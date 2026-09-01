@@ -1,14 +1,17 @@
 import { z } from 'zod';
 
+const optional = <T extends z.ZodType>(schema: T) =>
+  z.preprocess((value) => (value === '' ? undefined : value), schema.optional());
+
 const serverSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
-  RESEND_API_KEY: z.string().min(1).optional(),
-  CONTACT_FROM_EMAIL: z.string().email().optional(),
-  CONTACT_TO_EMAIL: z.string().email().optional(),
+  RESEND_API_KEY: optional(z.string().min(1)),
+  CONTACT_FROM_EMAIL: optional(z.string().email()),
+  CONTACT_TO_EMAIL: optional(z.string().email()),
 });
 
 const clientSchema = z.object({
-  NEXT_PUBLIC_SITE_URL: z.string().url().optional(),
+  NEXT_PUBLIC_SITE_URL: optional(z.string().url()),
 });
 
 const parsedServer = serverSchema.safeParse(process.env);

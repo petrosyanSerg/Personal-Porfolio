@@ -1,4 +1,6 @@
-const rawUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://petrosyanserg.vercel.app';
+import { env } from '@/lib/env';
+
+const rawUrl = env.NEXT_PUBLIC_SITE_URL ?? 'https://petrosyanserg.vercel.app';
 
 export const site = {
   url: rawUrl.replace(/\/+$/, ''),
