@@ -1,0 +1,171 @@
+@use "abstracts" as *;
+
+.page {
+  padding-block: var(--space-11) var(--section-y);
+}
+
+.download {
+  @include mono;
+
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: var(--space-6);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-text);
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+
+  &:hover {
+    background: var(--color-surface-2);
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+.section {
+  margin-top: var(--space-9);
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--color-border);
+}
+
+.sectionTitle {
+  @include eyebrow;
+
+  margin-bottom: var(--space-6);
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.entry {
+  min-width: 0;
+}
+
+.entryHead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.entryTitle {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-heading);
+}
+
+.entryDates {
+  @include mono;
+
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.entryMeta {
+  margin-top: var(--space-2);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+.entryBody {
+  margin-top: var(--space-3);
+  max-width: 68ch;
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  text-wrap: pretty;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.skillRow {
+  display: grid;
+  gap: var(--space-3);
+
+  @include up("md") {
+    grid-template-columns: 12rem minmax(0, 1fr);
+    gap: var(--space-5);
+    align-items: start;
+  }
+}
+
+.skillGroup {
+  @include mono;
+
+  color: var(--color-text);
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.certs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.cert {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+  justify-content: space-between;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.certName {
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+}
+
+.certIssuer {
+  @include mono;
+
+  color: var(--color-text-muted);
+}
+
+.secondaryCerts {
+  margin-top: var(--space-4);
+  font-size: var(--fs-caption);
+  color: var(--color-text-muted);
+}
+
+.languages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-4);
+    justify-content: space-between;
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+.languageName {
+  color: var(--color-text);
+}
+
+.languageLevel {
+  @include mono;
+
+  color: var(--color-text-muted);
+}

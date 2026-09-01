@@ -1,0 +1,25 @@
+@use "abstracts" as *;
+
+.stage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  opacity: var(--scene-opacity, 1);
+  mix-blend-mode: var(--scene-blend, normal);
+
+  canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+
+    mask-image: var(--scene-mask, none);
+  }
+}
+
+.stage,
+.stage canvas {
+  max-width: 100%;
+  overflow: hidden;
+}

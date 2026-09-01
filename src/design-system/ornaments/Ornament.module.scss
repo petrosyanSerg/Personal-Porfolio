@@ -1,0 +1,57 @@
+@use "abstracts" as *;
+
+.ornament {
+  display: block;
+  stroke: var(--ornament-color);
+  stroke-width: var(--ornament-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: var(--ornament-opacity);
+  pointer-events: none;
+  overflow: visible;
+}
+
+.divider {
+  width: 100%;
+  height: calc(1.75rem * var(--ornament-scale, 1));
+  margin-inline: auto;
+}
+
+.corner {
+  position: absolute;
+  width: calc(3.5rem * var(--ornament-scale, 1));
+  height: calc(3.5rem * var(--ornament-scale, 1));
+
+  &[data-corner="tl"] {
+    inset-block-start: 0;
+    inset-inline-start: 0;
+  }
+
+  &[data-corner="tr"] {
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    scale: -1 1;
+  }
+
+  &[data-corner="bl"] {
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    scale: 1 -1;
+  }
+
+  &[data-corner="br"] {
+    inset-block-end: 0;
+    inset-inline-end: 0;
+    scale: -1 -1;
+  }
+}
+
+.badge {
+  width: calc(4rem * var(--ornament-scale, 1));
+  height: calc(4rem * var(--ornament-scale, 1));
+  stroke: var(--ornament-accent);
+}
+
+.frame {
+  position: relative;
+}

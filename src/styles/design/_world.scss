@@ -1,0 +1,79 @@
+@use "../abstracts" as *;
+
+main > section + section::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--rule-color) 22%,
+    var(--rule-color) 78%,
+    transparent 100%
+  );
+  height: var(--rule-height);
+}
+
+:root {
+  --dur-base-scaled: calc(var(--dur-base) * var(--motion-scale));
+  --dur-slow-scaled: calc(var(--dur-slow) * var(--motion-scale));
+  --dur-reveal-scaled: calc(var(--dur-reveal) * var(--motion-scale));
+}
+
+[data-design-transition] * {
+  transition:
+    background-color var(--dur-slow) var(--ease-in-out),
+    border-color var(--dur-slow) var(--ease-in-out),
+    color var(--dur-slow) var(--ease-in-out),
+    fill var(--dur-slow) var(--ease-in-out),
+    box-shadow var(--dur-slow) var(--ease-in-out) !important;
+}
+
+[data-design-transition] [data-design-decor] * {
+  animation-play-state: paused;
+}
+
+@include reduced-motion {
+  [data-design-transition] * {
+    transition: none !important;
+  }
+}
+
+[data-design="pixel-art"] {
+  img,
+  svg {
+    image-rendering: pixelated;
+  }
+
+  body {
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+  }
+}
+
+.annotation {
+  font-family: var(--font-accent);
+  font-size: var(--fs-small);
+  line-height: 1.4;
+  color: var(--color-accent-text);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+[data-design="anthropomorphic"] {
+  a,
+  button {
+    transition: transform var(--dur-fast) var(--ease-signature);
+  }
+
+  a:active,
+  button:active {
+    transform: scale(0.96);
+  }
+}
+
+@include reduced-motion {
+  [data-design="anthropomorphic"] {
+    a:active,
+    button:active {
+      transform: none;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use "abstracts" as *;
+
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--enter-distance, 24px));
+  filter: blur(var(--enter-blur, 0));
+  transition:
+    opacity var(--dur-reveal-scaled) var(--ease-signature) var(--reveal-delay, 0ms),
+    transform var(--dur-reveal-scaled) var(--ease-signature) var(--reveal-delay, 0ms),
+    filter var(--dur-reveal-scaled) var(--ease-signature) var(--reveal-delay, 0ms);
+
+  will-change: opacity, transform;
+}
+
+.reveal[data-revealed] {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  will-change: auto;
+}
+
+@include reduced-motion {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+    will-change: auto;
+  }
+}
+
+@media (scripting: none) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}

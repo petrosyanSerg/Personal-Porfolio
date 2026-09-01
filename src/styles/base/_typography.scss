@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+[lang="hy"] {
+  --lh-tight: 1.06;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-text);
+}
+
+.prose {
+  max-width: var(--measure, 68ch);
+  color: var(--color-text-secondary);
+
+  p + p {
+    margin-top: var(--space-4);
+  }
+
+  strong {
+    color: var(--color-text);
+    font-weight: var(--fw-semibold);
+  }
+
+  a {
+    color: var(--color-accent-text);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+    transition: color var(--dur-fast) var(--ease-out);
+
+    &:hover {
+      color: var(--color-accent-hover);
+    }
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    padding: 0.1em 0.35em;
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xs);
+    color: var(--color-text);
+  }
+}

@@ -1,0 +1,25 @@
+@use "abstracts" as *;
+
+.container {
+  @include container;
+}
+
+.xs {
+  max-width: var(--container-xs);
+}
+
+.sm {
+  max-width: var(--container-sm);
+}
+
+.md {
+  max-width: var(--container-md);
+}
+
+.lg {
+  max-width: var(--container-lg);
+}
+
+.xl {
+  max-width: var(--container-xl);
+}

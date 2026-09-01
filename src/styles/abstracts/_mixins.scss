@@ -1,0 +1,144 @@
+@use "sass:map";
+@use "breakpoints" as bp;
+
+@mixin up($name) {
+  $value: map.get(bp.$breakpoints, $name);
+
+  @if not $value {
+    @error "Unknown breakpoint `#{$name}`.";
+  }
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin below($name) {
+  $value: map.get(bp.$breakpoints, $name);
+
+  @media (max-width: #{$value - 0.02px}) {
+    @content;
+  }
+}
+
+@mixin pointer-fine {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+@mixin motion-safe {
+  @media (prefers-reduced-motion: no-preference) {
+    @content;
+  }
+}
+
+@mixin container($width: var(--container-lg)) {
+  width: 100%;
+  max-width: $width;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin focus-ring($offset: 3px) {
+  outline: 2px solid var(--color-accent);
+  outline-offset: $offset;
+  border-radius: var(--radius-xs);
+}
+
+@mixin surface($radius: var(--radius-card)) {
+  background: var(--card-bg);
+  border: var(--card-border-width) var(--card-border-style) var(--card-border-color);
+  border-radius: $radius;
+  box-shadow: var(--card-shadow);
+}
+
+@mixin surface-hover {
+  border-color: var(--card-hover-border);
+  box-shadow: var(--card-hover-shadow);
+  transform: translate3d(0, var(--card-hover-lift), 0);
+}
+
+@mixin glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(var(--blur-md)) saturate(140%);
+  backdrop-filter: blur(var(--blur-md)) saturate(140%);
+}
+
+@mixin mono($size: var(--fs-mono-sm)) {
+  font-family: var(--font-mono);
+  font-size: $size;
+  letter-spacing: var(--ls-mono);
+  font-variant-ligatures: none;
+}
+
+@mixin eyebrow {
+  font-family: var(--font-eyebrow);
+  font-size: var(--fs-mono-sm);
+  font-variant-ligatures: none;
+  text-transform: var(--case-eyebrow);
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--color-accent-text);
+  font-weight: var(--fw-medium);
+}
+
+@mixin display-type($size: var(--fs-display-2)) {
+  font-family: var(--font-display);
+  font-size: calc(#{$size} * var(--optical-scale, 1));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-display);
+  font-weight: var(--fw-display);
+  font-style: var(--style-display, normal);
+  text-transform: var(--case-display, none);
+  color: var(--color-text);
+  text-wrap: balance;
+
+  :global([lang="hy"]) & {
+    line-height: 1.06;
+
+    text-transform: none;
+  }
+}
+
+@mixin control-type {
+  font-family: var(--font-body, var(--font-sans));
+  font-weight: var(--fw-medium);
+  text-transform: var(--case-control, none);
+  letter-spacing: var(--ls-control, 0.01em);
+}
+
+@mixin rule {
+  border: 0;
+  border-block-start: var(--rule-height) var(--rule-style) var(--rule-color);
+}
+
+@mixin text-gradient {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin deferred-render($estimate: 800px) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto $estimate;
+}

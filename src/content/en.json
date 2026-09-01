@@ -1,0 +1,560 @@
+{
+  "meta": {
+    "home": {
+      "title": "Sergey Petrosyan — Software Engineer, Enterprise Frontend Architecture",
+      "description": "Software engineer in Yerevan building enterprise frontends for regulated financial software. React 19, TypeScript, Feature-Sliced Design, AI-native development."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Enterprise fintech frontend architecture, AI-native engineering workflows, and public React and TypeScript builds."
+    },
+    "resume": {
+      "title": "Resume",
+      "description": "Experience, technical skills and education. Available as a PDF download."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "This page does not exist."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "architecture": "Architecture",
+    "ai": "AI-Native",
+    "stack": "Stack",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "design": {
+    "lab": "Design Lab",
+    "open": "Open the design lab",
+    "close": "Close the design lab",
+    "lead": "One portfolio, fifty artistic directions, each with a hero of its own. The content never changes — everything else does.",
+    "hint": "Your choice is remembered on this device.",
+    "active": "Active",
+    "apply": "Apply",
+    "specimen": "Type specimen",
+    "portraitAlt": "Painted interpretation of this site in the {name} design system",
+    "systems": {
+      "neoclassical": "Stone, symmetry and a restrained bronze. The portfolio as a classical institution.",
+      "baroque": "Deep shadow, one raking light and gilt on every edge. Composed excess.",
+      "aurora": "Ribbons of cold light over near-black, and the only world that keeps the three-dimensional diagram.",
+      "ethereal": "Pastel air, thin serifs and the slowest motion on the site. Almost nothing, precisely placed.",
+      "filigree": "Fine metalwork on a dark ground. Everything is a drawn line; nothing is a fill.",
+      "acanthus": "The Corinthian leaf as a digital identity. Straight structure, botanical curves.",
+      "anthropomorphic": "Rounded, inked and alive. Cards that watch the cursor and buttons with a body.",
+      "pixel-art": "A sixteen-bit workstation on a four-pixel grid. Stepped motion, hard edges, phosphor green.",
+      "conceptual-sketch": "Paper, pencil rules and blue-pen marginalia. The thinking, not only the result.",
+      "luxury-typography": "Black on white and nothing else. The typography is the entire design.",
+      "japandi": "Paper, clay and one soft cedar. The most space on the site, used as a material rather than left over.",
+      "memphis": "Sottsass in 1981: shapes with no functional excuse, in flat unmixed colour, around a perfectly sober text block.",
+      "bohemian": "A room with too many textiles in it, lit at dusk. Nothing has a hard edge; several things have a fringe.",
+      "shabby-chic": "Chalk paint sanded back at the corners. Every panel is a painted frame whose top coat has come away.",
+      "cottagecore": "Late afternoon in July, somewhere with no pavement. Wheat, sage and elderflower, held together by a workmanlike serif.",
+      "victorian": "A study lit by gas: oxblood, walnut and tarnished brass, with every surface occupied on principle.",
+      "art-deco": "Paris, 1925. Compass and set square only: every curve a struck arc, every ornament one motif stepped down in scale.",
+      "art-nouveau": "Structure derived from stems. No straight line, no repeated module, and no symmetry a plant would not produce.",
+      "mystical-western": "The desert at three in the morning: indigo, bone and rust, with a moon and one low fire as the only light.",
+      "kitsch": "Every decorative layer this site owns, switched on at once — and the body copy still at twelve to one.",
+      "y2k": "Chrome and frosted plastic, 1999. The only world drawn with a true bevel: light on the top edge, shadow on the bottom.",
+      "bauhaus": "Three primaries, three forms, one grid. No gradient, no blur, no radius but the true circle.",
+      "brutalism": "Béton brut: concrete left as the formwork made it, and type at the scale of signage cast into a wall.",
+      "cybercore": "An interface that shows its own instrumentation. Hairline cyan, monospace throughout, and not one neon blob.",
+      "synthwave": "Lit entirely from below by the grid and from behind by the sun, so every highlight sits on a bottom edge.",
+      "vaporwave": "The same decade on a worn tape. Nothing is quite aligned, and the edge on hover is a chromatic split rather than a glow.",
+      "pop-art": "Lichtenstein rather than Warhol: a keyline, a dot screen for every tone, and four process inks with no fifth.",
+      "bento-box": "One radius, one border, one accent. The hierarchy is carried by cell size and never by decoration.",
+      "graffiti": "A wall, not a font. Concrete, pasted panels, and the one soft thing an aerosol can does that a brush cannot.",
+      "tenebrism": "One source, close and hard, high on one side. Everything it does not reach falls to black rather than to grey.",
+      "gothic": "The architecture, not the subculture. Every arc meets at an apex, and the page is the tallest on the site.",
+      "pointillism": "No colour is ever mixed. Two pure hues placed side by side resolve into a third in the eye, and nowhere else.",
+      "mixed-media": "A combine: photograph, torn newsprint, pencil and brush on one surface, none of them harmonised with the others.",
+      "steampunk": "The workshop behind the parlour. Everything is fastened, everything reads out, and the ornament would turn if you pushed it.",
+      "kawaii": "Cute as a proportion system rather than a sticker sheet: two hues, one border weight, and lilac shadows.",
+      "coquette": "Dressed rather than worn. A hairline trim stitched in from every hem, and the only italic display face on the site.",
+      "surrealism": "Magritte, not Dalí: the rendering stays sober and only the logic is wrong. Shadows fall where no light could put them.",
+      "utilitarian": "A measuring instrument. Every mark exists because somebody operating the thing needs it — labels, units, tolerances, a lamp.",
+      "mid-century": "1955, and the belief that design was a public good. An elongated pill sitting on a strictly rectilinear grid.",
+      "scrapbook": "Somebody’s kitchen table: card stock, photo corners, washi tape and a ballpoint caption.",
+      "frutiger-aero": "2007: water, glass and sky, and the belief that technology was about to be clean and friendly.",
+      "dark-academia": "A library at night with one lamp lit, and the longest reading measure on the site. The fantasy is reading.",
+      "light-academia": "The same library at eleven in the morning. Identical bones, opposite light, and no vignette at all.",
+      "wabi-sabi": "Asymmetry applied systematically: four different corners on every radius, and no measurement that is a round number.",
+      "wild-west": "Noon on a wanted poster: heavy slab serif, a double rule around everything, and paper left in a window for a season.",
+      "nautical": "A chart table below the waterline. One horizontal is privileged over every other line, and the motion is a slow roll about it.",
+      "rebus": "A CV written as pictures. The puzzle is in the layout rather than in a texture, and the answer is always in red.",
+      "glassmorphism": "Exactly one glass layer deep, and text never sits on it without an opaque backing. Depth the type does not pay for.",
+      "modular-typography": "Letters as engineering. A character is not drawn, it is assembled from fixed modules on a fixed pitch.",
+      "neo-brutalism": "A wireframe that shipped. Saturated flat colour, a black keyline on everything, and a shadow that never blurs."
+    },
+    "families": {
+      "classical": "Classical",
+      "ornamental": "Ornamental",
+      "atmospheric": "Atmospheric",
+      "modernist": "Modernist",
+      "retro": "Retro",
+      "digital": "Digital",
+      "expressive": "Expressive",
+      "domestic": "Domestic"
+    },
+    "filter": "Filter worlds",
+    "filterPlaceholder": "Name, family or motif…",
+    "results": "{count} of 50",
+    "empty": "No world matches that.",
+    "scene": "Three-dimensional hero"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer · Yerevan, Armenia",
+    "boot": {
+      "init": "Initializing architecture",
+      "online": "System online"
+    },
+    "headline": "I build enterprise frontends that hold their shape.",
+    "sub": "React and TypeScript architecture for regulated financial software — and AI-native workflows that keep the code honest.",
+    "ctaPrimary": "See the architecture",
+    "ctaSecondary": "Get in touch",
+    "modules": "modules",
+    "systemMapped": "All six mapped",
+    "voices": {
+      "terminal": {
+        "status": "SYSTEM ONLINE"
+      },
+      "flow": {
+        "a": "Idea",
+        "b": "System",
+        "c": "Product"
+      },
+      "spec": {
+        "role": "Role",
+        "stack": "Stack",
+        "base": "Base",
+        "status": "Status",
+        "statusValue": "Open to work"
+      },
+      "playful": {
+        "greeting": "Hi, I am"
+      },
+      "manifesto": {
+        "claim": "Frontends that hold their shape"
+      }
+    }
+  },
+  "metrics": {
+    "modules": "business modules",
+    "endpoints": "API endpoints",
+    "services": "domain services",
+    "years": "years engineering",
+    "loc": "lines of frontend code",
+    "caption": "Enterprise leasing and credit platform, built from a greenfield codebase."
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Software that cannot afford to be wrong.",
+    "body": [
+      "I'm a software engineer in Yerevan. I work on financial software — leasing and credit systems where authorization, auditability and correctness aren't features, they're the product.",
+      "At Actual Solutions I own the frontend architecture of MK Kredit. It went from an empty repository to roughly fifty business modules covering the complete credit lifecycle: application analysis, credit history, collateral, income and expenses, cash flow, credit committee approval, conclusions, disbursement. I designed its Feature-Sliced architecture, its type-safe authorization model, its centralized API and error-handling layers, and the reusable form and table systems most of the product is built from.",
+      "I also work AI-native — as professional practice, not experiment. The interesting problem isn't getting a model to generate code. It's getting generated code to respect architecture, business rules and engineering standards at speed, without eroding the system underneath.",
+      "Before engineering I spent two years as a graphic designer. It still shows in how I treat interfaces."
+    ],
+    "photoPlaceholder": "YOUR_PHOTO_HERE"
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Four years, three of them commercial.",
+    "present": "Present",
+    "types": {
+      "full-time": "Full-time",
+      "internship": "Internship",
+      "contract": "Contract"
+    },
+    "modes": {
+      "onsite": "On-site",
+      "hybrid": "Hybrid",
+      "remote": "Remote"
+    },
+    "duration": {
+      "years": "{count, plural, one {# yr} other {# yrs}}",
+      "months": "{count, plural, one {# mo} other {# mos}}"
+    },
+    "actualsolutions": {
+      "role": "Software Engineer",
+      "summary": "Frontend architecture of MK Kredit, an enterprise leasing and credit management platform.",
+      "highlights": [
+        "Built and evolved a React 19 and TypeScript application from a greenfield codebase into roughly 50 business modules covering the complete leasing lifecycle — application analysis, credit history, collateral, income and expenses, cash flow, credit committee approval, conclusions and disbursement.",
+        "Architected the codebase around Feature-Sliced Design with enforced module boundaries and automated CI quality gates, so the application stays navigable as the domain expands.",
+        "Designed type-safe authorization, a centralized API layer and a unified error-handling architecture, plus reusable form and data-table systems that most business modules are composed from.",
+        "Integrated 36 domain API services spanning 190+ endpoints with JWT authentication and automatic token refresh.",
+        "Delivered mobile-first responsive UI, PWA capabilities, a multi-theme design system, user personalization and Armenian-first internationalization.",
+        "Applied AI-first and agentic development across requirements, architecture, implementation, refactoring, documentation and code review using Claude Code, specialized agents, project-aware scaffolding and Figma, Jira and Swagger integrations.",
+        "Established context engineering, spec-driven development and human-in-the-loop validation so AI-generated code conforms to project architecture, business rules and engineering standards rather than merely compiling."
+      ]
+    },
+    "softconstruct": {
+      "role": "Software Engineer",
+      "summary": "Two and a half years on the SpringBME platform — feature modules, performance, refactoring and documentation.",
+      "highlights": [
+        "Implemented new functional modules and UI components with scalability and responsive behaviour as first-class constraints.",
+        "Optimized images and frontend assets, improving page load performance across the platform.",
+        "Refactored existing code and styling to raise readability, maintainability and visual consistency.",
+        "Authored detailed user guides that helped end users and internal teams adopt new features.",
+        "Collaborated with cross-functional teams through sprint planning, code review and architecture discussion."
+      ]
+    },
+    "smartcode": {
+      "role": "Frontend Developer",
+      "summary": "Nine months moving from coursework to shipped product work.",
+      "highlights": [
+        "Built user dashboard filtering functionality and contributed React components to an existing application.",
+        "Refactored an API data-fetching module to reduce duplication and improve response handling.",
+        "Worked to team standards for Git workflow, code review and delivery."
+      ]
+    },
+    "edel": {
+      "role": "Graphic Designer",
+      "summary": "Colour grading and retouching. Where the eye came from.",
+      "highlights": [
+        "Handled colour correction and grading across portrait, product and event photography.",
+        "Streamlined the workflow between shoot, edit and delivery, reducing client turnaround time.",
+        "Carried out image restoration and cleanup on complex source material."
+      ]
+    }
+  },
+  "architecture": {
+    "eyebrow": "How it's built",
+    "title": "Fifty modules, one shape.",
+    "lead": "Feature-Sliced Design isn't a folder convention. It's a dependency rule: every layer may only reach downward. Enforce that in CI and the fiftieth module costs about what the fifth did.",
+    "layers": {
+      "app": "Providers, routing, global configuration. Knows about everything; nothing knows about it.",
+      "pages": "Route compositions. Assembles widgets — contains no business logic.",
+      "widgets": "Self-contained blocks: the application table, the credit committee panel.",
+      "features": "User actions with business meaning: approve, reject, attach collateral.",
+      "entities": "Domain models — application, client, collateral, payment schedule.",
+      "shared": "UI kit, API client, hooks, utilities. Knows nothing about the domain."
+    },
+    "closing": "Dependencies flow one way. CI fails the build when they don't. That single constraint is what makes fifty modules navigable — and what makes AI-generated code safe to accept."
+  },
+  "aiNative": {
+    "eyebrow": "AI-native engineering",
+    "title": "The hard part isn't generating code.",
+    "lead": "It's making generated code obey the architecture. Speed is only an asset when there's a shape for it to fill.",
+    "stages": {
+      "context": {
+        "name": "Context",
+        "body": "Architecture, conventions and domain rules structured as durable context, so generation starts inside the constraints."
+      },
+      "spec": {
+        "name": "Spec",
+        "body": "Specification before implementation. The spec is the contract, not the prompt."
+      },
+      "scaffold": {
+        "name": "Scaffold",
+        "body": "Modules generated against the real Feature-Sliced structure, with Figma, Jira and Swagger feeding design, requirements and API contracts in."
+      },
+      "validate": {
+        "name": "Validate",
+        "body": "Human-in-the-loop review gates. An engineer verifies architectural and business-rule compliance before merge."
+      },
+      "merge": {
+        "name": "Merge",
+        "body": "Automated CI quality gates catch what review doesn't."
+      }
+    },
+    "closing": "This is how a greenfield repository became ~50 business modules in seven months without the architecture eroding. The velocity is the visible part. The constraint system is the part that matters."
+  },
+  "skills": {
+    "eyebrow": "Tech stack",
+    "title": "What I use, and what I use it for.",
+    "lead": "Depth over breadth. Every item here is something I've shipped with — with a note on how deeply.",
+    "footnote": "Nothing here is aspirational. If it's on this page, there's work behind it.",
+    "personalOnly": "Personal projects",
+    "usedAt": "Evidence: {sources}",
+    "groups": {
+      "frontend": "Frontend",
+      "state-data": "State & data",
+      "architecture": "Architecture",
+      "ai-engineering": "AI engineering",
+      "tooling-infra": "Tooling & infrastructure",
+      "design": "Design"
+    },
+    "depth": {
+      "core": "Core",
+      "strong": "Strong",
+      "working": "Working",
+      "familiar": "Familiar"
+    },
+    "depthLegend": {
+      "core": "Architected with it in production",
+      "strong": "Used substantially in production",
+      "working": "Productive, not deep",
+      "familiar": "Real exposure, would need ramp-up"
+    },
+    "usage": {
+      "react": "Component systems and business modules for an enterprise platform, in every commercial role.",
+      "typescript": "Type-safe authorization, a typed API layer and domain modelling across ~50 modules.",
+      "javascript": "The foundation under every role and 29 public repositories.",
+      "scss": "Design system, theming and layout in every role — including SCSS-only animation work.",
+      "html": "Semantic, accessible markup as the starting point rather than a cleanup pass.",
+      "css": "Layout, responsive behaviour and motion without reaching for a framework.",
+      "react-hook-form": "The reusable form system most MK Kredit business modules are built on.",
+      "zod": "Schema validation paired with typed forms and API boundaries.",
+      "ant-design": "Component foundation and multi-theme design system for MK Kredit.",
+      "material-ui": "Component library work on earlier interfaces.",
+      "i18next": "Armenian-first internationalization with multi-locale support.",
+      "nuqs": "Type-safe URL search-param state, so filters survive a refresh and a shared link.",
+      "nextjs": "Routing, SSR and SSG in TypeScript — including this site.",
+      "tanstack-query": "Server-state architecture for MK Kredit: caching, invalidation and request lifecycle.",
+      "redux-toolkit": "Client state across two commercial platforms.",
+      "axios": "A centralized API client with interceptors, JWT refresh and unified error handling.",
+      "rest": "36 domain services and 190+ endpoints, integrated from Swagger contracts.",
+      "jwt": "Token handling with automatic refresh, behind a type-safe authorization model.",
+      "feature-sliced-design": "The architecture of MK Kredit — validated in a public reference build first.",
+      "frontend-architecture": "Greenfield to ~50 business modules with enforced module boundaries.",
+      "design-systems": "Multi-theme tokens plus reusable component and data-table systems.",
+      "authorization": "Role and permission modelling where unauthorized states are unrepresentable, not just hidden.",
+      "error-handling": "Centralized error boundaries and API failure handling across the application.",
+      "i18n": "Armenian as the default locale, not a retrofit — including layout for a non-Latin script.",
+      "pwa": "Offline and installable capability on enterprise software normally shipped desktop-only.",
+      "responsive": "Mobile-first delivery on dense, data-heavy business UI.",
+      "claude-code": "Primary AI development environment across the engineering lifecycle.",
+      "agentic-development": "Specialized agents for architecture, implementation, refactoring, documentation and review.",
+      "context-engineering": "Structuring project context so generated code respects real constraints.",
+      "spec-driven": "Specification before generation, as a delivery method rather than a habit.",
+      "scaffolding": "Generating modules that already conform to the project's architecture.",
+      "human-in-the-loop": "Review gates that keep AI output compliant with architecture and business rules.",
+      "vite": "Build tooling on the enterprise platform and all recent personal work.",
+      "git": "Branching and release discipline in team settings.",
+      "github-actions": "Automated CI quality gates, including the architecture boundary checks.",
+      "docker": "Containerized development and delivery.",
+      "azure": "Deployment target for MK Kredit.",
+      "eslint": "Enforced standards across commercial and personal repositories.",
+      "figma": "Design handoff — and a context source feeding the AI workflow.",
+      "photoshop": "Two years professional: colour grading, retouching and restoration.",
+      "lightroom": "Two years professional: colour correction and grading at volume."
+    }
+  },
+  "projects": {
+    "eyebrow": "Selected work",
+    "title": "Production work, and public code.",
+    "lead": "Commercial work is private — it's fintech. The case studies below describe it in the detail I can. The public repositories are architecture studies and challenge builds, and they're labelled as such.",
+    "publicDivider": "Public code — studies and challenge builds, not products.",
+    "viewCaseStudy": "Read the case study",
+    "viewCode": "View code",
+    "viewLive": "View live",
+    "backToProjects": "All projects",
+    "sections": {
+      "overview": "Overview",
+      "problem": "Problem",
+      "context": "Context",
+      "role": "My role",
+      "architecture": "Architecture",
+      "challenges": "Technical challenges",
+      "results": "Results",
+      "lessons": "Lessons",
+      "technologies": "Technologies"
+    },
+    "mk-kredit": {
+      "title": "MK Kredit",
+      "role": "Frontend architect & engineer",
+      "accessNote": "Production — access restricted",
+      "shortDescription": "Greenfield React 19 and TypeScript frontend for a full enterprise leasing and credit lifecycle: ~50 business modules on Feature-Sliced Design.",
+      "overview": "The frontend of a platform banks and leasing organizations run their credit business on: application intake through to disbursement, with the authorization, auditability and workflow rules that regulated lending requires. Built from an empty repository into roughly fifty business modules.",
+      "problem": "Leasing and credit operations are long, multi-stage and evidence-heavy. Every application accumulates financial analysis, collateral records, credit history and committee decisions — each stage with different actors, permissions and validation rules. Build this as ordinary screens and it becomes unmaintainable by module fifteen.",
+      "context": "Greenfield, regulated domain, Armenian-first user base, an expanding feature surface, and a small team. The architecture had to absorb growth without proportional growth in complexity.",
+      "roleDetail": "Frontend architecture and technical direction; the platform systems — authorization, API layer, error handling, forms, tables, theming, internationalization; delivery of lifecycle modules; and establishing the AI-native workflow the team develops with.",
+      "architecture": "Feature-Sliced Design, with enforced layer boundaries so dependencies flow one way and business modules stay isolated. On top of it: a centralized Axios client with JWT and automatic token refresh; TanStack Query for all server state; Redux Toolkit for client state; a reusable form system on React Hook Form and Zod; a shared data-table system; a type-safe authorization model; a unified error-handling architecture; a multi-theme design system on Ant Design and SCSS; i18next with Armenian as the primary locale. Automated CI quality gates on GitHub Actions, containerized with Docker, deployed to Azure.",
+      "challenges": [
+        "Keeping fifty business modules navigable — solved by Feature-Sliced layer boundaries enforced in CI rather than by convention.",
+        "Integrating 36 domain services across 190+ endpoints without the API layer fragmenting — solved with a single typed client, shared interceptors and centralized error handling.",
+        "Modelling permissions for a regulated workflow — solved with a type-safe authorization model, so unauthorized states are unrepresentable rather than merely hidden.",
+        "Validation-heavy multi-stage forms — solved with a reusable form system pairing React Hook Form with Zod schemas.",
+        "Armenian-first internationalization, including layout and typography for a non-Latin script as the default rather than a retrofit.",
+        "Sustaining AI-assisted velocity without architectural erosion — solved with project-aware scaffolding, spec-driven development and human review gates."
+      ],
+      "results": [
+        "Greenfield to ~50 business modules covering the full leasing lifecycle.",
+        "36 services and 190+ endpoints integrated behind one type-safe, centrally error-handled layer.",
+        "Mobile-first responsive UI with PWA capability, multi-theme support and personalization.",
+        "Armenian-first internationalization, with CI quality gates in place from the start."
+      ],
+      "lessons": "Architecture is what makes AI-assisted development safe. Generation speed is only an asset when there are boundaries for generated code to respect — the constraint system is the leverage, not the generator."
+    },
+    "ai-native-workflow": {
+      "title": "AI-Native Development Workflow",
+      "role": "Designed and adopted the workflow",
+      "shortDescription": "Agentic development on Claude Code with spec-driven implementation and human review gates — on a regulated fintech codebase.",
+      "overview": "An internal engineering workflow built on Claude Code, in which AI participates across requirements, architecture, implementation, refactoring, documentation and code review — under constraints that keep its output inside the project's architecture and business rules.",
+      "problem": "AI-generated code is fast and architecturally indifferent. On a regulated fintech codebase, unconstrained generation produces working code that quietly violates layer boundaries, duplicates existing abstractions and misses domain rules. The cost lands later, as erosion.",
+      "roleDetail": "Designed the workflow, the context structure and the review gates, then adopted them across the engineering lifecycle.",
+      "architecture": "Four mechanisms. Context engineering structures the project's architecture, conventions and domain rules as durable context, so generation starts inside the constraints. Project-aware scaffolding generates new modules against the real Feature-Sliced structure rather than generic templates. Spec-driven development puts specification before generation, making the spec the contract. Human-in-the-loop validation adds explicit review gates where an engineer verifies architectural and business-rule compliance before merge. Figma, Jira and Swagger integrations pull design, requirements and API contracts into that context, and specialized agents handle distinct lifecycle jobs rather than one general assistant handling everything.",
+      "challenges": [
+        "Generated code that compiles but violates layer boundaries — caught by scaffolding that starts inside the architecture and CI that enforces it.",
+        "Domain rules that a model cannot infer from the codebase alone — solved by encoding them as durable context rather than repeating them per prompt.",
+        "Review fatigue at volume — solved by making review gates specific: architectural compliance and business rules, not general code reading."
+      ],
+      "results": [
+        "AI-native throughput on a greenfield enterprise codebase, with the architecture holding.",
+        "~50 business modules in seven months, inside a Feature-Sliced structure with CI quality gates."
+      ],
+      "lessons": "The interesting problem is not generating code; it is constraining generation. Architecture, specs and review gates are what convert model output into software a bank can run."
+    },
+    "springbme": {
+      "title": "SpringBME",
+      "role": "Software Engineer",
+      "shortDescription": "Two and a half years on a large-scale platform: feature modules, UI components, performance optimization, refactoring and user documentation."
+    },
+    "fsd-reference": {
+      "title": "Feature-Sliced Design reference build",
+      "role": "Personal architecture study",
+      "shortDescription": "React, TypeScript and Vite application structured with Feature-Sliced Design and the React Compiler, used to validate layer boundaries before applying them at enterprise scale.",
+      "overview": "A sandbox for the architecture that now underpins a fifty-module fintech platform. Built four months before the role that would depend on it — learning the pattern deliberately, then applying it where it mattered.",
+      "architecture": "The six standard Feature-Sliced layers — app, pages, widgets, features, entities, shared — with dependencies permitted only downward, plus the React Compiler enabled to test how the layer structure interacts with automatic memoization.",
+      "lessons": "Layer boundaries are cheap to hold from the first commit and expensive to introduce later. Validating that in a sandbox is worth the weekend."
+    },
+    "vecto-digital": {
+      "title": "Vecto Digital build",
+      "role": "Frontend build",
+      "shortDescription": "The largest deployed public React and TypeScript build — layout, responsive behaviour and interaction for a marketing site."
+    },
+    "nextjs-rendering-study": {
+      "title": "Next.js routing, SSR & SSG study",
+      "role": "Personal study",
+      "shortDescription": "A TypeScript Next.js application exploring routing strategies and the trade-offs between server-side rendering and static generation."
+    },
+    "milky-way": {
+      "title": "Milky Way",
+      "role": "Motion study",
+      "shortDescription": "An animated vector rendering of the galaxy, built in SCSS alone — a motion and craft study rather than a product."
+    },
+    "react-patterns": {
+      "title": "React patterns",
+      "role": "Personal study",
+      "shortDescription": "A deliberate study of composition and reuse patterns in React with TypeScript."
+    },
+    "github-users-search": {
+      "title": "GitHub user search",
+      "role": "Frontend build",
+      "shortDescription": "API integration and search UI against the GitHub REST API, with loading, empty and error states."
+    }
+  },
+  "journey": {
+    "eyebrow": "Journey",
+    "title": "Design, then engineering, then architecture.",
+    "entries": {
+      "2019": "Colour grading in a photo studio in Hrazdan. Learning to see.",
+      "2022": "Software engineering at YSCI, and a nine-month internship at SmartCode. Theory into shipped code.",
+      "2023": "Two and a half years at SoftConstruct — a large platform, a real team, code review as a habit.",
+      "2025": "Feature-Sliced Design, studied deliberately in a sandbox before applying it anywhere that mattered.",
+      "2026": "Frontend architecture of an enterprise credit platform. Greenfield to fifty modules."
+    }
+  },
+  "education": {
+    "eyebrow": "Education",
+    "title": "Education & certifications",
+    "ysci": {
+      "field": "Computer Software Engineering"
+    },
+    "smartcode": {
+      "field": "Front End Developer programme"
+    },
+    "otherCertifications": "Also: {list}"
+  },
+  "certifications": {
+    "ysci-se": {
+      "name": "Software Engineer"
+    },
+    "smartcode-fe": {
+      "name": "Front-End Engineer"
+    },
+    "sololearn-react": {
+      "name": "React/Redux"
+    },
+    "sololearn-css": {
+      "name": "CSS"
+    },
+    "sololearn-html": {
+      "name": "HTML"
+    },
+    "sololearn-js": {
+      "name": "JavaScript"
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "hy": "Armenian",
+    "ru": "Russian",
+    "en": "English",
+    "levels": {
+      "native": "Native",
+      "full-professional": "Full professional",
+      "professional": "Professional",
+      "limited": "Limited working",
+      "elementary": "Elementary"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk.",
+    "lead": "Open to on-site, hybrid and remote roles. Based in Yerevan, working in Armenian, Russian and English.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "message": "Message",
+      "messagePlaceholder": "What are you building?",
+      "submit": "Send message",
+      "sending": "Sending…"
+    },
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "nameTooLong": "That name is too long.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "That doesn't look like a valid email address.",
+      "messageRequired": "Please write a message.",
+      "messageTooShort": "A little more detail would help.",
+      "messageTooLong": "That message is too long — please trim it."
+    },
+    "success": "Thanks — I'll reply within a couple of days.",
+    "error": "That didn't send. Email me directly at {email}.",
+    "rateLimited": "Too many messages from this address. Please try again later.",
+    "directLabel": "Or reach me directly"
+  },
+  "socials": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "telegram": "Telegram",
+    "email": "Email"
+  },
+  "footer": {
+    "role": "Software Engineer · Enterprise Frontend Architecture",
+    "copyright": "© {year} Sergey Petrosyan",
+    "builtWith": "Built with Next.js, TypeScript and Three.js.",
+    "source": "Source on GitHub"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "That page doesn't exist — it may have moved, or the link may be wrong.",
+    "cta": "Back home"
+  },
+  "common": {
+    "readMore": "Read more",
+    "close": "Close",
+    "loading": "Loading",
+    "downloadResume": "Download resume (PDF)",
+    "externalLink": "opens in a new tab"
+  },
+  "a11y": {
+    "skipLink": "Skip to content",
+    "mainNav": "Main navigation",
+    "footerNav": "Footer navigation",
+    "themeToggleToLight": "Switch to light theme",
+    "themeToggleToDark": "Switch to dark theme",
+    "themeToggleToCinematic": "Switch to cinematic theme",
+    "localeSwitcher": "Change language. Current language: {current}.",
+    "scrollToTop": "Scroll to top",
+    "heroScene": "A decorative three-dimensional scene belonging to the active design system. It carries no information that is not also written on this page."
+  }
+}

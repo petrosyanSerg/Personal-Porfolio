@@ -1,0 +1,160 @@
+@use "abstracts" as *;
+
+.section {
+  @include deferred-render(1100px);
+
+  padding-block: var(--section-y);
+}
+
+.pipeline {
+  display: grid;
+  gap: var(--space-5);
+
+  @include up("md") {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include up("xl") {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  min-width: 0;
+}
+
+.card {
+  @include surface;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
+  padding: var(--space-6);
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+
+  &:hover {
+    border-color: var(--color-border-accent);
+    box-shadow: var(--shadow-lg), var(--highlight-top);
+    transform: translateY(-2px);
+  }
+}
+
+.cardHead {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.index {
+  @include mono;
+
+  color: var(--color-accent-text);
+}
+
+.name {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-heading);
+}
+
+.body {
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+  text-wrap: pretty;
+}
+
+.connector {
+  display: none;
+
+  @include up("xl") {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: calc(var(--space-3) * -1);
+    width: var(--space-3);
+    height: 1px;
+    overflow: hidden;
+    background: var(--color-border-strong);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: 40%;
+    background: var(--color-teal);
+  }
+}
+
+@include motion-safe {
+  .connector::after {
+    animation: pipeline-flow 5.6s var(--ease-in-out) infinite;
+  }
+
+  .stage:nth-child(1) .connector::after {
+    animation-delay: 0s;
+  }
+
+  .stage:nth-child(2) .connector::after {
+    animation-delay: 0.35s;
+  }
+
+  .stage:nth-child(3) .connector::after {
+    animation-delay: 0.7s;
+  }
+
+  .stage:nth-child(4) .connector::after {
+    animation-delay: 1.05s;
+  }
+}
+
+@include reduced-motion {
+  .connector::after {
+    opacity: 0;
+  }
+}
+
+@keyframes pipeline-flow {
+  0%,
+  70%,
+  100% {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  30%,
+  62% {
+    transform: translateX(260%);
+    opacity: 0;
+  }
+}
+
+.closing {
+  max-width: 72ch;
+  margin-top: var(--space-9);
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text);
+  text-wrap: pretty;
+}
+
+@include reduced-motion {
+  .card:hover {
+    transform: none;
+  }
+}

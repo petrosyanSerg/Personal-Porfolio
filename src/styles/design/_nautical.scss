@@ -1,0 +1,113 @@
+[data-design="nautical"] {
+  color-scheme: dark;
+
+  --color-bg: #0b1f2e;
+  --color-bg-elevated: #0f2739;
+  --color-surface: #133045;
+  --color-surface-2: #1a3c54;
+  --color-surface-3: #234a66;
+
+  --color-border: #1e4058;
+  --color-border-strong: #35617f;
+  --color-border-accent: rgb(47 143 191 / 52%);
+
+  --color-text: #eef4f7;
+  --color-text-secondary: #bfd0da;
+  --color-text-muted: #93a9b8;
+  --color-text-faint: #64798a;
+
+  --color-accent: #2f8fbf;
+  --color-accent-hover: #47a6d4;
+  --color-accent-press: #24759e;
+  --color-accent-strong: #1f6c94;
+  --color-accent-strong-hover: #1a5a7c;
+  --color-accent-soft: rgb(47 143 191 / 14%);
+  --color-accent-text: #6fc0e4;
+
+  --color-teal: #d9a441;
+  --color-teal-soft: rgb(217 164 65 / 16%);
+  --color-teal-text: #e8bb63;
+
+  --color-warn: #d9a441;
+
+  --gradient-hero:
+    radial-gradient(40% 34% at 92% 12%, rgb(217 164 65 / 18%), transparent 70%),
+    radial-gradient(90% 46% at 50% 104%, rgb(47 143 191 / 22%), transparent 72%);
+  --gradient-text: linear-gradient(180deg, #f6fafc 0%, #6fc0e4 100%);
+  --gradient-accent: linear-gradient(120deg, #2f8fbf 0%, #d9a441 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(170 215 240 / 6%) 0%,
+    rgb(0 0 0 / 0%) 100%
+  );
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    rgb(47 143 191 / 70%),
+    transparent
+  );
+
+  --shadow-sm: 0 2px 6px rgb(0 12 22 / 46%);
+  --shadow-md: 0 8px 24px rgb(0 12 22 / 48%);
+  --shadow-lg: 0 18px 48px rgb(0 12 22 / 54%);
+  --shadow-xl: 0 32px 80px rgb(0 12 22 / 60%);
+  --shadow-glow: 0 0 0 1px var(--color-border-accent), 0 0 34px rgb(47 143 191 / 18%);
+  --highlight-top: inset 0 1px 0 rgb(190 225 245 / 10%);
+  --glass-bg: rgb(19 48 69 / 80%);
+  --glass-border: rgb(47 143 191 / 26%);
+
+  --font-display: "Optima", "Palatino Linotype", "Book Antiqua", palatino, serif;
+  --font-heading: var(--font-sans);
+  --font-eyebrow: var(--font-mono);
+  --font-accent: var(--font-mono);
+
+  --fw-display: var(--fw-medium);
+  --case-display: uppercase;
+  --case-eyebrow: uppercase;
+  --ls-display: 0.04em;
+  --ls-eyebrow: 0.36em;
+  --optical-scale: 0.94;
+  --lh-tight: 1.06;
+
+  --density: 1.06;
+  --measure: 64ch;
+
+  --radius-card: 4px 4px 22px 22px;
+  --radius-control: 999px;
+  --radius-tag: 3px;
+  --radius-media: 4px 4px 22px 22px;
+
+  --card-bg: linear-gradient(180deg, rgb(35 74 102 / 62%) 0%, rgb(19 48 69 / 84%) 100%);
+  --card-border-color: rgb(47 143 191 / 26%);
+  --card-shadow: var(--highlight-top), 0 8px 26px rgb(0 12 22 / 42%);
+  --card-hover-shadow: 0 18px 44px rgb(0 12 22 / 56%), 0 0 30px rgb(47 143 191 / 16%);
+  --card-hover-border: rgb(111 192 228 / 60%);
+  --card-hover-lift: -3px;
+
+  --control-bg: var(--color-accent-strong);
+  --control-fg: #eef4f7;
+  --control-shadow: 0 6px 18px rgb(31 108 148 / 34%);
+
+  --rule-color: rgb(47 143 191 / 46%);
+  --rule-height: 3px;
+
+  --decor-grid: 0.28;
+  --decor-grain: 0.05;
+  --decor-vignette: 0.42;
+  --motif: "\2693";
+
+  --motion-scale: 1.25;
+  --ease-signature: cubic-bezier(0.42, 0.02, 0.28, 1.06);
+  --dur-signature: var(--dur-slower);
+  --enter-distance: 16px;
+  --enter-blur: 2px;
+
+  --cursor-ink: #6fc0e4;
+  --cursor-size: 30px;
+  --cursor-dot: 4px;
+  --cursor-blend: screen;
+  --cursor-light: 0.07;
+
+  --hero-align: start;
+  --hero-measure: 40rem;
+}

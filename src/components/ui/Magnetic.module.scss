@@ -1,0 +1,19 @@
+@use "abstracts" as *;
+
+.magnet {
+  display: inline-flex;
+  translate: var(--magnet-x, 0) var(--magnet-y, 0);
+
+  transition: translate var(--dur-slow) var(--ease-spring);
+
+  @include below("lg") {
+    translate: none;
+  }
+}
+
+@include reduced-motion {
+  .magnet {
+    translate: none;
+    transition: none;
+  }
+}

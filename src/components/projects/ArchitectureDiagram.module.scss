@@ -1,0 +1,80 @@
+@use "abstracts" as *;
+
+.figure {
+  margin: var(--space-7) 0;
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-media);
+  background: var(--color-surface);
+  box-shadow: var(--highlight-top);
+
+  overflow-x: auto;
+}
+
+.svg {
+  width: 100%;
+  min-width: 34rem;
+  height: auto;
+}
+
+.box rect {
+  fill: var(--color-surface-2);
+  stroke: var(--color-border-strong);
+  stroke-width: 1;
+}
+
+.boxAccent rect {
+  fill: var(--color-accent-soft);
+  stroke: var(--color-border-accent);
+  stroke-width: 1;
+}
+
+.slab {
+  fill: var(--color-surface-2);
+  stroke: var(--color-border-strong);
+  stroke-width: 1;
+}
+
+.boxTitle,
+.slabLabel {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  fill: var(--color-text);
+}
+
+.boxNote,
+.slabNote {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--color-text-muted);
+}
+
+.caption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--color-text-muted);
+}
+
+.foreignNote {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.35;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.arrow,
+.arrowDashed {
+  stroke: var(--color-border-strong);
+  stroke-width: 1.2;
+  fill: none;
+}
+
+.arrowDashed {
+  stroke-dasharray: 4 4;
+}
+
+.arrowHead {
+  fill: var(--color-border-strong);
+}

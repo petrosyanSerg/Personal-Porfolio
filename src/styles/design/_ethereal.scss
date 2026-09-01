@@ -1,0 +1,126 @@
+[data-design="ethereal"] {
+  color-scheme: light;
+
+  --color-bg: #f7f5fb;
+  --color-bg-elevated: #fdfcff;
+  --color-surface: rgb(255 255 255 / 62%);
+  --color-surface-2: rgb(255 255 255 / 78%);
+  --color-surface-3: #efebf8;
+
+  --color-border: rgb(70 58 104 / 10%);
+  --color-border-strong: rgb(70 58 104 / 20%);
+  --color-border-accent: rgb(124 95 196 / 30%);
+
+  --color-text: #2e2a3a;
+  --color-text-secondary: #514c63;
+  --color-text-muted: #6f6987;
+  --color-text-faint: #a49dbb;
+
+  --color-accent: #7c5fc4;
+  --color-accent-hover: #6a4cb5;
+  --color-accent-press: #593c9e;
+  --color-accent-strong: #6a4cb5;
+  --color-accent-strong-hover: #593c9e;
+  --color-accent-soft: rgb(124 95 196 / 9%);
+  --color-accent-text: #63459f;
+
+  --color-teal: #4b9bb0;
+  --color-teal-soft: rgb(75 155 176 / 10%);
+  --color-teal-text: #3a7c8e;
+
+  --gradient-hero:
+    radial-gradient(
+      80% 60% at 22% 8%,
+      rgb(185 167 224 / 34%) 0%,
+      rgb(247 245 251 / 0%) 62%
+    ),
+    radial-gradient(
+      70% 55% at 82% 22%,
+      rgb(167 205 224 / 30%) 0%,
+      rgb(247 245 251 / 0%) 60%
+    ),
+    radial-gradient(
+      90% 70% at 50% 100%,
+      rgb(240 214 226 / 34%) 0%,
+      rgb(247 245 251 / 0%) 66%
+    );
+  --gradient-text: linear-gradient(180deg, #2e2a3a 0%, #6a5f8c 100%);
+  --gradient-accent: linear-gradient(120deg, #b9a7e0 0%, #a7cde0 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 70%) 0%,
+    rgb(255 255 255 / 20%) 100%
+  );
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    rgb(185 167 224 / 60%),
+    transparent
+  );
+
+  --shadow-sm: 0 1px 2px rgb(70 58 104 / 4%);
+  --shadow-md: 0 6px 24px rgb(70 58 104 / 6%);
+  --shadow-lg: 0 18px 60px rgb(70 58 104 / 8%);
+  --shadow-xl: 0 32px 100px rgb(70 58 104 / 9%);
+  --highlight-top: inset 0 1px 0 rgb(255 255 255 / 90%);
+  --glass-bg: rgb(255 255 255 / 58%);
+  --glass-border: rgb(255 255 255 / 80%);
+
+  --font-display:
+    "Iowan Old Style", "Palatino Linotype", palatino, georgia, "Times New Roman", serif;
+  --font-heading: var(--font-display);
+  --font-eyebrow: var(--font-sans);
+
+  --fw-display: 300;
+  --fw-heading: 400;
+  --style-display: italic;
+  --ls-display: -0.005em;
+  --ls-eyebrow: 0.32em;
+  --optical-scale: 1.05;
+  --lh-tight: 1.14;
+  --lh-normal: 1.72;
+  --lh-relaxed: 1.85;
+
+  --density: 1.4;
+  --gutter: clamp(1.5rem, 0.9rem + 3vw, 3.5rem);
+  --container-lg: 68rem;
+  --measure: 56ch;
+
+  --radius-card: 26px;
+  --radius-control: var(--radius-full);
+  --radius-media: 26px;
+  --radius-tag: var(--radius-full);
+
+  --card-bg: rgb(255 255 255 / 55%);
+  --card-border-color: rgb(255 255 255 / 90%);
+  --card-shadow: var(--highlight-top), 0 12px 40px rgb(70 58 104 / 6%);
+  --card-hover-shadow: 0 22px 70px rgb(70 58 104 / 10%);
+  --card-hover-border: rgb(185 167 224 / 60%);
+  --card-hover-lift: -3px;
+
+  --control-bg: rgb(255 255 255 / 70%);
+  --control-fg: #453a6a;
+  --control-border: rgb(124 95 196 / 26%);
+
+  --rule-color: rgb(70 58 104 / 10%);
+
+  --decor-grain: 0.012;
+  --ornament-opacity: 0;
+  --motif: "\223C";
+
+  --motion-scale: 1.4;
+  --ease-signature: cubic-bezier(0.19, 1, 0.22, 1);
+  --dur-signature: var(--dur-reveal);
+  --enter-distance: 8px;
+  --enter-blur: 10px;
+
+  --cursor-ink: #7c5fc4;
+  --cursor-size: 44px;
+  --cursor-dot: 3px;
+  --cursor-light: 0.05;
+
+  --hero-align: center;
+  --hero-text-align: center;
+  --hero-measure: 44rem;
+  --hero-min-h: min(96svh, 64rem);
+}

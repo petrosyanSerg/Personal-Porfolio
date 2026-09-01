@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+:focus-visible {
+  @include focus-ring;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  z-index: var(--z-toast);
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-semibold);
+  transform: translateY(-200%);
+  transition: transform var(--dur-fast) var(--ease-out);
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+[aria-live] {
+  &:empty {
+    display: none;
+  }
+}
+
+@media (forced-colors: active) {
+  * {
+    forced-color-adjust: auto;
+  }
+}

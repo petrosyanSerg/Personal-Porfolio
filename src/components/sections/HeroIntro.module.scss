@@ -1,0 +1,79 @@
+@use "abstracts" as *;
+
+.intro {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg);
+  animation: scrim-lift 1100ms var(--ease-out) forwards;
+}
+
+.boot {
+  @include mono;
+
+  position: absolute;
+
+  inset-block-start: clamp(6rem, 22vh, 12rem);
+  inset-inline-start: var(--gutter);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-accent-text);
+
+  @include up("lg") {
+    inset-inline-start: max(var(--gutter), calc((100vw - var(--container-lg)) / 2));
+  }
+}
+
+.line {
+  position: absolute;
+  inset-inline-start: 0;
+  white-space: nowrap;
+  opacity: 0;
+
+  &[data-line="1"] {
+    animation: boot-line 620ms var(--ease-out) 60ms forwards;
+  }
+
+  &[data-line="2"] {
+    animation: boot-line 620ms var(--ease-out) 520ms forwards;
+  }
+}
+
+@keyframes boot-line {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  28%,
+  62% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+  }
+}
+
+@keyframes scrim-lift {
+  0% {
+    opacity: 1;
+  }
+
+  22% {
+    opacity: 0.96;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

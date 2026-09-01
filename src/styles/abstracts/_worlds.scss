@@ -1,0 +1,269 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+
+$compositions: (
+  "axial": (
+    "neoclassical",
+    "filigree",
+    "acanthus",
+    "japandi",
+    "art-deco",
+    "art-nouveau",
+    "mid-century",
+    "wabi-sabi",
+  ),
+  "theatrical": (
+    "baroque",
+    "victorian",
+    "mystical-western",
+    "tenebrism",
+    "gothic",
+    "steampunk",
+    "surrealism",
+    "dark-academia",
+    "wild-west",
+  ),
+  "atmospheric": (
+    "aurora",
+    "ethereal",
+    "cottagecore",
+    "synthwave",
+    "pointillism",
+    "frutiger-aero",
+    "nautical",
+    "glassmorphism",
+  ),
+  "character": (
+    "anthropomorphic",
+    "kawaii",
+  ),
+  "terminal": (
+    "pixel-art",
+    "cybercore",
+    "utilitarian",
+  ),
+  "notebook": ("conceptual-sketch"),
+  "editorial": (
+    "luxury-typography",
+    "coquette",
+    "light-academia",
+  ),
+  "poster": (
+    "memphis",
+    "y2k",
+    "brutalism",
+    "pop-art",
+    "graffiti",
+    "neo-brutalism",
+  ),
+  "collage": (
+    "bohemian",
+    "shabby-chic",
+    "kitsch",
+    "vaporwave",
+    "mixed-media",
+    "scrapbook",
+  ),
+  "modular": (
+    "bauhaus",
+    "bento-box",
+    "rebus",
+    "modular-typography",
+  ),
+);
+$voices: (
+  "institutional": (
+    "neoclassical",
+    "baroque",
+    "filigree",
+    "acanthus",
+    "victorian",
+    "art-deco",
+    "gothic",
+    "dark-academia",
+    "light-academia",
+  ),
+  "editorial": (
+    "luxury-typography",
+    "shabby-chic",
+    "vaporwave",
+    "coquette",
+    "mid-century",
+    "glassmorphism",
+  ),
+  "terminal": (
+    "pixel-art",
+    "y2k",
+    "cybercore",
+  ),
+  "flow": (
+    "conceptual-sketch",
+    "bauhaus",
+    "rebus",
+    "modular-typography",
+  ),
+  "manifesto": (
+    "brutalism",
+    "synthwave",
+    "pop-art",
+    "graffiti",
+    "wild-west",
+    "neo-brutalism",
+  ),
+  "atmospheric": (
+    "aurora",
+    "ethereal",
+    "japandi",
+    "bohemian",
+    "cottagecore",
+    "art-nouveau",
+    "mystical-western",
+    "tenebrism",
+    "pointillism",
+    "mixed-media",
+    "surrealism",
+    "wabi-sabi",
+    "nautical",
+  ),
+  "spec": (
+    "bento-box",
+    "steampunk",
+    "utilitarian",
+  ),
+  "playful": (
+    "anthropomorphic",
+    "memphis",
+    "kitsch",
+    "kawaii",
+    "scrapbook",
+    "frutiger-aero",
+  ),
+);
+$capabilities: (
+  "pointer-field": (
+    "neoclassical",
+    "baroque",
+    "aurora",
+    "ethereal",
+    "acanthus",
+    "anthropomorphic",
+    "luxury-typography",
+    "japandi",
+    "art-nouveau",
+    "tenebrism",
+    "pointillism",
+    "wabi-sabi",
+    "nautical",
+    "glassmorphism",
+  ),
+  "ornament": (
+    "baroque",
+    "filigree",
+    "acanthus",
+    "conceptual-sketch",
+    "victorian",
+    "art-deco",
+    "art-nouveau",
+    "gothic",
+    "steampunk",
+    "coquette",
+    "dark-academia",
+  ),
+  "characters": (
+    "anthropomorphic",
+    "kawaii",
+  ),
+  "system-readout": (
+    "conceptual-sketch",
+    "cybercore",
+    "bento-box",
+    "utilitarian",
+  ),
+);
+
+@function -world-selector($ids) {
+  $parts: ();
+
+  @each $id in $ids {
+    $parts: list.append($parts, ':global([data-design="#{$id}"]) &', $separator: comma);
+  }
+
+  @return $parts;
+}
+
+@mixin -require-parent($name) {
+  @if not & {
+    @error "`#{$name}` must be used inside a selector — at the root of a file it emits a literal `&` and silently matches nothing. Nest it: `.hero { @include #{$name}(…) { … } }`.";
+  }
+}
+
+@mixin composition($name) {
+  @include -require-parent("composition");
+
+  $ids: map.get($compositions, $name);
+
+  @if not $ids {
+    @error "Unknown hero composition `#{$name}`. Known: #{map.keys($compositions)}.";
+  }
+
+  #{-world-selector($ids)} {
+    @content;
+  }
+}
+
+@mixin voice($name) {
+  @include -require-parent("voice");
+
+  $ids: map.get($voices, $name);
+
+  @if not $ids {
+    @error "Unknown hero voice `#{$name}`. Known: #{map.keys($voices)}.";
+  }
+
+  #{-world-selector($ids)} {
+    @content;
+  }
+}
+
+@mixin capability($name) {
+  @include -require-parent("capability");
+
+  $ids: map.get($capabilities, $name);
+
+  @if not $ids {
+    @error "Unknown capability `#{$name}`. Known: #{map.keys($capabilities)}.";
+  }
+
+  #{-world-selector($ids)} {
+    @content;
+  }
+}
+
+@mixin without-capability($name) {
+  @include -require-parent("without-capability");
+
+  $ids: map.get($capabilities, $name);
+
+  @if not $ids {
+    @error "Unknown capability `#{$name}`.";
+  }
+
+  $selector: ":global(html";
+
+  @each $id in $ids {
+    $selector: $selector + ':not([data-design="#{$id}"])';
+  }
+
+  #{$selector + ") &"} {
+    @content;
+  }
+}
+
+@mixin world($ids...) {
+  @include -require-parent("world");
+
+  #{-world-selector($ids)} {
+    @content;
+  }
+}

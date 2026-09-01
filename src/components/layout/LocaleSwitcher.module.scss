@@ -1,0 +1,39 @@
+@use "abstracts" as *;
+
+.switcher {
+  display: flex;
+}
+
+.list {
+  @include glass;
+
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--radius-md);
+}
+
+.option {
+  @include mono;
+
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding-inline: var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+
+  &:hover {
+    color: var(--color-text);
+    background: var(--color-surface-2);
+  }
+
+  &[data-active] {
+    color: var(--color-accent-text);
+    background: var(--color-accent-soft);
+  }
+}

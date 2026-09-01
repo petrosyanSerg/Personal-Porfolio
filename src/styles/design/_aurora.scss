@@ -1,0 +1,108 @@
+[data-design="aurora"] {
+  color-scheme: dark;
+
+  --color-bg: #050914;
+  --color-bg-elevated: #070d1c;
+  --color-surface: #0a1226;
+  --color-surface-2: #101a33;
+  --color-surface-3: #182444;
+
+  --color-border: #1b2748;
+  --color-border-strong: #2c3d69;
+  --color-border-accent: rgb(87 242 208 / 34%);
+
+  --color-text: #e8f4ff;
+  --color-text-secondary: #b3c6e0;
+  --color-text-muted: #8397b5;
+  --color-text-faint: #5a6b88;
+
+  --color-accent: #6aa9ff;
+  --color-accent-hover: #8fc0ff;
+  --color-accent-press: #4d8ce8;
+  --color-accent-strong: #3f63e0;
+  --color-accent-strong-hover: #3554cc;
+  --color-accent-soft: rgb(106 169 255 / 12%);
+  --color-accent-text: #9cc6ff;
+
+  --color-teal: #57f2d0;
+  --color-teal-soft: rgb(87 242 208 / 12%);
+  --color-teal-text: #6ef5d8;
+
+  --gradient-hero:
+    radial-gradient(
+      120% 80% at 70% -10%,
+      rgb(106 169 255 / 20%) 0%,
+      rgb(5 9 20 / 0%) 60%
+    ),
+    radial-gradient(100% 60% at 15% 105%, rgb(87 242 208 / 12%) 0%, rgb(5 9 20 / 0%) 66%);
+  --gradient-text: linear-gradient(160deg, #fff 0%, #a8d8ff 55%, #57f2d0 100%);
+  --gradient-accent: linear-gradient(120deg, #6aa9ff 0%, #57f2d0 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(140 200 255 / 6%) 0%,
+    rgb(255 255 255 / 0%) 100%
+  );
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    rgb(87 242 208 / 60%),
+    rgb(106 169 255 / 60%),
+    transparent
+  );
+
+  --shadow-lg: 0 12px 44px rgb(0 0 0 / 58%);
+  --shadow-xl: 0 28px 88px rgb(0 0 0 / 66%);
+  --shadow-glow: 0 0 0 1px var(--color-border-accent), 0 10px 44px rgb(87 242 208 / 16%);
+  --highlight-top: inset 0 1px 0 rgb(160 220 255 / 10%);
+  --glass-bg: rgb(10 18 38 / 62%);
+  --glass-border: rgb(160 220 255 / 12%);
+
+  --font-display: var(--font-sans);
+  --ls-display: -0.03em;
+  --ls-eyebrow: 0.18em;
+  --optical-scale: 1;
+
+  --density: 1;
+  --measure: 66ch;
+
+  --radius-card: 20px;
+  --radius-control: var(--radius-full);
+  --radius-media: 20px;
+
+  --card-bg: linear-gradient(180deg, rgb(20 34 66 / 66%) 0%, rgb(10 18 38 / 66%) 100%);
+  --card-border-color: rgb(160 220 255 / 12%);
+  --card-shadow: var(--highlight-top), 0 8px 32px rgb(0 0 0 / 40%);
+  --card-hover-shadow:
+    0 0 0 1px rgb(87 242 208 / 40%), 0 20px 60px rgb(0 0 0 / 55%),
+    0 0 48px rgb(87 242 208 / 14%);
+  --card-hover-border: rgb(87 242 208 / 55%);
+  --card-hover-lift: -4px;
+
+  --control-bg: var(--gradient-accent);
+  --control-fg: #041018;
+  --control-border: transparent;
+  --control-shadow: 0 6px 24px rgb(87 242 208 / 22%);
+
+  --rule-color: rgb(160 220 255 / 14%);
+
+  --decor-aurora: 1;
+  --decor-grain: 0.03;
+  --decor-vignette: 0.45;
+  --ornament-opacity: 0;
+  --motif: "\2022";
+
+  --motion-scale: 1;
+  --ease-signature: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-signature: var(--dur-slower);
+  --enter-distance: 18px;
+  --enter-blur: 4px;
+
+  --cursor-ink: #57f2d0;
+  --cursor-size: 40px;
+  --cursor-dot: 5px;
+  --cursor-blend: screen;
+  --cursor-light: 0.12;
+
+  --hero-align: start;
+  --hero-measure: 42rem;
+}

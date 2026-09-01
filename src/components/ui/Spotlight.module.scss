@@ -1,0 +1,35 @@
+@use "abstracts" as *;
+
+.spotlight {
+  position: relative;
+  border-radius: var(--radius-card);
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    background: radial-gradient(
+      18rem 18rem at var(--spot-x, 50%) var(--spot-y, 0%),
+      rgb(from var(--color-accent) r g b / 42%),
+      transparent 62%
+    );
+    opacity: 0;
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+
+  @include pointer-fine {
+    &:hover::before,
+    &:focus-within::before {
+      opacity: 1;
+    }
+  }
+}
+
+@include reduced-motion {
+  .spotlight::before {
+    transition: none;
+  }
+}

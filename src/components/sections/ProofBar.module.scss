@@ -1,0 +1,44 @@
+@use "abstracts" as *;
+
+.proof {
+  padding-block: var(--space-8);
+  border-block: 1px solid var(--color-border);
+  background: var(--gradient-surface);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-5);
+
+  @include up("md") {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.value {
+  @include mono(var(--fs-display-2));
+  @include text-gradient;
+
+  font-weight: var(--fw-medium);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.label {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  text-wrap: balance;
+}
+
+.caption {
+  margin-top: var(--space-6);
+  font-size: var(--fs-caption);
+  color: var(--color-text-muted);
+}

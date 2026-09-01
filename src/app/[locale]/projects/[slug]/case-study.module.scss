@@ -1,0 +1,155 @@
+@use "abstracts" as *;
+
+.page {
+  padding-block: var(--space-10) var(--section-y);
+}
+
+.breadcrumb {
+  @include mono;
+
+  margin-bottom: var(--space-6);
+
+  a {
+    color: var(--color-accent-text);
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+    }
+  }
+}
+
+.header {
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.meta {
+  @include mono;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.company {
+  color: var(--color-accent-text);
+}
+
+.title {
+  @include display-type(var(--fs-display-2));
+
+  margin-bottom: var(--space-5);
+}
+
+.lead {
+  max-width: 62ch;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+  text-wrap: pretty;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+}
+
+.links {
+  @include mono;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+
+  a {
+    color: var(--color-accent-text);
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+    }
+  }
+}
+
+.note {
+  color: var(--color-text-muted);
+}
+
+.section {
+  margin-top: var(--space-8);
+}
+
+.sectionTitle {
+  @include eyebrow;
+
+  margin-bottom: var(--space-4);
+}
+
+.body,
+.lessons {
+  max-width: 68ch;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+  text-wrap: pretty;
+}
+
+.lessons {
+  padding-left: var(--space-5);
+  border-left: 2px solid var(--color-border-accent);
+  color: var(--color-text);
+}
+
+.numbered {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 72ch;
+
+  li {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: var(--space-3);
+    color: var(--color-text-secondary);
+    line-height: var(--lh-relaxed);
+    text-wrap: pretty;
+  }
+}
+
+.number {
+  @include mono;
+
+  color: var(--color-accent-text);
+  padding-top: 0.15em;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 72ch;
+
+  li {
+    position: relative;
+    padding-left: var(--space-5);
+    color: var(--color-text-secondary);
+    line-height: var(--lh-relaxed);
+    text-wrap: pretty;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.62em;
+      left: 0;
+      width: 8px;
+      height: 1px;
+      background: var(--color-teal);
+    }
+  }
+}

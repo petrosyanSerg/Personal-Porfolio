@@ -1,0 +1,560 @@
+{
+  "meta": {
+    "home": {
+      "title": "Սերգեյ Պետրոսյան — Software Engineer, Enterprise Frontend Architecture",
+      "description": "Software Engineer Երևանում՝ ստեղծելով enterprise frontend-ներ կարգավորվող ֆինանսական ծրագրային համակարգերի համար։ React 19, TypeScript, Feature-Sliced Design, AI-native development։"
+    },
+    "projects": {
+      "title": "Նախագծեր",
+      "description": "Enterprise fintech frontend ճարտարապետություն, AI-native engineering աշխատանքային հոսքեր և հանրային React ու TypeScript նախագծեր։"
+    },
+    "resume": {
+      "title": "Ռեզյումե",
+      "description": "Փորձ, տեխնիկական հմտություններ և կրթություն։ Հասանելի է PDF ձևաչափով ներբեռնման համար։"
+    },
+    "notFound": {
+      "title": "Էջը չի գտնվել",
+      "description": "Այս էջը գոյություն չունի։"
+    }
+  },
+  "nav": {
+    "home": "Գլխավոր",
+    "about": "Իմ մասին",
+    "experience": "Փորձ",
+    "architecture": "Ճարտարապետություն",
+    "ai": "AI-Native",
+    "stack": "Տեխնոլոգիաներ",
+    "projects": "Նախագծեր",
+    "contact": "Կապ",
+    "resume": "Ռեզյումե"
+  },
+  "design": {
+    "lab": "Դիզայնի լաբորատորիա",
+    "open": "Բացել դիզայնի լաբորատորիան",
+    "close": "Փակել դիզայնի լաբորատորիան",
+    "lead": "Մեկ պորտֆոլիո, հիսուն գեղարվեստական ուղղություն, յուրաքանչյուրն իր հերոսով։ Բովանդակությունը նույնն է մնում — մնացած ամեն ինչը՝ ոչ։",
+    "hint": "Ընտրությունը պահվում է այս սարքում։",
+    "active": "Ակտիվ",
+    "apply": "Կիրառել",
+    "specimen": "Տառատեսակի նմուշ",
+    "portraitAlt": "Կայքի գեղարվեստական մեկնաբանությունը {name} դիզայն-համակարգում",
+    "systems": {
+      "neoclassical": "Քար, համաչափություն և զուսպ բրոնզ։ Պորտֆոլիոն որպես դասական հաստատություն։",
+      "baroque": "Խոր ստվեր, մեկ սահող լույս և ոսկեզօծում եզրերին։ Կառուցված ավելցուկ։",
+      "aurora": "Սառը լույսի ժապավեններ գրեթե սև ֆոնի վրա — միակ աշխարհը, որտեղ մնում է եռաչափ դիագրամը։",
+      "ethereal": "Պաստելային օդ, բարակ սերիֆներ և կայքի ամենադանդաղ շարժումը։ Գրեթե ոչինչ, բայց ճշգրիտ տեղադրված։",
+      "filigree": "Նուրբ մետաղագործություն մուգ ֆոնի վրա։ Ամեն ինչ գիծ է, ոչինչ՝ լցվածք։",
+      "acanthus": "Կորնթյան տերևը որպես թվային ինքնություն։ Ուղիղ կառուցվածք, բուսական կորեր։",
+      "anthropomorphic": "Կլորացված, ուրվագծված և կենդանի։ Քարտեր, որոնք հետևում են կուրսորին, և կոճակներ, որոնք մարմին ունեն։",
+      "pixel-art": "Տասնվեցբիթանոց աշխատակայան չորս պիքսելի ցանցի վրա։ Աստիճանավոր շարժում, կոշտ եզրեր, լյումինոֆորային կանաչ։",
+      "conceptual-sketch": "Թուղթ, մատիտի գծեր և կապույտ գրչով լուսանցքային նշումներ։ Մտածելակերպը, ոչ միայն արդյունքը։",
+      "luxury-typography": "Սև սպիտակի վրա և ուրիշ ոչինչ։ Տպագրությունն ինքն է ամբողջ դիզայնը։",
+      "japandi": "Թուղթ, կավ և մեկ մեղմ մայրի։ Կայքի ամենաշատ բացատը՝ որպես նյութ, ոչ թե ավելցուկ։",
+      "memphis": "Սոթսաս, 1981․ ձևեր առանց ֆունկցիոնալ արդարացման, հարթ ու չխառնված գույն՝ բոլորովին սթափ տեքստի շուրջ։",
+      "bohemian": "Սենյակ՝ չափազանց շատ գործվածքով, մթնշաղի լույսի տակ։ Ոչ մի կոշտ եզր, փոխարենը՝ ծոպեր։",
+      "shabby-chic": "Կավճաներկ՝ անկյուններում մաշված։ Յուրաքանչյուր վահանակ ներկված շրջանակ է, որի վերին շերտը պոկվել է։",
+      "cottagecore": "Հուլիսյան ուշ կեսօր՝ առանց ասֆալտի։ Ցորեն, եղեսպակ և թանթրվենի՝ հավաքված աշխատավոր անտիկվայով։",
+      "victorian": "Աշխատասենյակ գազի լույսի տակ․ մուգ կարմիր, ընկուզենի և մգացած արույր՝ զբաղեցված ամեն մակերես։",
+      "art-deco": "Փարիզ, 1925։ Միայն կարկին և անկյունաչափ․ ամեն կոր՝ աղեղ, ամեն զարդ՝ մեկ մոտիվ՝ նվազող չափերով։",
+      "art-nouveau": "Կառուցվածք՝ ցողունից բխած։ Ոչ մի ուղիղ գիծ, ոչ մի կրկնվող մոդուլ, ոչ մի համաչափություն, որ բույսը չստեղծեր։",
+      "mystical-western": "Անապատը գիշերվա երեքին․ ինդիգո, ոսկոր և ժանգ, իսկ ողջ լույսը՝ լուսինը և մեկ ցածր կրակ։",
+      "kitsch": "Կայքի բոլոր դեկորատիվ շերտերը՝ միանգամից միացված, և հիմնական տեքստը դեռ տասներկու մեկի հակադրությամբ։",
+      "y2k": "Քրոմ և մատ պլաստիկ, 1999։ Միակ աշխարհը իսկական թեքվածքով․ լույս վերևի եզրին, ստվեր՝ ներքևի։",
+      "bauhaus": "Երեք հիմնական գույն, երեք ձև, մեկ ցանց։ Ոչ գրադիենտ, ոչ մշուշ, ոչ մի կորություն, բացի իսկական շրջանից։",
+      "brutalism": "Béton brut․ բետոն՝ թողնված այնպես, ինչպես կաղապարն է ստեղծել, և տառատեսակ՝ պատի մեջ ձուլված ցուցանակի չափի։",
+      "cybercore": "Ինտերֆեյս, որը ցույց է տալիս իր չափիչ գործիքակազմը։ Բարակ ցիան, մոնոտառատեսակ և ոչ մի նեոնային բիծ։",
+      "synthwave": "Լույսը գալիս է միայն ներքևից՝ ցանցից, և հետևից՝ արևից, ուստի բոլոր փայլերը ներքևի եզրերին են։",
+      "vaporwave": "Նույն տասնամյակը՝ մաշված ժապավենի վրա։ Ոչինչ ճշգրիտ հավասարեցված չէ, իսկ եզրը՝ ոչ թե փայլ, այլ գունային շեղում։",
+      "pop-art": "Լիխտենշտայն, ոչ թե Ուորհոլ․ ուրվագիծ, կետային ռաստր՝ ամեն երանգի փոխարեն, և չորս տպագրական թանաք։",
+      "bento-box": "Մեկ կորություն, մեկ եզրագիծ, մեկ շեշտ։ Հիերարխիան կրում է բջջի չափը, ոչ թե զարդարանքը։",
+      "graffiti": "Պատ, ոչ թե տառատեսակ։ Բետոն, փակցված վահանակներ և այն միակ մեղմը, ինչ կարող է բալոնը, բայց ոչ վրձինը։",
+      "tenebrism": "Մեկ աղբյուր՝ մոտ և կոշտ, բարձր՝ մի կողմից։ Այն ամենը, ուր չի հասնում, ընկնում է սևի, ոչ թե մոխրագույնի մեջ։",
+      "gothic": "Ճարտարապետությունը, ոչ թե ենթամշակույթը։ Ամեն աղեղ հանդիպում է գագաթին, և էջը կայքի ամենաբարձրն է։",
+      "pointillism": "Ոչ մի գույն չի խառնվում։ Երկու մաքուր երանգ կողք կողքի երրորդն են դառնում միայն աչքում և ոչ մի այլ տեղ։",
+      "mixed-media": "Կոմբայն․ լուսանկար, պատռված թերթ, մատիտ և վրձին՝ մեկ մակերեսին, և ոչինչ միմյանց հետ ներդաշնակ չէ։",
+      "steampunk": "Արհեստանոցը՝ հյուրասենյակի հետևում։ Ամեն ինչ ամրացված է, ամեն ինչ ցուցմունք է տալիս, իսկ զարդը կպտտվեր, եթե հրեիր։",
+      "kawaii": "Սրամիտն այստեղ համամասնությունների համակարգ է, ոչ թե կպչուն պիտակների թերթ․ երկու երանգ, մեկ եզրագծի հաստություն, յասամանագույն ստվերներ։",
+      "coquette": "Հագցված, ոչ թե մաշված։ Բարակ երիզ՝ կարված ամեն եզրից ներս, և կայքի միակ շեղատառ ցուցադրական տառատեսակը։",
+      "surrealism": "Մագրիտ, ոչ թե Դալի․ պատկերը մնում է սթափ, սխալ է միայն տրամաբանությունը։ Ստվերներն ընկնում են այնտեղ, ուր ոչ մի լույս չէր գցի։",
+      "utilitarian": "Չափիչ սարք։ Ամեն նշան կա, որովհետև օպերատորին պետք է՝ պիտակներ, միավորներ, թույլատրելի շեղումներ, լամպ։",
+      "mid-century": "1955 թվականը և այն համոզմունքը, որ դիզայնը հանրային բարիք է։ Երկարավուն հաբ՝ խիստ ուղղանկյուն ցանցի վրա։",
+      "scrapbook": "Ինչ-որ մեկի խոհանոցի սեղանը․ հաստ ստվարաթուղթ, լուսանկարի անկյուններ, թղթե ժապավեն և գնդիկավոր գրիչի մակագրություն։",
+      "frutiger-aero": "2007 թվական․ ջուր, ապակի և երկինք, և այն հավատը, որ տեխնոլոգիան պատրաստվում է դառնալ մաքուր ու բարեկամական։",
+      "dark-academia": "Գիշերային գրադարան՝ մեկ վառված լամպով, և կայքի ամենաերկար տողը։ Այստեղ երազանքը կարդալն է։",
+      "light-academia": "Նույն գրադարանը՝ առավոտյան տասնմեկին։ Նույն կմախքը, հակառակ լույսը և ոչ մի վինյետ։",
+      "wabi-sabi": "Անհամաչափությունը՝ համակարգված կիրառված․ չորս տարբեր անկյուն ամեն կորության մեջ և ոչ մի կլոր թիվ չափերում։",
+      "wild-west": "Կեսօր՝ հետախուզման ազդագրի վրա․ ծանր բրգաձև տառատեսակ, կրկնակի գիծ ամեն ինչի շուրջ և թուղթ՝ մի եղանակ պատուհանին մնացած։",
+      "nautical": "Քարտեզի սեղան՝ ջրագծից ներքև։ Մեկ հորիզոնականն ավելի կարևոր է մյուս բոլոր գծերից, և շարժումը դանդաղ օրորում է նրա շուրջ։",
+      "rebus": "Ինքնակենսագրություն՝ գրված նկարներով։ Հանելուկը դասավորության մեջ է, ոչ թե հյուսվածքի, և պատասխանը միշտ կարմիր է։",
+      "glassmorphism": "Ուղիղ մեկ շերտ ապակի, և տեքստը երբեք չի դրվում դրա վրա առանց անթափանց հենքի։ Խորություն, որի համար տառը չի վճարում։",
+      "modular-typography": "Տառերը՝ որպես ինժեներիա։ Նշանը չի գծվում, այն հավաքվում է ֆիքսված մոդուլներից՝ ֆիքսված քայլով։",
+      "neo-brutalism": "Վայրֆրեյմ, որը թողարկվեց։ Հագեցած հարթ գույն, սև ուրվագիծ ամեն ինչի վրա և ստվեր, որը երբեք չի մշուշվում։"
+    },
+    "families": {
+      "classical": "Դասական",
+      "ornamental": "Զարդային",
+      "atmospheric": "Մթնոլորտային",
+      "modernist": "Մոդեռնիստական",
+      "retro": "Ռետրո",
+      "digital": "Թվային",
+      "expressive": "Արտահայտիչ",
+      "domestic": "Տնային"
+    },
+    "filter": "Զտել աշխարհները",
+    "filterPlaceholder": "Անուն, ընտանիք կամ մոտիվ…",
+    "results": "{count} 50-ից",
+    "empty": "Ոչ մի աշխարհ չի համապատասխանում։",
+    "scene": "Եռաչափ հերոս"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer · Երևան, Հայաստան",
+    "boot": {
+      "init": "Ճարտարապետության գործարկում",
+      "online": "Համակարգը գործում է"
+    },
+    "headline": "Ես ստեղծում եմ enterprise frontend-ներ, որոնք պահպանում են իրենց ճարտարապետական ամբողջականությունը։",
+    "sub": "React և TypeScript ճարտարապետություն կարգավորվող ֆինանսական ծրագրային համակարգերի համար, ինչպես նաև AI-native աշխատանքային հոսքեր, որոնք պահպանում են կոդի որակն ու ճարտարապետական կարգապահությունը։",
+    "ctaPrimary": "Տեսնել ճարտարապետությունը",
+    "ctaSecondary": "Կապ հաստատել",
+    "modules": "մոդուլ",
+    "systemMapped": "Բոլոր վեցը՝ քարտեզագրված",
+    "voices": {
+      "terminal": {
+        "status": "ՀԱՄԱԿԱՐԳՆ ԱՌՑԱՆՑ Է"
+      },
+      "flow": {
+        "a": "Գաղափար",
+        "b": "Համակարգ",
+        "c": "Արդյունք"
+      },
+      "spec": {
+        "role": "Դեր",
+        "stack": "Փաթեթ",
+        "base": "Բազա",
+        "status": "Կարգավիճակ",
+        "statusValue": "Բաց է առաջարկների համար"
+      },
+      "playful": {
+        "greeting": "Բարև, ես"
+      },
+      "manifesto": {
+        "claim": "Frontend, որը պահում է իր ձևը"
+      }
+    }
+  },
+  "metrics": {
+    "modules": "բիզնես մոդուլ",
+    "endpoints": "API endpoint",
+    "services": "դոմենային ծառայություն",
+    "years": "տարի ինժեներական փորձ",
+    "loc": "frontend կոդի տող",
+    "caption": "Enterprise լիզինգի և վարկավորման հարթակ՝ ստեղծված զրոյից։"
+  },
+  "about": {
+    "eyebrow": "Իմ մասին",
+    "title": "Ծրագրային ապահովում, որը չի կարող իրեն թույլ տալ սխալվել։",
+    "body": [
+      "Ես Software Engineer եմ Երևանում։ Աշխատում եմ ֆինանսական ծրագրային ապահովման վրա՝ լիզինգի և վարկավորման համակարգերում, որտեղ authorization-ը, auditability-ն և correctness-ը պարզապես ֆունկցիաներ չեն․ դրանք հենց արտադրանքի հիմքն են։",
+      "Actual Solutions-ում ես պատասխանատու եմ MK Kredit-ի frontend ճարտարապետության համար։ Այն դատարկ repository-ից վերածվեց մոտ հիսուն բիզնես մոդուլից բաղկացած համակարգի, որը ներառում է վարկային ամբողջ lifecycle-ը՝ հայտի վերլուծություն, վարկային պատմություն, գրավ, եկամուտներ և ծախսեր, cash flow, վարկային կոմիտեի հաստատում, եզրակացություններ և տրամադրում։ Ես նախագծել եմ դրա Feature-Sliced ճարտարապետությունը, type-safe authorization մոդելը, կենտրոնացված API և error-handling շերտերը, ինչպես նաև վերօգտագործվող form և table համակարգերը, որոնց վրա կառուցված է արտադրանքի մեծ մասը։",
+      "Ես նաև աշխատում եմ AI-native մոտեցմամբ՝ որպես մասնագիտական պրակտիկա, ոչ թե փորձարկում։ Հետաքրքիր խնդիրը մոդելին կոդ գեներացնել ստիպելը չէ։ Խնդիրն այն է, որ գեներացված կոդը արագությամբ հետևի ճարտարապետությանը, բիզնես կանոններին և engineering ստանդարտներին՝ առանց համակարգի հիմքը քայքայելու։",
+      "Մինչև engineering-ին անցնելը երկու տարի աշխատել եմ որպես graphic designer։ Դա մինչ օրս արտացոլվում է ինտերֆեյսների նկատմամբ իմ մոտեցման մեջ։"
+    ],
+    "photoPlaceholder": "ՁԵՐ_ԼՈՒՍԱՆԿԱՐԸ_ԱՅՍՏԵՂ"
+  },
+  "experience": {
+    "eyebrow": "Փորձ",
+    "title": "Չորս տարի փորձ, որից երեքը՝ կոմերցիոն։",
+    "present": "Ներկա",
+    "types": {
+      "full-time": "Լրիվ դրույք",
+      "internship": "Պրակտիկա",
+      "contract": "Պայմանագրային"
+    },
+    "modes": {
+      "onsite": "Գրասենյակային",
+      "hybrid": "Հիբրիդ",
+      "remote": "Հեռավար"
+    },
+    "duration": {
+      "years": "{count, plural, one {# տարի} other {# տարի}}",
+      "months": "{count, plural, one {# ամիս} other {# ամիս}}"
+    },
+    "actualsolutions": {
+      "role": "Software Engineer",
+      "summary": "MK Kredit-ի frontend ճարտարապետություն՝ enterprise լիզինգի և վարկերի կառավարման հարթակի համար։",
+      "highlights": [
+        "React 19 և TypeScript հավելվածը զրոյից կառուցել և զարգացրել եմ մինչև մոտ 50 բիզնես մոդուլ՝ ներառելով լիզինգի ամբողջ lifecycle-ը՝ հայտի վերլուծություն, վարկային պատմություն, գրավ, եկամուտներ և ծախսեր, cash flow, վարկային կոմիտեի հաստատում, եզրակացություններ և տրամադրում։",
+        "Կոդային բազան նախագծել եմ Feature-Sliced Design-ի հիման վրա՝ պարտադիր մոդուլային սահմաններով և ավտոմատացված CI quality gates-ով, որպեսզի domain-ի ընդլայնման ընթացքում հավելվածը մնա կառավարելի և հեշտ նավիգացվող։",
+        "Նախագծել եմ type-safe authorization, կենտրոնացված API շերտ և միասնական error-handling ճարտարապետություն, ինչպես նաև վերօգտագործվող form և data-table համակարգեր, որոնցից կազմված են բիզնես մոդուլների մեծ մասը։",
+        "Ինտեգրել եմ 36 դոմենային API ծառայություն՝ ավելի քան 190 endpoint-ով, JWT authentication-ով և token-ի ավտոմատ թարմացմամբ։",
+        "Իրականացրել եմ mobile-first responsive UI, PWA հնարավորություններ, multi-theme design system, user personalization և Armenian-first internationalization։",
+        "Կիրառել եմ AI-first և agentic development մոտեցումներ requirements-ի, architecture-ի, implementation-ի, refactoring-ի, documentation-ի և code review-ի ամբողջ lifecycle-ում՝ օգտագործելով Claude Code, մասնագիտացված agents, project-aware scaffolding և Figma, Jira ու Swagger ինտեգրացիաներ։",
+        "Ստեղծել եմ context engineering, spec-driven development և human-in-the-loop validation գործընթացներ, որպեսզի AI-ով գեներացված կոդը համապատասխանի նախագծի ճարտարապետությանը, բիզնես կանոններին և engineering ստանդարտներին, այլ ոչ թե պարզապես compile լինի։"
+      ]
+    },
+    "softconstruct": {
+      "role": "Software Engineer",
+      "summary": "Երկու ու կես տարի SpringBME հարթակում՝ feature մոդուլներ, performance, refactoring և documentation։",
+      "highlights": [
+        "Իրականացրել եմ նոր ֆունկցիոնալ մոդուլներ և UI բաղադրիչներ՝ scalability-ն և responsive behaviour-ը դիտարկելով որպես հիմնական պահանջներ։",
+        "Օպտիմիզացրել եմ պատկերներն ու frontend assets-ը՝ բարելավելով էջերի բեռնման արագությունը ամբողջ հարթակում։",
+        "Refactor եմ արել առկա կոդն ու styling-ը՝ բարձրացնելով readability-ն, maintainability-ն և տեսողական ամբողջականությունը։",
+        "Ստեղծել եմ մանրամասն user guide-եր, որոնք օգնել են վերջնական օգտատերերին և ներքին թիմերին օգտագործել նոր ֆունկցիաները։",
+        "Համագործակցել եմ cross-functional թիմերի հետ sprint planning-ի, code review-ի և architecture discussion-ների միջոցով։"
+      ]
+    },
+    "smartcode": {
+      "role": "Frontend Developer",
+      "summary": "Ինը ամիս՝ ուսուցումից դեպի իրական արտադրական աշխատանքի անցում։",
+      "highlights": [
+        "Կառուցել եմ user dashboard-ի filtering functionality և ներդրում ունեցել առկա հավելվածի React բաղադրիչների մշակման մեջ։",
+        "Refactor եմ արել API data-fetching մոդուլը՝ նվազեցնելով կրկնությունները և բարելավելով response handling-ը։",
+        "Աշխատել եմ թիմի Git workflow-ի, code review-ի և delivery-ի ստանդարտներով։"
+      ]
+    },
+    "edel": {
+      "role": "Graphic Designer",
+      "summary": "Color grading և retouching։ Այստեղից է ձևավորվել տեսողական ընկալման իմ հիմքը։",
+      "highlights": [
+        "Իրականացրել եմ color correction և grading portrait, product և event լուսանկարչության համար։",
+        "Օպտիմիզացրել եմ shoot, edit և delivery փուլերի workflow-ը՝ կրճատելով հաճախորդների սպասման ժամանակը։",
+        "Իրականացրել եմ պատկերների restoration և cleanup բարդ սկզբնաղբյուրների վրա։"
+      ]
+    }
+  },
+  "architecture": {
+    "eyebrow": "Ինչպես է կառուցված",
+    "title": "Հիսուն մոդուլ, մեկ ճարտարապետական ձև։",
+    "lead": "Feature-Sliced Design-ը պարզապես folder convention չէ։ Դա dependency rule է․ յուրաքանչյուր layer կարող է կախվածություն ունենալ միայն ներքևի layer-երից։ Երբ դա պարտադրվում է CI-ում, հիսուներորդ մոդուլի ավելացումը մոտավորապես նույնքան բարդ է, որքան հինգերորդինը։",
+    "layers": {
+      "app": "Providers, routing, global configuration։ Գիտի ամեն ինչի մասին, բայց ոչինչ կախված չէ իրենից։",
+      "pages": "Route compositions։ Հավաքում է widgets-ը և չի պարունակում business logic։",
+      "widgets": "Ինքնաբավ բլոկներ՝ application table, credit committee panel։",
+      "features": "Բիզնես նշանակություն ունեցող user actions՝ approve, reject, attach collateral։",
+      "entities": "Դոմենային մոդելներ՝ application, client, collateral, payment schedule։",
+      "shared": "UI kit, API client, hooks, utilities։ Ոչինչ չգիտի domain-ի մասին։"
+    },
+    "closing": "Dependencies-ը հոսում են միայն մեկ ուղղությամբ։ Երբ դա չի պահպանվում, CI-ն ձախողում է build-ը։ Հենց այս սահմանափակումն է հիսուն մոդուլը դարձնում կառավարելի և AI-ով գեներացված կոդը՝ անվտանգ ընդունելու համար։"
+  },
+  "aiNative": {
+    "eyebrow": "AI-native engineering",
+    "title": "Դժվար մասը կոդ գեներացնելը չէ։",
+    "lead": "Դժվարն այն է, որ գեներացված կոդը ենթարկվի ճարտարապետությանը։ Արագությունը արժեք է միայն այն դեպքում, երբ դրա համար կա հստակ կառուցվածք։",
+    "stages": {
+      "context": {
+        "name": "Կոնտեքստ",
+        "body": "Ճարտարապետությունը, conventions-ը և domain rules-ը կառուցված են որպես կայուն context, որպեսզի գեներացիան սկսվի արդեն սահմանված constraints-ների ներսում։"
+      },
+      "spec": {
+        "name": "Spec",
+        "body": "Specification-ը՝ implementation-ից առաջ։ Spec-ը contract է, ոչ թե prompt։"
+      },
+      "scaffold": {
+        "name": "Scaffold",
+        "body": "Մոդուլները գեներացվում են իրական Feature-Sliced կառուցվածքի հիման վրա, իսկ Figma-ն, Jira-ն և Swagger-ը փոխանցում են design-ը, requirements-ը և API contracts-ը։"
+      },
+      "validate": {
+        "name": "Վավերացում",
+        "body": "Human-in-the-loop review gates։ Engineer-ը merge-ից առաջ ստուգում է ճարտարապետական և բիզնես կանոնների համապատասխանությունը։"
+      },
+      "merge": {
+        "name": "Merge",
+        "body": "Ավտոմատացված CI quality gates-ը հայտնաբերում են այն խնդիրները, որոնք review-ը կարող է բաց թողնել։"
+      }
+    },
+    "closing": "Այսպես greenfield repository-ն յոթ ամսում դարձավ մոտ 50 բիզնես մոդուլ՝ առանց ճարտարապետության քայքայման։ Արագությունը տեսանելի մասն է։ Կարևոր մասը constraints-ի համակարգն է։"
+  },
+  "skills": {
+    "eyebrow": "Տեխնոլոգիական stack",
+    "title": "Ինչ եմ օգտագործում և ինչի համար։",
+    "lead": "Խորությունը՝ լայնությունից առաջ։ Այստեղ նշված յուրաքանչյուր տեխնոլոգիայով ես իրական արտադրանք եմ ստեղծել՝ նշելով նաև իմ փորձի մակարդակը։",
+    "footnote": "Այստեղ ոչինչ պարզապես ցանկություն կամ նպատակ չէ։ Եթե այն այս էջում է, նշանակում է՝ դրա հետևում կա իրական աշխատանք։",
+    "personalOnly": "Անձնական նախագծեր",
+    "usedAt": "Ապացույց՝ {sources}",
+    "groups": {
+      "frontend": "Frontend",
+      "state-data": "State և data",
+      "architecture": "Ճարտարապետություն",
+      "ai-engineering": "AI engineering",
+      "tooling-infra": "Tooling և infrastructure",
+      "design": "Design"
+    },
+    "depth": {
+      "core": "Core",
+      "strong": "Strong",
+      "working": "Working",
+      "familiar": "Familiar"
+    },
+    "depthLegend": {
+      "core": "Դրանով նախագծել եմ production համակարգեր",
+      "strong": "Լայնորեն օգտագործել եմ production-ում",
+      "working": "Արդյունավետ օգտագործում, բայց ոչ խոր մասնագիտացում",
+      "familiar": "Իրական փորձ, սակայն անհրաժեշտ կլինի լրացուցիչ խորացում"
+    },
+    "usage": {
+      "react": "Enterprise հարթակի component համակարգեր և բիզնես մոդուլներ՝ իմ յուրաքանչյուր կոմերցիոն դերում։",
+      "typescript": "Type-safe authorization, typed API layer և domain modelling մոտ 50 մոդուլներում։",
+      "javascript": "Հիմքը իմ բոլոր դերերի և 29 հանրային repository-ների համար։",
+      "scss": "Design system, theming և layout իմ բոլոր դերերում՝ ներառյալ միայն SCSS-ով animation աշխատանքներ։",
+      "html": "Semantic և accessible markup՝ որպես աշխատանքի սկզբնական պահանջ, ոչ թե վերջնական cleanup։",
+      "css": "Layout, responsive behaviour և motion՝ առանց framework-ի օգտագործման։",
+      "react-hook-form": "Վերօգտագործվող form համակարգը, որի վրա կառուցված են MK Kredit-ի բիզնես մոդուլների մեծ մասը։",
+      "zod": "Schema validation՝ typed forms-ի և API boundaries-ի հետ համակցված։",
+      "ant-design": "MK Kredit-ի component foundation և multi-theme design system։",
+      "material-ui": "Component library աշխատանքներ նախորդ ինտերֆեյսների վրա։",
+      "i18next": "Armenian-first internationalization՝ բազմալեզու աջակցությամբ։",
+      "nuqs": "Type-safe URL search-param state, որպեսզի ֆիլտրերը պահպանվեն refresh-ից և shared link-ից հետո։",
+      "nextjs": "Routing, SSR և SSG TypeScript-ում՝ ներառյալ այս կայքը։",
+      "tanstack-query": "Server-state ճարտարապետություն MK Kredit-ի համար՝ caching, invalidation և request lifecycle։",
+      "redux-toolkit": "Client state երկու կոմերցիոն հարթակներում։",
+      "axios": "Կենտրոնացված API client՝ interceptors-ով, JWT refresh-ով և միասնական error handling-ով։",
+      "rest": "36 դոմենային ծառայություն և 190+ endpoint՝ ինտեգրված Swagger contracts-ից։",
+      "jwt": "Token handling՝ ավտոմատ refresh-ով և type-safe authorization մոդելով։",
+      "feature-sliced-design": "MK Kredit-ի ճարտարապետությունը՝ նախապես վավերացված public reference build-ում։",
+      "frontend-architecture": "Greenfield-ից մինչև մոտ 50 բիզնես մոդուլ՝ պարտադիր module boundaries-ով։",
+      "design-systems": "Multi-theme tokens, ինչպես նաև վերօգտագործվող component և data-table համակարգեր։",
+      "authorization": "Role և permission modelling, որտեղ չարտոնված վիճակները հնարավոր չէ ներկայացնել, այլ ոչ թե պարզապես թաքցվում են։",
+      "error-handling": "Կենտրոնացված error boundaries և API failure handling ամբողջ հավելվածում։",
+      "i18n": "Հայերենը որպես default locale, ոչ թե հետագայում ավելացված լուծում՝ ներառյալ non-Latin script-ի համար նախատեսված layout-ը։",
+      "pwa": "Offline և installable հնարավորություններ enterprise ծրագրային ապահովման մեջ, որը սովորաբար նախատեսված է միայն desktop-ի համար։",
+      "responsive": "Mobile-first մոտեցում խիտ և տվյալներով հարուստ business UI-ի համար։",
+      "claude-code": "Հիմնական AI development environment-ը engineering lifecycle-ի ամբողջ ընթացքում։",
+      "agentic-development": "Մասնագիտացված agents՝ architecture-ի, implementation-ի, refactoring-ի, documentation-ի և review-ի համար։",
+      "context-engineering": "Project context-ի կառուցվածքավորում, որպեսզի գեներացված կոդը հետևի իրական constraints-ներին։",
+      "spec-driven": "Specification-ը՝ generation-ից առաջ, որպես delivery մեթոդ, ոչ թե պարզապես սովորություն։",
+      "scaffolding": "Մոդուլների գեներացիա, որոնք սկզբից արդեն համապատասխանում են նախագծի ճարտարապետությանը։",
+      "human-in-the-loop": "Review gates, որոնք ապահովում են AI output-ի համապատասխանությունը ճարտարապետությանը և բիզնես կանոններին։",
+      "vite": "Build tooling enterprise հարթակի և վերջին անձնական նախագծերի համար։",
+      "git": "Branching և release discipline թիմային միջավայրում։",
+      "github-actions": "Ավտոմատացված CI quality gates՝ ներառյալ architecture boundary checks-ը։",
+      "docker": "Containerized development և delivery։",
+      "azure": "MK Kredit-ի deployment target-ը։",
+      "eslint": "Պարտադիր ստանդարտներ կոմերցիոն և անձնական repository-ներում։",
+      "figma": "Design handoff և context source, որը սնուցում է AI workflow-ը։",
+      "photoshop": "Երկու տարվա մասնագիտական փորձ՝ color grading, retouching և restoration։",
+      "lightroom": "Երկու տարվա մասնագիտական փորձ՝ color correction և grading մեծ ծավալով։"
+    }
+  },
+  "projects": {
+    "eyebrow": "Ընտրված աշխատանքներ",
+    "title": "Production աշխատանք և հանրային կոդ։",
+    "lead": "Կոմերցիոն աշխատանքը private է՝ դա fintech է։ Ստորև ներկայացված case study-ները նկարագրում են այն այնքան մանրամասն, որքան հնարավոր է։ Հանրային repository-ները architecture studies և challenge builds են և համապատասխանաբար նշված են։",
+    "publicDivider": "Հանրային կոդ — ուսումնասիրություններ և challenge builds, ոչ թե պատրաստի արտադրանքներ։",
+    "viewCaseStudy": "Կարդալ case study-ն",
+    "viewCode": "Դիտել կոդը",
+    "viewLive": "Դիտել live",
+    "backToProjects": "Բոլոր նախագծերը",
+    "sections": {
+      "overview": "Ընդհանուր նկարագիր",
+      "problem": "Խնդիր",
+      "context": "Կոնտեքստ",
+      "role": "Իմ դերը",
+      "architecture": "Ճարտարապետություն",
+      "challenges": "Տեխնիկական մարտահրավերներ",
+      "results": "Արդյունքներ",
+      "lessons": "Դասեր",
+      "technologies": "Տեխնոլոգիաներ"
+    },
+    "mk-kredit": {
+      "title": "MK Kredit",
+      "role": "Frontend architect & engineer",
+      "accessNote": "Production — հասանելիությունը սահմանափակ է",
+      "shortDescription": "Greenfield React 19 և TypeScript frontend՝ enterprise լիզինգի և վարկավորման ամբողջ lifecycle-ի համար․ մոտ 50 բիզնես մոդուլ՝ Feature-Sliced Design-ի հիման վրա։",
+      "overview": "Հարթակի frontend-ը, որի միջոցով բանկերն ու լիզինգային կազմակերպությունները կառավարում են իրենց վարկային բիզնեսը՝ հայտի ընդունումից մինչև տրամադրում՝ կարգավորվող վարկավորման համար անհրաժեշտ authorization, auditability և workflow կանոններով։ Դատարկ repository-ից կառուցվել է մոտ հիսուն բիզնես մոդուլ։",
+      "problem": "Լիզինգի և վարկավորման գործընթացները երկար են, բազմափուլ և պահանջում են մեծ քանակի ապացույցներ ու տվյալներ։ Յուրաքանչյուր հայտ ներառում է ֆինանսական վերլուծություն, գրավի տվյալներ, վարկային պատմություն և կոմիտեի որոշումներ՝ յուրաքանչյուր փուլում տարբեր դերերով, permissions-ով և validation rules-ով։ Եթե սա կառուցվի որպես սովորական էկրանների հավաքածու, մոտ տասնհինգերորդ մոդուլից այն կդառնա դժվար պահպանվող։",
+      "context": "Greenfield նախագիծ, կարգավորվող domain, Armenian-first user base, ընդլայնվող feature surface և փոքր թիմ։ Ճարտարապետությունը պետք է ապահովեր աճը՝ առանց բարդության համաչափ աճի։",
+      "roleDetail": "Frontend architecture և technical direction, հարթակի հիմնական համակարգերը՝ authorization, API layer, error handling, forms, tables, theming, internationalization, lifecycle մոդուլների իրականացում և AI-native workflow-ի ձևավորում, որով աշխատում է թիմը։",
+      "architecture": "Feature-Sliced Design՝ պարտադիր layer boundaries-ով, որպեսզի dependencies-ը հոսեն մեկ ուղղությամբ, իսկ բիզնես մոդուլները մնան մեկուսացված։ Դրա վրա՝ կենտրոնացված Axios client՝ JWT-ով և token-ի ավտոմատ refresh-ով, TanStack Query՝ ամբողջ server state-ի համար, Redux Toolkit՝ client state-ի համար, վերօգտագործվող form system՝ React Hook Form և Zod հիմքով, shared data-table system, type-safe authorization model, unified error-handling architecture, multi-theme design system՝ Ant Design և SCSS հիմքով, i18next՝ հայերենը որպես հիմնական locale։ Ավտոմատացված CI quality gates GitHub Actions-ում, containerized Docker-ով և deployed Azure-ում։",
+      "challenges": [
+        "Հիսուն բիզնես մոդուլը կառավարելի պահելը՝ լուծված է Feature-Sliced layer boundaries-ով, որոնք պարտադրվում են CI-ում, ոչ թե միայն convention-ով։",
+        "36 դոմենային ծառայությունների և 190+ endpoint-ների ինտեգրում՝ առանց API layer-ի մասնատման․ լուծվել է մեկ typed client-ի, shared interceptors-ի և centralized error handling-ի միջոցով։",
+        "Կարգավորվող workflow-ի permissions-ի մոդելավորում՝ լուծված type-safe authorization model-ով, որպեսզի չարտոնված վիճակները հնարավոր չլինեն, այլ ոչ թե պարզապես թաքցվեն։",
+        "Բազմափուլ և validation-ով հարուստ forms՝ լուծված React Hook Form-ը Zod schemas-ի հետ համակցող վերօգտագործվող form system-ով։",
+        "Armenian-first internationalization՝ ներառյալ non-Latin script-ի համար layout և typography՝ որպես սկզբնական լուծում, ոչ թե հետագայում ավելացված։",
+        "AI-assisted արագության պահպանում՝ առանց ճարտարապետության քայքայման․ լուծված project-aware scaffolding-ի, spec-driven development-ի և human review gates-ի միջոցով։"
+      ],
+      "results": [
+        "Greenfield-ից մինչև մոտ 50 բիզնես մոդուլ՝ ընդգրկելով լիզինգի ամբողջ lifecycle-ը։",
+        "36 ծառայություն և 190+ endpoint՝ ինտեգրված մեկ type-safe և կենտրոնացված error-handled layer-ի հետևում։",
+        "Mobile-first responsive UI՝ PWA հնարավորությամբ, multi-theme support-ով և personalization-ով։",
+        "Armenian-first internationalization՝ CI quality gates-ով հենց սկզբից։"
+      ],
+      "lessons": "Ճարտարապետությունն է AI-assisted development-ը դարձնում անվտանգ։ Generation-ի արագությունը արժեք է միայն այն դեպքում, երբ կան սահմաններ, որոնց պետք է հետևի գեներացված կոդը․ leverage-ը constraint system-ն է, ոչ թե generator-ը։"
+    },
+    "ai-native-workflow": {
+      "title": "AI-Native Development Workflow",
+      "role": "Նախագծել և ներդրել եմ workflow-ը",
+      "shortDescription": "Agentic development Claude Code-ի միջոցով՝ spec-driven implementation-ով և human review gates-ով՝ կարգավորվող fintech codebase-ում։",
+      "overview": "Claude Code-ի հիման վրա ստեղծված ներքին engineering workflow, որտեղ AI-ը մասնակցում է requirements-ի, architecture-ի, implementation-ի, refactoring-ի, documentation-ի և code review-ի փուլերին՝ այնպիսի constraints-ների ներքո, որոնք պահում են output-ը նախագծի ճարտարապետության և բիզնես կանոնների սահմաններում։",
+      "problem": "AI-ով գեներացված կոդը արագ է, բայց ճարտարապետության նկատմամբ անտարբեր։ Կարգավորվող fintech codebase-ում չսահմանափակված generation-ը ստեղծում է աշխատող կոդ, որը կարող է աննկատ խախտել layer boundaries-ը, կրկնօրինակել առկա abstractions-ը և բաց թողնել domain rules-ը։ Արժեքը վճարվում է ավելի ուշ՝ համակարգի քայքայման տեսքով։",
+      "roleDetail": "Նախագծել եմ workflow-ը, context structure-ը և review gates-ը, այնուհետև ներդրել դրանք ամբողջ engineering lifecycle-ում։",
+      "architecture": "Չորս մեխանիզմ։ Context engineering-ը նախագծի architecture-ը, conventions-ը և domain rules-ը կառուցում է որպես կայուն context, որպեսզի generation-ը սկսվի constraints-ների ներսում։ Project-aware scaffolding-ը նոր մոդուլները գեներացնում է իրական Feature-Sliced structure-ի հիման վրա, ոչ թե generic templates-ներից։ Spec-driven development-ը specification-ը դնում է generation-ից առաջ՝ spec-ը դարձնելով contract։ Human-in-the-loop validation-ը ավելացնում է հստակ review gates, որտեղ engineer-ը merge-ից առաջ ստուգում է architecture-ի և business rules-ի համապատասխանությունը։ Figma, Jira և Swagger integrations-ը design-ը, requirements-ը և API contracts-ը բերում են այդ context-ի մեջ, իսկ specialized agents-ը կատարում են տարբեր lifecycle tasks՝ մեկ ընդհանուր assistant-ի փոխարեն։",
+      "challenges": [
+        "Կոդ, որը compile է լինում, բայց խախտում է layer boundaries-ը՝ հայտնաբերվում է architecture-ի ներսից սկսվող scaffolding-ի և այն պարտադրող CI-ի միջոցով։",
+        "Domain rules, որոնք model-ը չի կարող միայն codebase-ից եզրակացնել՝ լուծված են դրանք durable context-ում ամրագրելով, այլ ոչ թե յուրաքանչյուր prompt-ում կրկնելով։",
+        "Մեծ ծավալի review-ից առաջացած հոգնածություն՝ լուծված review gates-ը կոնկրետ դարձնելով․ architecture compliance և business rules, ոչ թե կոդի ընդհանուր ընթերցում։"
+      ],
+      "results": [
+        "AI-native throughput greenfield enterprise codebase-ում՝ պահպանված ճարտարապետությամբ։",
+        "Մոտ 50 բիզնես մոդուլ յոթ ամսում՝ Feature-Sliced structure-ի և CI quality gates-ի պայմաններում։"
+      ],
+      "lessons": "Հետաքրքիր խնդիրը կոդ գեներացնելը չէ, այլ generation-ը սահմանափակելը։ Architecture-ը, specs-ը և review gates-ն են model output-ը վերածում այնպիսի ծրագրային ապահովման, որը կարող է օգտագործվել բանկում։"
+    },
+    "springbme": {
+      "title": "SpringBME",
+      "role": "Software Engineer",
+      "shortDescription": "Երկու ու կես տարի մեծածավալ հարթակում՝ feature modules, UI components, performance optimization, refactoring և user documentation։"
+    },
+    "fsd-reference": {
+      "title": "Feature-Sliced Design reference build",
+      "role": "Անձնական ճարտարապետական ուսումնասիրություն",
+      "shortDescription": "React, TypeScript և Vite հավելված՝ կառուցված Feature-Sliced Design և React Compiler-ով, որն օգտագործվել է layer boundaries-ը enterprise scale-ում կիրառելուց առաջ վավերացնելու համար։",
+      "overview": "Sandbox այն ճարտարապետության համար, որն այժմ հիմք է հանդիսանում հիսուն մոդուլից բաղկացած fintech հարթակի համար։ Կառուցվել է այն դերից չորս ամիս առաջ, որը պետք է հիմնվեր դրա վրա՝ pattern-ը գիտակցաբար ուսումնասիրելու և այնուհետև անհրաժեշտ վայրում կիրառելու նպատակով։",
+      "architecture": "Feature-Sliced-ի վեց ստանդարտ layer-երը՝ app, pages, widgets, features, entities, shared, որոնց dependencies-ը թույլատրվում են միայն ներքև ուղղությամբ, ինչպես նաև միացված React Compiler՝ ստուգելու համար layer structure-ի և automatic memoization-ի փոխազդեցությունը։",
+      "lessons": "Layer boundaries-ը առաջին commit-ից պահելը էժան է, իսկ ավելի ուշ ներդնելը՝ թանկ։ Դրա վավերացումը sandbox-ում արժե մեկ շաբաթավերջ։"
+    },
+    "vecto-digital": {
+      "title": "Vecto Digital build",
+      "role": "Frontend build",
+      "shortDescription": "Ամենամեծ deployed public React և TypeScript build-ը՝ marketing site-ի layout, responsive behaviour և interaction։"
+    },
+    "nextjs-rendering-study": {
+      "title": "Next.js routing, SSR և SSG ուսումնասիրություն",
+      "role": "Անձնական ուսումնասիրություն",
+      "shortDescription": "TypeScript Next.js հավելված՝ routing ռազմավարությունների և server-side rendering-ի ու static generation-ի միջև trade-off-ների ուսումնասիրությամբ։"
+    },
+    "milky-way": {
+      "title": "Milky Way",
+      "role": "Motion ուսումնասիրություն",
+      "shortDescription": "Գալակտիկայի անիմացված vector rendering՝ կառուցված միայն SCSS-ով․ motion և craft ուսումնասիրություն, ոչ թե արտադրանք։"
+    },
+    "react-patterns": {
+      "title": "React patterns",
+      "role": "Անձնական ուսումնասիրություն",
+      "shortDescription": "React-ում composition և reuse pattern-ների նպատակային ուսումնասիրություն TypeScript-ով։"
+    },
+    "github-users-search": {
+      "title": "GitHub user search",
+      "role": "Frontend build",
+      "shortDescription": "API integration և search UI GitHub REST API-ի հիման վրա՝ loading, empty և error states-ով։"
+    }
+  },
+  "journey": {
+    "eyebrow": "Ուղի",
+    "title": "Սկզբում՝ design, հետո՝ engineering, ապա՝ architecture։",
+    "entries": {
+      "2019": "Color grading լուսանկարչական ստուդիայում Հրազդանում։ Սովորում եմ տեսնել։",
+      "2022": "Software engineering YSCI-ում և իննամսյա internship SmartCode-ում։ Տեսությունը՝ իրական կոդի։",
+      "2023": "Երկու ու կես տարի SoftConstruct-ում՝ մեծ հարթակ, իրական թիմ, code review-ը որպես սովորություն։",
+      "2025": "Feature-Sliced Design՝ նպատակային ուսումնասիրված sandbox-ում, նախքան այն կարևոր production միջավայրում կիրառելը։",
+      "2026": "Enterprise վարկային հարթակի frontend architecture։ Greenfield-ից մինչև հիսուն մոդուլ։"
+    }
+  },
+  "education": {
+    "eyebrow": "Կրթություն",
+    "title": "Կրթություն և սերտիֆիկատներ",
+    "ysci": {
+      "field": "Computer Software Engineering"
+    },
+    "smartcode": {
+      "field": "Front End Developer ծրագիր"
+    },
+    "otherCertifications": "Նաև՝ {list}"
+  },
+  "certifications": {
+    "ysci-se": {
+      "name": "Software Engineer"
+    },
+    "smartcode-fe": {
+      "name": "Front-End Engineer"
+    },
+    "sololearn-react": {
+      "name": "React/Redux"
+    },
+    "sololearn-css": {
+      "name": "CSS"
+    },
+    "sololearn-html": {
+      "name": "HTML"
+    },
+    "sololearn-js": {
+      "name": "JavaScript"
+    }
+  },
+  "languages": {
+    "title": "Լեզուներ",
+    "hy": "Հայերեն",
+    "ru": "Ռուսերեն",
+    "en": "Անգլերեն",
+    "levels": {
+      "native": "Մայրենի",
+      "full-professional": "Լիարժեք մասնագիտական",
+      "professional": "Մասնագիտական",
+      "limited": "Սահմանափակ աշխատանքային",
+      "elementary": "Սկզբնական"
+    }
+  },
+  "contact": {
+    "eyebrow": "Կապ",
+    "title": "Եկեք կապ հաստատենք։",
+    "lead": "Բաց եմ on-site, hybrid և remote հնարավորությունների համար։ Հիմնված եմ Երևանում և աշխատում եմ հայերեն, ռուսերեն ու անգլերեն լեզուներով։",
+    "form": {
+      "name": "Անուն",
+      "namePlaceholder": "Ձեր անունը",
+      "email": "Էլ․ փոստ",
+      "emailPlaceholder": "you@company.com",
+      "message": "Հաղորդագրություն",
+      "messagePlaceholder": "Ի՞նչ եք կառուցում։",
+      "submit": "Ուղարկել հաղորդագրությունը",
+      "sending": "Ուղարկվում է…"
+    },
+    "validation": {
+      "nameRequired": "Խնդրում ենք մուտքագրել ձեր անունը։",
+      "nameTooLong": "Այդ անունը չափազանց երկար է։",
+      "emailRequired": "Խնդրում ենք մուտքագրել ձեր էլ․ փոստի հասցեն։",
+      "emailInvalid": "Սա վավեր էլ․ փոստի հասցե չի թվում։",
+      "messageRequired": "Խնդրում ենք գրել հաղորդագրություն։",
+      "messageTooShort": "Մի փոքր ավելի մանրամասն տեղեկատվությունը կօգնի։",
+      "messageTooLong": "Հաղորդագրությունը չափազանց երկար է․ խնդրում ենք կրճատել այն։"
+    },
+    "success": "Շնորհակալություն․ կպատասխանեմ մի քանի օրվա ընթացքում։",
+    "error": "Հաղորդագրությունը չուղարկվեց։ Կարող եք անմիջապես գրել ինձ՝ {email} հասցեով։",
+    "rateLimited": "Այս հասցեից չափազանց շատ հաղորդագրություններ են ուղարկվել։ Խնդրում ենք փորձել ավելի ուշ։",
+    "directLabel": "Կամ կապվեք ինձ հետ անմիջապես"
+  },
+  "socials": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "telegram": "Telegram",
+    "email": "Էլ․ փոստ"
+  },
+  "footer": {
+    "role": "Software Engineer · Enterprise Frontend Architecture",
+    "copyright": "© {year} Sergey Petrosyan",
+    "builtWith": "Կառուցված է Next.js, TypeScript և Three.js տեխնոլոգիաներով։",
+    "source": "Կոդը GitHub-ում"
+  },
+  "notFound": {
+    "title": "Էջը չի գտնվել",
+    "body": "Այդ էջը գոյություն չունի․ այն կարող է տեղափոխված լինել, կամ հղումը կարող է սխալ լինել։",
+    "cta": "Վերադառնալ գլխավոր էջ"
+  },
+  "common": {
+    "readMore": "Կարդալ ավելին",
+    "close": "Փակել",
+    "loading": "Բեռնվում է",
+    "downloadResume": "Ներբեռնել ռեզյումեն (PDF)",
+    "externalLink": "բացվում է նոր ներդիրում"
+  },
+  "a11y": {
+    "skipLink": "Անցնել բովանդակությանը",
+    "mainNav": "Հիմնական նավիգացիա",
+    "footerNav": "Footer նավիգացիա",
+    "themeToggleToLight": "Անցնել light theme-ի",
+    "themeToggleToDark": "Անցնել dark theme-ի",
+    "themeToggleToCinematic": "Անցնել cinematic theme-ի",
+    "localeSwitcher": "Փոխել լեզուն։ Ընթացիկ լեզու՝ {current}։",
+    "scrollToTop": "Վերադառնալ էջի վերև",
+    "heroScene": "Ակտիվ դիզայն-ուղղությանը պատկանող դեկորատիվ եռաչափ տեսարան։ Այն չի կրում որևէ տեղեկություն, որը գրված չէ այս էջում։"
+  }
+}

@@ -1,0 +1,64 @@
+@use "abstracts" as *;
+
+.about {
+  @include deferred-render(900px);
+
+  padding-block: var(--section-y);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-8);
+
+  @include up("lg") {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: var(--space-9);
+    align-items: start;
+  }
+}
+
+.prose {
+  max-width: 66ch;
+  color: var(--color-text-secondary);
+
+  p {
+    font-size: var(--fs-lead);
+    line-height: var(--lh-relaxed);
+    text-wrap: pretty;
+  }
+
+  p + p {
+    margin-top: var(--space-5);
+  }
+}
+
+.portraitWrap {
+  position: relative;
+
+  @include up("lg") {
+    position: sticky;
+    top: var(--space-11);
+  }
+}
+
+.portrait {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-media);
+  border: 1px solid var(--color-border);
+}
+
+.placeholder {
+  @include mono(var(--fs-small));
+
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-media);
+  background: linear-gradient(var(--gradient-surface)), var(--color-surface);
+  color: var(--color-text-muted);
+  letter-spacing: var(--ls-eyebrow);
+  text-align: center;
+  padding: var(--space-6);
+}

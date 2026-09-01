@@ -1,0 +1,141 @@
+@use "abstracts" as *;
+
+.section {
+  @include deferred-render(1400px);
+
+  padding-block: var(--section-y);
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-9);
+}
+
+.item {
+  position: relative;
+  padding-left: var(--space-6);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: calc(var(--space-9) * -1);
+    left: 3px;
+    width: 1px;
+    background: var(--color-border);
+  }
+
+  &:last-child::before {
+    display: none;
+  }
+
+  @include up("md") {
+    padding-left: var(--space-7);
+  }
+}
+
+.node {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--color-border-strong);
+
+  &[data-featured] {
+    background: var(--color-accent);
+    box-shadow: 0 0 0 4px var(--color-accent-soft);
+  }
+}
+
+.body {
+  min-width: 0;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.role {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-heading);
+}
+
+.dash {
+  color: var(--color-text-muted);
+  font-weight: var(--fw-regular);
+}
+
+.company {
+  color: var(--color-accent-text);
+}
+
+a.company:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.dates {
+  @include mono;
+
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.duration {
+  color: var(--color-text-muted);
+}
+
+.meta {
+  margin-top: var(--space-2);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+.product {
+  color: var(--color-text-secondary);
+}
+
+a.product:hover {
+  color: var(--color-accent-text);
+}
+
+.highlights {
+  margin-top: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 76ch;
+
+  li {
+    position: relative;
+    padding-left: var(--space-4);
+    color: var(--color-text-secondary);
+    text-wrap: pretty;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.62em;
+      left: 0;
+      width: 4px;
+      height: 1px;
+      background: var(--color-text-faint);
+    }
+  }
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}

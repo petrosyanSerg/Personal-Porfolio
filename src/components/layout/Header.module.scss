@@ -1,0 +1,232 @@
+@use "abstracts" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+  border-bottom: 1px solid transparent;
+
+  &[data-scrolled] {
+    @include glass;
+
+    border-bottom-color: var(--color-border);
+  }
+
+  &[data-scrolled] .inner {
+    height: 56px;
+  }
+}
+
+.inner {
+  @include container(var(--container-xl));
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  height: 64px;
+  transition: height var(--dur-base) var(--ease-out);
+}
+
+.brand {
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-heading);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.brandName {
+  font-size: var(--fs-small);
+}
+
+.nav {
+  display: none;
+
+  @include up("lg") {
+    display: block;
+  }
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-3);
+
+  @include up("xl") {
+    gap: var(--space-5);
+  }
+}
+
+.navLink {
+  @include mono;
+
+  position: relative;
+  display: block;
+  padding-block: var(--space-2);
+  color: var(--color-text-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+
+  &:hover {
+    color: var(--color-text);
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  &[data-current] {
+    color: var(--color-text);
+  }
+
+  &[data-current]::after {
+    background: var(--color-accent);
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.desktopSwitcher {
+  display: none;
+
+  @include up("lg") {
+    display: flex;
+  }
+}
+
+.mobileSwitcher {
+  padding-block: var(--space-4) var(--space-2);
+
+  @include up("lg") {
+    display: none;
+  }
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+
+  @include up("lg") {
+    display: none;
+  }
+}
+
+.mobileNav {
+  @include up("lg") {
+    display: none;
+  }
+
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+}
+
+@include motion-safe {
+  .mobileNav[data-open] {
+    animation: menu-in var(--dur-base) var(--ease-out);
+  }
+
+  .mobileNav[data-open] .mobileLink,
+  .mobileNav[data-open] .mobileSwitcher {
+    animation: menu-item-in var(--dur-base) var(--ease-out) backwards;
+  }
+
+  .mobileNav[data-open] li:nth-child(1) .mobileLink {
+    animation-delay: 40ms;
+  }
+
+  .mobileNav[data-open] li:nth-child(2) .mobileLink {
+    animation-delay: 70ms;
+  }
+
+  .mobileNav[data-open] li:nth-child(3) .mobileLink {
+    animation-delay: 100ms;
+  }
+
+  .mobileNav[data-open] li:nth-child(4) .mobileLink {
+    animation-delay: 130ms;
+  }
+
+  .mobileNav[data-open] li:nth-child(5) .mobileLink {
+    animation-delay: 160ms;
+  }
+
+  .mobileNav[data-open] li:nth-child(6) .mobileLink {
+    animation-delay: 190ms;
+  }
+
+  .mobileNav[data-open] li:nth-child(7) .mobileLink {
+    animation-delay: 220ms;
+  }
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes menu-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.mobileList {
+  @include container(var(--container-xl));
+
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--space-3);
+}
+
+.mobileLink {
+  display: block;
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: var(--fs-lead);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}

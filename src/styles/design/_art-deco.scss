@@ -1,0 +1,125 @@
+[data-design="art-deco"] {
+  color-scheme: dark;
+
+  --color-bg: #0e1418;
+  --color-bg-elevated: #131c21;
+  --color-surface: #17222a;
+  --color-surface-2: #1e2d36;
+  --color-surface-3: #263943;
+
+  --color-border: #26363f;
+  --color-border-strong: #3d5765;
+  --color-border-accent: rgb(212 175 89 / 58%);
+
+  --color-text: #f0e3c8;
+  --color-text-secondary: #d0c1a2;
+  --color-text-muted: #ab9d81;
+  --color-text-faint: #7d7360;
+
+  --color-accent: #d4af59;
+  --color-accent-hover: #e5c374;
+  --color-accent-press: #b8933f;
+  --color-accent-strong: #a8842f;
+  --color-accent-strong-hover: #8e6f26;
+  --color-accent-soft: rgb(212 175 89 / 16%);
+  --color-accent-text: #e0bd6d;
+
+  --color-teal: #2f7f7c;
+  --color-teal-soft: rgb(47 127 124 / 20%);
+  --color-teal-text: #66b5b1;
+
+  --gradient-hero:
+    radial-gradient(90% 62% at 50% -8%, rgb(212 175 89 / 20%), transparent 66%),
+    linear-gradient(180deg, rgb(47 127 124 / 8%) 0%, transparent 44%);
+  --gradient-text: linear-gradient(180deg, #f7ecd4 0%, #d4af59 100%);
+  --gradient-accent: linear-gradient(120deg, #d4af59 0%, #2f7f7c 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(212 175 89 / 8%) 0%,
+    rgb(0 0 0 / 0%) 100%
+  );
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    #d4af59 30%,
+    #d4af59 70%,
+    transparent
+  );
+
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 54%);
+  --shadow-md: 0 6px 20px rgb(0 0 0 / 56%);
+  --shadow-lg: 0 16px 46px rgb(0 0 0 / 62%);
+  --shadow-xl: 0 30px 78px rgb(0 0 0 / 68%);
+  --shadow-glow: 0 0 0 1px var(--color-border-accent);
+  --highlight-top: inset 0 1px 0 rgb(240 215 150 / 16%);
+  --glass-bg: rgb(23 34 42 / 80%);
+  --glass-border: rgb(212 175 89 / 26%);
+
+  --font-display: "Futura", "Century Gothic", "Avenir Next", var(--font-sans);
+  --font-heading: var(--font-display);
+  --font-eyebrow: var(--font-display);
+  --font-accent: var(--font-display);
+
+  --fw-display: var(--fw-medium);
+  --fw-heading: var(--fw-medium);
+  --case-display: uppercase;
+  --case-heading: uppercase;
+  --case-eyebrow: uppercase;
+  --case-control: uppercase;
+  --ls-display: 0.06em;
+  --ls-heading: 0.05em;
+  --ls-eyebrow: 0.36em;
+  --ls-control: 0.16em;
+  --optical-scale: 0.9;
+  --lh-tight: 1.1;
+
+  --density: 1.08;
+  --measure: 62ch;
+
+  --radius-card: 0;
+  --radius-control: 0;
+  --radius-tag: 0;
+  --radius-media: 0;
+
+  --card-bg: linear-gradient(180deg, rgb(38 57 67 / 62%) 0%, rgb(23 34 42 / 84%) 100%);
+  --card-border-width: 1px;
+  --card-border-color: rgb(212 175 89 / 30%);
+  --card-shadow: inset 0 0 0 4px rgb(212 175 89 / 8%);
+  --card-hover-shadow:
+    inset 0 0 0 4px rgb(212 175 89 / 22%), 0 14px 40px rgb(0 0 0 / 56%);
+  --card-hover-border: rgb(212 175 89 / 70%);
+  --card-hover-lift: 0;
+
+  --control-bg: transparent;
+  --control-fg: #e0bd6d;
+  --control-border: #d4af59;
+  --control-border-width: 1px;
+  --control-shadow: inset 0 0 0 3px rgb(212 175 89 / 14%);
+
+  --rule-color: rgb(212 175 89 / 46%);
+  --rule-height: 1px;
+
+  --ornament-color: rgb(212 175 89 / 70%);
+  --ornament-accent: #e0bd6d;
+  --ornament-opacity: 0.9;
+  --ornament-width: 1.2;
+
+  --decor-grain: 0.03;
+  --decor-vignette: 0.42;
+  --motif: "\25C7";
+
+  --motion-scale: 1;
+  --ease-signature: cubic-bezier(0.5, 0, 0.1, 1);
+  --dur-signature: var(--dur-slow);
+  --enter-distance: 10px;
+
+  --cursor-ink: #d4af59;
+  --cursor-size: 26px;
+  --cursor-dot: 3px;
+  --cursor-radius: 0;
+  --cursor-light: 0.05;
+
+  --hero-align: center;
+  --hero-text-align: center;
+  --hero-measure: 36rem;
+}

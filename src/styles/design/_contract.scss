@@ -1,0 +1,98 @@
+:root {
+  --font-display: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --font-body: var(--font-sans);
+  --font-eyebrow: var(--font-mono);
+
+  --font-accent: var(--font-sans);
+
+  --fw-display: var(--fw-bold);
+  --fw-heading: var(--fw-semibold);
+  --fw-body: var(--fw-regular);
+
+  --case-display: none;
+  --case-heading: none;
+  --case-eyebrow: uppercase;
+  --case-control: none;
+
+  --style-display: normal;
+  --ls-control: 0.01em;
+
+  --optical-scale: 1;
+
+  --density: 1;
+  --measure: 68ch;
+
+  --radius-card: var(--radius-lg);
+  --radius-control: var(--radius-md);
+  --radius-tag: var(--radius-full);
+  --radius-media: var(--radius-lg);
+
+  --card-bg: var(--color-surface);
+  --card-border-width: 1px;
+  --card-border-style: solid;
+  --card-border-color: var(--color-border);
+  --card-shadow: var(--highlight-top);
+  --card-hover-shadow: var(--shadow-lg);
+  --card-hover-border: var(--color-border-strong);
+
+  --card-hover-lift: -2px;
+
+  --control-bg: var(--color-accent-strong);
+  --control-fg: #fff;
+  --control-border: transparent;
+  --control-border-width: 1px;
+  --control-shadow: none;
+
+  --rule-color: var(--color-border);
+  --rule-height: 1px;
+  --rule-style: solid;
+
+  --decor-marble: 0;
+  --decor-paper: 0;
+  --decor-grain: 0;
+  --decor-scanline: 0;
+  --decor-aurora: 0;
+  --decor-botanical: 0;
+  --decor-vignette: 0;
+  --decor-grid: 0;
+
+  --decor-halftone: 0;
+  --decor-stripe: 0;
+  --decor-gloss: 0;
+  --decor-stars: 0;
+  --decor-concrete: 0;
+  --decor-sunbeam: 0;
+  --decor-tile: 0;
+
+  --scene-opacity: 1;
+  --scene-blend: normal;
+
+  --scene-mask: none;
+
+  --ornament-color: var(--color-border-strong);
+  --ornament-accent: var(--color-accent);
+  --ornament-width: 1;
+  --ornament-opacity: 0;
+  --ornament-scale: 1;
+
+  --motif: "·";
+
+  --motion-scale: 1;
+  --ease-signature: var(--ease-out);
+  --dur-signature: var(--dur-base);
+  --enter-distance: 14px;
+  --enter-blur: 0px;
+
+  --cursor-native: none;
+  --cursor-size: 28px;
+  --cursor-dot: 5px;
+  --cursor-ink: var(--color-accent);
+  --cursor-blend: normal;
+  --cursor-radius: 50%;
+
+  --hero-align: start;
+  --hero-text-align: start;
+  --hero-min-h: min(92svh, 60rem);
+  --hero-measure: 40rem;
+}

@@ -1,0 +1,183 @@
+@use "abstracts" as *;
+
+.section {
+  @include deferred-render(1800px);
+
+  padding-block: var(--section-y);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-6);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-caption);
+}
+
+.legendDot,
+.skillDot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: var(--radius-full);
+  background: var(--color-text-faint);
+
+  &[data-depth="core"] {
+    background: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-soft);
+  }
+
+  &[data-depth="strong"] {
+    background: var(--color-teal);
+  }
+
+  &[data-depth="working"] {
+    background: var(--color-text-muted);
+  }
+}
+
+.legendName {
+  @include mono;
+
+  color: var(--color-text);
+}
+
+.legendDesc {
+  color: var(--color-text-muted);
+}
+
+.groups {
+  columns: 1;
+  column-gap: var(--space-8);
+
+  @include up("md") {
+    columns: 2;
+  }
+
+  @include up("xl") {
+    columns: 3;
+  }
+}
+
+.group {
+  min-width: 0;
+
+  break-inside: avoid;
+  margin-bottom: var(--space-9);
+}
+
+.groupTitle {
+  @include eyebrow;
+
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.skill {
+  position: relative;
+  min-width: 0;
+  padding-inline-start: var(--space-4);
+  margin-inline-start: calc(var(--space-4) * -1);
+  border-radius: var(--radius-sm);
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset-block: 2px;
+    inset-inline-start: 0;
+    width: 2px;
+    border-radius: var(--radius-full);
+    background: var(--color-teal);
+    opacity: 0;
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+
+  &[data-related]::before {
+    opacity: 1;
+  }
+
+  &[data-focused] {
+    background: var(--color-accent-soft);
+    box-shadow: -2px 0 0 0 var(--color-accent);
+  }
+}
+
+.groups[data-probing] .skill:not([data-related], [data-focused]) .skillEvidence {
+  opacity: 0.35;
+}
+
+.skillHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.skillName {
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+}
+
+.skillDepth {
+  @include mono;
+
+  color: var(--color-text-muted);
+}
+
+.personal {
+  @include mono;
+
+  padding: 1px 7px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+}
+
+.skillUsage {
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+  text-wrap: pretty;
+}
+
+.skillEvidence {
+  @include mono;
+
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  transition:
+    color var(--dur-base) var(--ease-out),
+    opacity var(--dur-base) var(--ease-out);
+}
+
+.skill[data-focused] .skillEvidence,
+.skill[data-related] .skillEvidence {
+  color: var(--color-teal-text);
+}
+
+.footnote {
+  margin-top: var(--space-9);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}

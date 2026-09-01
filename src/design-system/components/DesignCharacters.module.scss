@@ -1,0 +1,97 @@
+@use "abstracts" as *;
+
+.layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.figure {
+  position: absolute;
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-text);
+  border-radius: 46% 54% 50% 50% / 56% 56% 44% 44%;
+  box-shadow: 4px 4px 0 var(--color-text);
+
+  &[data-figure="a"] {
+    inset-block-start: 18%;
+    inset-inline-end: 12%;
+    rotate: -6deg;
+  }
+
+  &[data-figure="b"] {
+    inset-block-end: 16%;
+    inset-inline-end: 28%;
+    scale: 0.72;
+    rotate: 8deg;
+  }
+
+  @include motion-safe {
+    animation: character-bob 5.5s var(--ease-in-out) infinite alternate;
+  }
+
+  &[data-figure="b"] {
+    animation-delay: -2.4s;
+    animation-duration: 6.8s;
+  }
+}
+
+.eye {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: var(--color-bg-elevated);
+  border: 2px solid var(--color-text);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.pupil {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  width: 7px;
+  height: 7px;
+  background: var(--color-text);
+  border-radius: 50%;
+
+  translate: calc(-50% + clamp(-3px, (var(--pointer-x, 50vw) - 50vw) / 90, 3px))
+    calc(-50% + clamp(-3px, (var(--pointer-y, 50vh) - 50vh) / 70, 3px));
+  transition: translate 120ms linear;
+}
+
+:global(html:not([data-ambient="on"])) .pupil {
+  translate: -50% -50%;
+}
+
+@keyframes character-bob {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@include below("lg") {
+  .layer {
+    display: none;
+  }
+}
+
+@include reduced-motion {
+  .figure {
+    animation: none;
+  }
+
+  .pupil {
+    transition: none;
+  }
+}

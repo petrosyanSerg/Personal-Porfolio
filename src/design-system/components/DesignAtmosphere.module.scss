@@ -1,0 +1,307 @@
+@use "abstracts" as *;
+
+.decor {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+
+.decor > * {
+  position: absolute;
+  inset: 0;
+}
+
+.decorMarble {
+  opacity: var(--decor-marble, 0);
+  background-image:
+    repeating-linear-gradient(
+      114deg,
+      rgb(0 0 0 / 0%) 0 38px,
+      rgb(0 0 0 / 2.2%) 38px 39px,
+      rgb(0 0 0 / 0%) 39px 96px
+    ),
+    repeating-linear-gradient(
+      67deg,
+      rgb(0 0 0 / 0%) 0 61px,
+      rgb(0 0 0 / 1.6%) 61px 62px,
+      rgb(0 0 0 / 0%) 62px 150px
+    ),
+    repeating-linear-gradient(
+      160deg,
+      rgb(0 0 0 / 0%) 0 140px,
+      rgb(0 0 0 / 1.2%) 140px 142px,
+      rgb(0 0 0 / 0%) 142px 320px
+    );
+}
+
+.decorPaper {
+  opacity: var(--decor-paper, 0);
+  background-image:
+    linear-gradient(rgb(47 111 208 / 7%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(47 111 208 / 7%) 1px, transparent 1px),
+    linear-gradient(rgb(35 35 35 / 4%) 1px, transparent 1px);
+  background-size:
+    24px 24px,
+    24px 24px,
+    120px 120px;
+}
+
+.decorGrid {
+  opacity: calc(var(--decor-grid, 0) * 0.5);
+  background-image:
+    linear-gradient(rgb(255 255 255 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 3%) 1px, transparent 1px),
+    linear-gradient(rgb(255 255 255 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 5%) 1px, transparent 1px);
+  background-size:
+    8px 8px,
+    8px 8px,
+    64px 64px,
+    64px 64px;
+}
+
+.decorScanline {
+  opacity: calc(var(--decor-scanline, 0) * 0.55);
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgb(0 0 0 / 0%) 0 2px,
+    rgb(0 0 0 / 26%) 2px 4px
+  );
+}
+
+.decorSweep {
+  opacity: calc(var(--decor-scanline, 0) * 0.5);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgb(57 255 136 / 6%) 48%,
+    rgb(57 255 136 / 10%) 50%,
+    transparent 100%
+  );
+  height: 40vh;
+  inset-block-end: auto;
+  will-change: transform;
+
+  @include motion-safe {
+    animation: decor-sweep 7s linear infinite;
+  }
+}
+
+@keyframes decor-sweep {
+  from {
+    transform: translate3d(0, -40vh, 0);
+  }
+
+  to {
+    transform: translate3d(0, 100vh, 0);
+  }
+}
+
+.decorAurora {
+  opacity: var(--decor-aurora, 0);
+}
+
+.decorRibbon {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  will-change: transform, opacity;
+  mix-blend-mode: screen;
+
+  &:nth-child(1) {
+    inset: -18% 32% 46% -12%;
+    background: radial-gradient(
+      closest-side,
+      rgb(87 242 208 / 44%),
+      rgb(87 242 208 / 0%)
+    );
+
+    @include motion-safe {
+      animation: decor-drift-a 26s ease-in-out infinite alternate;
+    }
+  }
+
+  &:nth-child(2) {
+    inset: -6% -14% 34% 38%;
+    background: radial-gradient(
+      closest-side,
+      rgb(106 169 255 / 42%),
+      rgb(106 169 255 / 0%)
+    );
+
+    @include motion-safe {
+      animation: decor-drift-b 34s ease-in-out infinite alternate;
+    }
+  }
+
+  &:nth-child(3) {
+    inset: 44% 18% -22% 6%;
+    background: radial-gradient(
+      closest-side,
+      rgb(150 120 255 / 34%),
+      rgb(150 120 255 / 0%)
+    );
+
+    @include motion-safe {
+      animation: decor-drift-c 42s ease-in-out infinite alternate;
+    }
+  }
+}
+
+@keyframes decor-drift-a {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(9vw, 6vh, 0) scale(1.22);
+  }
+}
+
+@keyframes decor-drift-b {
+  from {
+    transform: translate3d(0, 0, 0) scale(1.1);
+  }
+
+  to {
+    transform: translate3d(-11vw, 8vh, 0) scale(0.9);
+  }
+}
+
+@keyframes decor-drift-c {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.95);
+  }
+
+  to {
+    transform: translate3d(7vw, -9vh, 0) scale(1.25);
+  }
+}
+
+.decorBotanical {
+  opacity: var(--decor-botanical, 0);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%236f7d4f' stroke-width='1.1' opacity='0.5'%3E%3Cpath d='M110 18c26 30 34 62 22 96-9 25-30 42-58 48 6-32 3-60-8-84C55 54 78 32 110 18Z'/%3E%3Cpath d='M110 18c-4 44 2 82 18 116'/%3E%3Cpath d='M96 60c14 8 26 20 34 36M88 92c14 6 26 16 34 30M84 124c12 4 22 12 30 22'/%3E%3Cpath d='M40 150c30 4 54 18 70 42-28 6-52-2-70-24Z'/%3E%3Cpath d='M180 150c-30 4-54 18-70 42 28 6 52-2 70-24Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 460px 460px;
+}
+
+.decorGrain {
+  opacity: var(--decor-grain, 0);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+.decorConcrete {
+  opacity: var(--decor-concrete, 0);
+  background-image:
+    repeating-linear-gradient(
+      180deg,
+      rgb(0 0 0 / 0%) 0 52px,
+      rgb(0 0 0 / 7%) 52px 54px,
+      rgb(255 255 255 / 4%) 54px 56px,
+      rgb(0 0 0 / 0%) 56px 108px
+    ),
+    radial-gradient(circle at 12% 26%, rgb(0 0 0 / 9%) 0 3px, transparent 4px),
+    radial-gradient(circle at 62% 74%, rgb(0 0 0 / 9%) 0 3px, transparent 4px);
+  background-size:
+    100% 108px,
+    216px 216px,
+    216px 216px;
+}
+
+.decorTile {
+  opacity: var(--decor-tile, 0);
+  background-image:
+    conic-gradient(
+      from 90deg at 50% 50%,
+      rgb(255 255 255 / 8%) 0deg 90deg,
+      transparent 90deg 180deg,
+      rgb(255 255 255 / 8%) 180deg 270deg,
+      transparent 270deg 360deg
+    ),
+    linear-gradient(180deg, transparent 40%, rgb(0 224 198 / 10%) 100%);
+  background-size:
+    88px 88px,
+    100% 100%;
+  transform: perspective(46rem) rotateX(58deg) scale(2.4);
+  transform-origin: 50% 100%;
+  inset-block-start: 46%;
+}
+
+.decorStripe {
+  opacity: var(--decor-stripe, 0);
+  background-image: repeating-linear-gradient(
+    116deg,
+    var(--color-accent) 0 14px,
+    transparent 14px 46px
+  );
+}
+
+.decorStars {
+  opacity: var(--decor-stars, 0);
+  background-image:
+    radial-gradient(circle at 18% 22%, rgb(255 255 255 / 90%) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 12%, rgb(255 255 255 / 70%) 0 1.4px, transparent 2px),
+    radial-gradient(circle at 42% 62%, rgb(255 255 255 / 55%) 0 1px, transparent 2px),
+    radial-gradient(circle at 88% 78%, rgb(255 255 255 / 80%) 0 1.6px, transparent 3px);
+  background-size:
+    197px 197px,
+    263px 263px,
+    331px 331px,
+    421px 421px;
+}
+
+.decorSunbeam {
+  opacity: var(--decor-sunbeam, 0);
+  background-image:
+    linear-gradient(
+      104deg,
+      rgb(255 244 214 / 0%) 34%,
+      rgb(255 244 214 / 42%) 44%,
+      rgb(255 244 214 / 0%) 58%
+    ),
+    radial-gradient(70% 44% at 22% 8%, rgb(255 236 190 / 34%), transparent 70%);
+  mix-blend-mode: screen;
+}
+
+.decorGloss {
+  opacity: var(--decor-gloss, 0);
+  background-image:
+    radial-gradient(120% 46% at 50% -12%, rgb(255 255 255 / 46%), transparent 62%),
+    radial-gradient(24% 18% at 82% 14%, rgb(255 255 255 / 34%), transparent 70%);
+  mix-blend-mode: screen;
+}
+
+.decorHalftone {
+  opacity: var(--decor-halftone, 0);
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    var(--color-accent) 0 1.4px,
+    transparent 1.8px
+  );
+  background-size: 6px 6px;
+  mix-blend-mode: multiply;
+}
+
+.decorVignette {
+  opacity: var(--decor-vignette, 0);
+  background: radial-gradient(
+    130% 105% at 50% 42%,
+    rgb(0 0 0 / 0%) 42%,
+    rgb(0 0 0 / 34%) 78%,
+    rgb(0 0 0 / 60%) 100%
+  );
+}
+
+@include reduced-motion {
+  .decorSweep,
+  .decorRibbon {
+    animation: none !important;
+  }
+
+  .decorSweep {
+    opacity: 0;
+  }
+}

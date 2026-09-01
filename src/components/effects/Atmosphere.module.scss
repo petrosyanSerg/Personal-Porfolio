@@ -1,0 +1,25 @@
+@use "abstracts" as *;
+
+.light {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background: radial-gradient(
+    26rem 26rem at var(--pointer-x, 50vw) var(--pointer-y, 50vh),
+    rgb(from var(--cursor-ink, var(--color-accent)) r g b / var(--cursor-light)) 0%,
+    rgb(
+        from var(--cursor-ink, var(--color-accent)) r g b /
+          calc(var(--cursor-light) * 0.35)
+      )
+      38%,
+    transparent 68%
+  );
+  opacity: 0;
+  transition: opacity var(--dur-slow) var(--ease-out);
+
+  :global([data-ambient]) & {
+    opacity: 1;
+  }
+}

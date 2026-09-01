@@ -1,0 +1,93 @@
+@use "../abstracts" as *;
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--gradient-hero);
+  pointer-events: none;
+}
+
+main {
+  display: block;
+}
+
+section {
+  position: relative;
+}
+
+main > section + section::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-border) 22%,
+    var(--color-border) 78%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+main > section + section::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: 0;
+  height: 14rem;
+  background: linear-gradient(
+    180deg,
+    rgb(from var(--color-accent) r g b / 3.5%) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.section-deferred {
+  @include deferred-render;
+}
+
+[data-theme-transition] * {
+  transition:
+    background-color var(--dur-slow) var(--ease-in-out),
+    border-color var(--dur-slow) var(--ease-in-out),
+    color var(--dur-slow) var(--ease-in-out),
+    fill var(--dur-slow) var(--ease-in-out) !important;
+}
+
+::view-transition-old(root) {
+  animation: none;
+}
+
+::view-transition-new(root) {
+  animation: theme-wipe var(--dur-slower) var(--ease-out);
+}
+
+@keyframes theme-wipe {
+  from {
+    clip-path: circle(0 at var(--theme-origin-x, 50vw) var(--theme-origin-y, 0));
+  }
+
+  to {
+    clip-path: circle(
+      var(--theme-origin-r, 150vmax) at var(--theme-origin-x, 50vw)
+        var(--theme-origin-y, 0)
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-theme-transition] * {
+    transition: none !important;
+  }
+
+  ::view-transition-new(root),
+  ::view-transition-old(root) {
+    animation: none;
+  }
+}

@@ -1,0 +1,120 @@
+[data-design="bauhaus"] {
+  color-scheme: light;
+
+  --color-bg: #f2efe9;
+  --color-bg-elevated: #f8f6f2;
+  --color-surface: #fff;
+  --color-surface-2: #e9e5dd;
+  --color-surface-3: #dcd7cd;
+
+  --color-border: #151515;
+  --color-border-strong: #151515;
+  --color-border-accent: #e2231a;
+
+  --color-text: #151515;
+  --color-text-secondary: #3a3a3a;
+  --color-text-muted: #565656;
+  --color-text-faint: #8b8b8b;
+
+  --color-accent: #e2231a;
+  --color-accent-hover: #c81c14;
+  --color-accent-press: #a8160f;
+  --color-accent-strong: #c81c14;
+  --color-accent-strong-hover: #a8160f;
+  --color-accent-soft: rgb(226 35 26 / 12%);
+  --color-accent-text: #b31810;
+
+  --color-teal: #1a4fbf;
+  --color-teal-soft: rgb(26 79 191 / 12%);
+  --color-teal-text: #16419e;
+
+  --color-warn: #f5c400;
+
+  --gradient-hero:
+    linear-gradient(180deg, rgb(245 196 0 / 22%) 0%, transparent 26%),
+    radial-gradient(30% 30% at 92% 12%, rgb(26 79 191 / 26%) 0 100%, transparent 100%),
+    radial-gradient(26% 26% at 6% 92%, rgb(226 35 26 / 24%) 0 100%, transparent 100%);
+  --gradient-text: none;
+  --gradient-accent: linear-gradient(
+    90deg,
+    #e2231a 0 33.3%,
+    #f5c400 33.3% 66.6%,
+    #1a4fbf 66.6% 100%
+  );
+  --gradient-surface: none;
+  --gradient-edge: linear-gradient(
+    90deg,
+    #e2231a 0 33.3%,
+    #f5c400 33.3% 66.6%,
+    #1a4fbf 66.6% 100%
+  );
+
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-glow: 0 0 0 3px #e2231a;
+  --highlight-top: none;
+  --glass-bg: #fff;
+  --glass-border: #151515;
+
+  --font-display: "Futura", "Century Gothic", "Avenir Next", var(--font-sans);
+  --font-heading: var(--font-display);
+  --font-body: var(--font-sans);
+  --font-eyebrow: var(--font-display);
+  --font-accent: var(--font-display);
+
+  --fw-display: var(--fw-bold);
+  --fw-heading: var(--fw-medium);
+  --case-display: lowercase;
+  --case-eyebrow: lowercase;
+  --case-control: lowercase;
+  --ls-display: -0.03em;
+  --ls-eyebrow: 0.02em;
+  --ls-control: 0.02em;
+  --optical-scale: 1.06;
+  --lh-tight: 0.92;
+
+  --density: 1;
+  --measure: 64ch;
+
+  --radius-card: 0;
+  --radius-control: 0;
+  --radius-tag: 0;
+  --radius-media: 0;
+
+  --card-bg: #fff;
+  --card-border-width: 2px;
+  --card-border-color: #151515;
+  --card-shadow: none;
+  --card-hover-shadow: none;
+  --card-hover-border: #e2231a;
+  --card-hover-lift: 0;
+
+  --control-bg: #e2231a;
+  --control-fg: #fff;
+  --control-border: #151515;
+  --control-border-width: 2px;
+  --control-shadow: none;
+
+  --rule-color: #151515;
+  --rule-height: 2px;
+
+  --decor-grid: 0.5;
+  --decor-grain: 0;
+  --motif: "\25CF";
+
+  --motion-scale: 0.7;
+  --ease-signature: cubic-bezier(0.5, 0, 0.5, 1);
+  --dur-signature: var(--dur-fast);
+  --enter-distance: 16px;
+
+  --cursor-ink: #e2231a;
+  --cursor-size: 22px;
+  --cursor-dot: 4px;
+  --cursor-radius: 0;
+  --cursor-light: 0;
+
+  --hero-align: start;
+  --hero-measure: 44rem;
+}

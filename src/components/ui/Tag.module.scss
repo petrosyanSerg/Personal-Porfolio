@@ -1,0 +1,33 @@
+@use "abstracts" as *;
+
+.tag {
+  @include mono;
+
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-tag);
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.core {
+  border-color: var(--color-border-accent);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-text);
+}
+
+.strong {
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+
+.working {
+  color: var(--color-text-secondary);
+}
+
+.familiar {
+  color: var(--color-text-muted);
+}

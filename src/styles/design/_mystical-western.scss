@@ -1,0 +1,110 @@
+[data-design="mystical-western"] {
+  color-scheme: dark;
+
+  --color-bg: #0d0a14;
+  --color-bg-elevated: #12101d;
+  --color-surface: #181524;
+  --color-surface-2: #211d31;
+  --color-surface-3: #2c2740;
+
+  --color-border: #2a2440;
+  --color-border-strong: #453c63;
+  --color-border-accent: rgb(196 106 61 / 46%);
+
+  --color-text: #f0e6d2;
+  --color-text-secondary: #cfc3ad;
+  --color-text-muted: #a99d8c;
+  --color-text-faint: #776c62;
+
+  --color-accent: #c46a3d;
+  --color-accent-hover: #db8054;
+  --color-accent-press: #a8562e;
+  --color-accent-strong: #9e5029;
+  --color-accent-strong-hover: #874321;
+  --color-accent-soft: rgb(196 106 61 / 16%);
+  --color-accent-text: #dd8f61;
+
+  --color-teal: #7b6bb5;
+  --color-teal-soft: rgb(123 107 181 / 20%);
+  --color-teal-text: #a496d6;
+
+  --gradient-hero:
+    radial-gradient(38% 32% at 82% 8%, rgb(200 200 255 / 16%), transparent 68%),
+    radial-gradient(66% 46% at 10% 96%, rgb(196 106 61 / 22%), transparent 74%);
+  --gradient-text: linear-gradient(170deg, #f6eddb 0%, #c46a3d 100%);
+  --gradient-accent: linear-gradient(120deg, #c46a3d 0%, #7b6bb5 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(190 170 255 / 6%) 0%,
+    rgb(0 0 0 / 0%) 100%
+  );
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    rgb(123 107 181 / 60%),
+    rgb(196 106 61 / 60%),
+    transparent
+  );
+
+  --shadow-sm: 0 2px 6px rgb(0 0 0 / 56%);
+  --shadow-md: 0 8px 26px rgb(0 0 0 / 58%);
+  --shadow-lg: 0 18px 52px rgb(0 0 0 / 64%);
+  --shadow-xl: 0 32px 84px rgb(0 0 0 / 70%);
+  --shadow-glow: 0 0 0 1px var(--color-border-accent), 0 10px 40px rgb(123 107 181 / 18%);
+  --highlight-top: inset 0 1px 0 rgb(200 190 255 / 8%);
+  --glass-bg: rgb(24 21 36 / 78%);
+  --glass-border: rgb(123 107 181 / 26%);
+
+  --font-display: "Hoefler Text", "Baskerville", "Times New Roman", georgia, serif;
+  --font-heading: var(--font-display);
+  --font-eyebrow: var(--font-sans);
+  --font-accent: var(--font-display);
+
+  --fw-display: var(--fw-regular);
+  --case-eyebrow: uppercase;
+  --ls-display: 0.01em;
+  --ls-eyebrow: 0.34em;
+  --optical-scale: 0.95;
+  --lh-tight: 1.08;
+
+  --density: 1.16;
+  --measure: 58ch;
+
+  --radius-card: 2px 2px 18px 18px;
+  --radius-control: 999px;
+  --radius-tag: 2px;
+  --radius-media: 999px 999px 4px 4px;
+
+  --card-bg: linear-gradient(180deg, rgb(44 39 64 / 62%) 0%, rgb(24 21 36 / 82%) 100%);
+  --card-border-color: rgb(123 107 181 / 26%);
+  --card-shadow: var(--highlight-top), 0 10px 32px rgb(0 0 0 / 44%);
+  --card-hover-shadow: 0 18px 50px rgb(0 0 0 / 58%), 0 0 40px rgb(196 106 61 / 14%);
+  --card-hover-border: rgb(196 106 61 / 58%);
+  --card-hover-lift: -3px;
+
+  --control-bg: transparent;
+  --control-fg: #dd8f61;
+  --control-border: rgb(196 106 61 / 70%);
+
+  --rule-color: rgb(123 107 181 / 30%);
+
+  --decor-stars: 0.5;
+  --decor-grain: 0.06;
+  --decor-vignette: 0.6;
+  --motif: "\2735";
+
+  --motion-scale: 1.3;
+  --ease-signature: cubic-bezier(0.36, 0, 0.16, 1);
+  --dur-signature: var(--dur-slower);
+  --enter-distance: 18px;
+  --enter-blur: 4px;
+
+  --cursor-ink: #dd8f61;
+  --cursor-size: 36px;
+  --cursor-dot: 3px;
+  --cursor-blend: screen;
+  --cursor-light: 0.1;
+
+  --hero-align: start;
+  --hero-measure: 36rem;
+}

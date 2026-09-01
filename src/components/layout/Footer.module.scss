@@ -1,0 +1,79 @@
+@use "abstracts" as *;
+
+.footer {
+  padding-block: var(--space-10) var(--space-7);
+  border-top: 1px solid var(--color-border);
+  background: var(--gradient-surface);
+}
+
+.top {
+  display: grid;
+  gap: var(--space-8);
+
+  @include up("md") {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 0.8fr);
+    gap: var(--space-7);
+  }
+}
+
+.name {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  letter-spacing: var(--ls-heading);
+}
+
+.role {
+  margin-top: var(--space-2);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  text-wrap: pretty;
+}
+
+.resume {
+  @include mono;
+
+  display: inline-block;
+  margin-top: var(--space-4);
+  color: var(--color-accent-text);
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+}
+
+.navList,
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.navLink,
+.social {
+  @include mono;
+
+  color: var(--color-text-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+
+  &:hover {
+    color: var(--color-text);
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-6);
+  justify-content: space-between;
+  margin-top: var(--space-9);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--fs-caption);
+  color: var(--color-text-muted);
+}
+
+.built {
+  color: var(--color-text-muted);
+}
