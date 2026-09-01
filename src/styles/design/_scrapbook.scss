@@ -1,4 +1,43 @@
 [data-design="scrapbook"] {
+  --font-display: "Rockwell", "Bookman Old Style", georgia, serif;
+  --font-heading: var(--font-sans);
+  --font-body: var(--font-sans);
+  --font-eyebrow: var(--font-mono);
+  --font-accent: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+
+  --fw-display: var(--fw-bold);
+  --fw-heading: var(--fw-semibold);
+  --ls-display: -0.02em;
+  --ls-eyebrow: 0.18em;
+  --optical-scale: 0.98;
+  --lh-tight: 1.02;
+  --lh-normal: 1.64;
+
+  --density: 1.02;
+  --measure: 60ch;
+
+  --radius-card: 2px 4px 3px 5px;
+  --radius-control: 4px;
+  --radius-tag: 3px;
+  --radius-media: 3px 2px 4px 2px;
+  --card-border-width: 1px;
+  --card-hover-lift: -3px;
+  --rule-height: 8px;
+  --motif: "\2702";
+
+  --motion-scale: 1;
+  --ease-signature: cubic-bezier(0.3, 1.3, 0.45, 1);
+  --dur-signature: var(--dur-base);
+  --enter-distance: 14px;
+  --cursor-size: 26px;
+  --cursor-dot: 4px;
+  --cursor-radius: 2px;
+
+  --hero-align: start;
+  --hero-measure: 40rem;
+}
+
+[data-design="scrapbook"][data-theme="light"] {
   color-scheme: light;
 
   --color-bg: #f2ece1;
@@ -54,35 +93,11 @@
   --glass-bg: rgb(255 253 247 / 86%);
   --glass-border: rgb(154 144 120 / 46%);
 
-  --font-display: "Rockwell", "Bookman Old Style", georgia, serif;
-  --font-heading: var(--font-sans);
-  --font-body: var(--font-sans);
-  --font-eyebrow: var(--font-mono);
-  --font-accent: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
-
-  --fw-display: var(--fw-bold);
-  --fw-heading: var(--fw-semibold);
-  --ls-display: -0.02em;
-  --ls-eyebrow: 0.18em;
-  --optical-scale: 0.98;
-  --lh-tight: 1.02;
-  --lh-normal: 1.64;
-
-  --density: 1.02;
-  --measure: 60ch;
-
-  --radius-card: 2px 4px 3px 5px;
-  --radius-control: 4px;
-  --radius-tag: 3px;
-  --radius-media: 3px 2px 4px 2px;
-
   --card-bg: var(--color-surface);
-  --card-border-width: 1px;
   --card-border-color: #ded4c0;
   --card-shadow: 2px 4px 8px rgb(60 50 34 / 16%);
   --card-hover-shadow: 4px 8px 16px rgb(60 50 34 / 22%);
   --card-hover-border: #4d7ea8;
-  --card-hover-lift: -3px;
 
   --control-bg: var(--color-accent-strong);
   --control-fg: #fffdf7;
@@ -90,24 +105,89 @@
   --control-shadow: 2px 3px 6px rgb(60 50 34 / 24%);
 
   --rule-color: rgb(212 160 23 / 46%);
-  --rule-height: 8px;
 
   --decor-paper: 0.24;
   --decor-grain: 0.1;
   --decor-sunbeam: 0.2;
-  --motif: "\2702";
-
-  --motion-scale: 1;
-  --ease-signature: cubic-bezier(0.3, 1.3, 0.45, 1);
-  --dur-signature: var(--dur-base);
-  --enter-distance: 14px;
 
   --cursor-ink: #4d7ea8;
-  --cursor-size: 26px;
-  --cursor-dot: 4px;
-  --cursor-radius: 2px;
   --cursor-light: 0.02;
+}
 
-  --hero-align: start;
-  --hero-measure: 40rem;
+[data-design="scrapbook"]:not([data-theme="light"]) {
+  /* COUNTERPART-PENDING */
+  color-scheme: light;
+
+  --color-bg: #f2ece1;
+  --color-bg-elevated: #f7f2e9;
+  --color-surface: #fffdf7;
+  --color-surface-2: #e8e0d1;
+  --color-surface-3: #d9cfbc;
+
+  --color-border: #cdc3ae;
+  --color-border-strong: #9a9078;
+  --color-border-accent: rgb(77 126 168 / 52%);
+
+  --color-text: #2a2620;
+  --color-text-secondary: #46413a;
+  --color-text-muted: #5f594d;
+  --color-text-faint: #948d7c;
+
+  --color-accent: #4d7ea8;
+  --color-accent-hover: #3f6b91;
+  --color-accent-press: #345a7c;
+  --color-accent-strong: #3a6489;
+  --color-accent-strong-hover: #305474;
+  --color-accent-soft: rgb(77 126 168 / 14%);
+  --color-accent-text: #305474;
+
+  --color-teal: #c26a52;
+  --color-teal-soft: rgb(194 106 82 / 16%);
+  --color-teal-text: #9b4f3a;
+
+  --color-warn: #d4a017;
+
+  --gradient-hero:
+    radial-gradient(56% 40% at 22% 2%, rgb(255 252 240 / 90%), transparent 72%),
+    linear-gradient(128deg, rgb(194 106 82 / 14%) 0 16%, transparent 16%),
+    linear-gradient(232deg, rgb(77 126 168 / 14%) 0 18%, transparent 18%);
+  --gradient-text: none;
+  --gradient-accent: linear-gradient(120deg, #4d7ea8 0%, #c26a52 100%);
+  --gradient-surface: none;
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    rgb(212 160 23 / 60%) 20%,
+    rgb(212 160 23 / 60%) 80%,
+    transparent
+  );
+
+  --shadow-sm: 1px 2px 3px rgb(60 50 34 / 16%);
+  --shadow-md: 2px 4px 8px rgb(60 50 34 / 18%);
+  --shadow-lg: 4px 7px 16px rgb(60 50 34 / 20%);
+  --shadow-xl: 6px 12px 28px rgb(60 50 34 / 22%);
+  --shadow-glow: 0 0 0 2px var(--color-border-accent);
+  --highlight-top: none;
+  --glass-bg: rgb(255 253 247 / 86%);
+  --glass-border: rgb(154 144 120 / 46%);
+
+  --card-bg: var(--color-surface);
+  --card-border-color: #ded4c0;
+  --card-shadow: 2px 4px 8px rgb(60 50 34 / 16%);
+  --card-hover-shadow: 4px 8px 16px rgb(60 50 34 / 22%);
+  --card-hover-border: #4d7ea8;
+
+  --control-bg: var(--color-accent-strong);
+  --control-fg: #fffdf7;
+  --control-border: transparent;
+  --control-shadow: 2px 3px 6px rgb(60 50 34 / 24%);
+
+  --rule-color: rgb(212 160 23 / 46%);
+
+  --decor-paper: 0.24;
+  --decor-grain: 0.1;
+  --decor-sunbeam: 0.2;
+
+  --cursor-ink: #4d7ea8;
+  --cursor-light: 0.02;
 }

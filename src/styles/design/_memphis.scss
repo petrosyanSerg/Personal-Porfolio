@@ -1,4 +1,45 @@
 [data-design="memphis"] {
+  --font-display: "Futura", "Century Gothic", "Avenir Next", var(--font-sans);
+  --font-heading: var(--font-display);
+  --font-eyebrow: var(--font-display);
+  --font-accent: var(--font-display);
+
+  --fw-display: var(--fw-bold);
+  --fw-heading: var(--fw-bold);
+  --case-display: uppercase;
+  --case-eyebrow: uppercase;
+  --case-control: uppercase;
+  --ls-display: -0.02em;
+  --ls-eyebrow: 0.2em;
+  --ls-control: 0.08em;
+  --optical-scale: 1.05;
+
+  --density: 0.94;
+  --measure: 62ch;
+
+  --radius-card: 0 22px 0 22px;
+  --radius-control: 999px;
+  --radius-tag: 999px;
+  --radius-media: 22px 0 22px 0;
+  --card-border-width: 3px;
+  --card-hover-lift: -4px;
+  --control-border-width: 3px;
+  --rule-height: 3px;
+  --motif: "\25C6";
+
+  --motion-scale: 0.8;
+  --ease-signature: cubic-bezier(0.34, 1.7, 0.5, 1);
+  --dur-signature: var(--dur-base);
+  --enter-distance: 20px;
+  --cursor-size: 26px;
+  --cursor-dot: 7px;
+  --cursor-radius: 0;
+
+  --hero-align: start;
+  --hero-measure: 40rem;
+}
+
+[data-design="memphis"][data-theme="light"] {
   color-scheme: light;
 
   --color-bg: #fdf6e3;
@@ -53,61 +94,98 @@
   --glass-bg: #fff;
   --glass-border: #141414;
 
-  --font-display: "Futura", "Century Gothic", "Avenir Next", var(--font-sans);
-  --font-heading: var(--font-display);
-  --font-eyebrow: var(--font-display);
-  --font-accent: var(--font-display);
-
-  --fw-display: var(--fw-bold);
-  --fw-heading: var(--fw-bold);
-  --case-display: uppercase;
-  --case-eyebrow: uppercase;
-  --case-control: uppercase;
-  --ls-display: -0.02em;
-  --ls-eyebrow: 0.2em;
-  --ls-control: 0.08em;
-  --optical-scale: 1.05;
-
-  --density: 0.94;
-  --measure: 62ch;
-
-  --radius-card: 0 22px 0 22px;
-  --radius-control: 999px;
-  --radius-tag: 999px;
-  --radius-media: 22px 0 22px 0;
-
   --card-bg: #fff;
-  --card-border-width: 3px;
   --card-border-color: #141414;
   --card-shadow: 5px 5px 0 #141414;
   --card-hover-shadow: 9px 9px 0 #ff3b7f;
   --card-hover-border: #141414;
-  --card-hover-lift: -4px;
 
   --control-bg: #ffc800;
   --control-fg: #141414;
   --control-border: #141414;
-  --control-border-width: 3px;
   --control-shadow: 4px 4px 0 #141414;
 
   --rule-color: #141414;
-  --rule-height: 3px;
 
   --decor-stripe: 0.1;
   --decor-grain: 0;
-  --motif: "\25C6";
-
-  --motion-scale: 0.8;
-  --ease-signature: cubic-bezier(0.34, 1.7, 0.5, 1);
-  --dur-signature: var(--dur-base);
-  --enter-distance: 20px;
 
   --cursor-ink: #ff3b7f;
-  --cursor-size: 26px;
-  --cursor-dot: 7px;
-  --cursor-radius: 0;
   --cursor-light: 0;
+}
 
-  --hero-align: start;
-  --hero-measure: 40rem;
+[data-design="memphis"]:not([data-theme="light"]) {
+  /* COUNTERPART-PENDING */
+  color-scheme: light;
+
+  --color-bg: #fdf6e3;
+  --color-bg-elevated: #fffdf6;
+  --color-surface: #fff;
+  --color-surface-2: #fdeee0;
+  --color-surface-3: #ffe4ef;
+
+  --color-border: #141414;
+  --color-border-strong: #141414;
+  --color-border-accent: #ff3b7f;
+
+  --color-text: #141414;
+  --color-text-secondary: #3b3b3b;
+  --color-text-muted: #5d5d5d;
+  --color-text-faint: #8f8f8f;
+
+  --color-accent: #ff3b7f;
+  --color-accent-hover: #ff5c95;
+  --color-accent-press: #e01c63;
+  --color-accent-strong: #d61461;
+  --color-accent-strong-hover: #b80f51;
+  --color-accent-soft: rgb(255 59 127 / 14%);
+  --color-accent-text: #c01055;
+
+  --color-teal: #00c2c7;
+  --color-teal-soft: rgb(0 194 199 / 16%);
+  --color-teal-text: #00777a;
+
+  --color-warn: #ffc800;
+
+  --gradient-hero:
+    radial-gradient(28% 30% at 8% 12%, rgb(255 200 0 / 42%), transparent 70%),
+    radial-gradient(24% 26% at 92% 22%, rgb(0 194 199 / 38%), transparent 70%),
+    radial-gradient(30% 24% at 78% 92%, rgb(255 59 127 / 32%), transparent 72%);
+  --gradient-text: none;
+  --gradient-accent: linear-gradient(90deg, #ff3b7f 0%, #ffc800 50%, #00c2c7 100%);
+  --gradient-surface: none;
+  --gradient-edge: repeating-linear-gradient(
+    90deg,
+    #ff3b7f 0 12px,
+    #00c2c7 12px 24px,
+    #ffc800 24px 36px
+  );
+
+  --shadow-sm: 3px 3px 0 #141414;
+  --shadow-md: 5px 5px 0 #141414;
+  --shadow-lg: 7px 7px 0 #141414;
+  --shadow-xl: 10px 10px 0 #141414;
+  --shadow-glow: 0 0 0 3px #ff3b7f;
+  --highlight-top: none;
+  --glass-bg: #fff;
+  --glass-border: #141414;
+
+  --card-bg: #fff;
+  --card-border-color: #141414;
+  --card-shadow: 5px 5px 0 #141414;
+  --card-hover-shadow: 9px 9px 0 #ff3b7f;
+  --card-hover-border: #141414;
+
+  --control-bg: #ffc800;
+  --control-fg: #141414;
+  --control-border: #141414;
+  --control-shadow: 4px 4px 0 #141414;
+
+  --rule-color: #141414;
+
+  --decor-stripe: 0.1;
+  --decor-grain: 0;
+
+  --cursor-ink: #ff3b7f;
+  --cursor-light: 0;
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { setDesignSystem } from '../core/design-store';
@@ -12,7 +12,10 @@ import type { DesignSystemId } from '../core/types';
 import { DesignPreview } from './DesignPreview';
 import styles from './DesignLab.module.scss';
 
-export function DesignLab() {
+// Memoised because it takes no props and mounts fifty previews. The header
+// re-renders on every section crossing as the active nav link moves, and
+// without this each of those reconciles the whole tray.
+export const DesignLab = memo(function DesignLab() {
   const t = useTranslations('design');
   const activeDesign = useDesignSystem();
   const active = activeDesign.id;
@@ -196,4 +199,4 @@ export function DesignLab() {
       </dialog>
     </>
   );
-}
+});

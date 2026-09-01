@@ -1,4 +1,48 @@
 [data-design="gothic"] {
+  --font-display: "Trajan Pro", "Bodoni MT", "Palatino Linotype", didot, serif;
+  --font-heading: var(--font-display);
+  --font-body: "Baskerville", "Hoefler Text", georgia, serif;
+  --font-eyebrow: var(--font-display);
+  --font-accent: var(--font-display);
+
+  --fw-display: var(--fw-regular);
+  --case-display: uppercase;
+  --case-heading: uppercase;
+  --case-eyebrow: uppercase;
+  --ls-display: 0.08em;
+  --ls-heading: 0.06em;
+  --ls-eyebrow: 0.4em;
+  --optical-scale: 0.92;
+  --lh-tight: 1.04;
+  --lh-normal: 1.62;
+
+  --density: 1.4;
+  --measure: 56ch;
+
+  --radius-card: 60px 60px 2px 2px;
+  --radius-control: 999px 999px 2px 2px;
+  --radius-tag: 2px;
+  --radius-media: 999px 999px 2px 2px;
+  --card-hover-lift: -3px;
+  --ornament-width: 1.2;
+  --ornament-scale: 1.2;
+  --motif: "\2020";
+
+  --motion-scale: 1.3;
+  --ease-signature: cubic-bezier(0.36, 0, 0.12, 1);
+  --dur-signature: var(--dur-slower);
+  --enter-distance: 22px;
+  --enter-blur: 4px;
+  --cursor-size: 38px;
+  --cursor-dot: 3px;
+
+  --hero-align: center;
+  --hero-text-align: center;
+  --hero-measure: 34rem;
+  --hero-min-h: min(100svh, 66rem);
+}
+
+[data-design="gothic"]:not([data-theme="light"]) {
   color-scheme: dark;
 
   --color-bg: #0a0a10;
@@ -55,37 +99,11 @@
   --glass-bg: rgb(20 20 32 / 84%);
   --glass-border: rgb(122 79 168 / 26%);
 
-  --font-display: "Trajan Pro", "Bodoni MT", "Palatino Linotype", didot, serif;
-  --font-heading: var(--font-display);
-  --font-body: "Baskerville", "Hoefler Text", georgia, serif;
-  --font-eyebrow: var(--font-display);
-  --font-accent: var(--font-display);
-
-  --fw-display: var(--fw-regular);
-  --case-display: uppercase;
-  --case-heading: uppercase;
-  --case-eyebrow: uppercase;
-  --ls-display: 0.08em;
-  --ls-heading: 0.06em;
-  --ls-eyebrow: 0.4em;
-  --optical-scale: 0.92;
-  --lh-tight: 1.04;
-  --lh-normal: 1.62;
-
-  --density: 1.4;
-  --measure: 56ch;
-
-  --radius-card: 60px 60px 2px 2px;
-  --radius-control: 999px 999px 2px 2px;
-  --radius-tag: 2px;
-  --radius-media: 999px 999px 2px 2px;
-
   --card-bg: linear-gradient(180deg, rgb(36 36 56 / 66%) 0%, rgb(20 20 32 / 88%) 100%);
   --card-border-color: rgb(122 79 168 / 26%);
   --card-shadow: var(--highlight-top), 0 12px 36px rgb(0 0 0 / 56%);
   --card-hover-shadow: 0 22px 56px rgb(0 0 0 / 70%), 0 0 44px rgb(122 79 168 / 18%);
   --card-hover-border: rgb(168 135 212 / 60%);
-  --card-hover-lift: -3px;
 
   --control-bg: transparent;
   --control-fg: #a887d4;
@@ -96,28 +114,95 @@
   --ornament-color: rgb(168 135 212 / 60%);
   --ornament-accent: #a8324a;
   --ornament-opacity: 0.86;
-  --ornament-width: 1.2;
-  --ornament-scale: 1.2;
 
   --decor-stars: 0.22;
   --decor-grain: 0.06;
   --decor-vignette: 0.72;
-  --motif: "\2020";
-
-  --motion-scale: 1.3;
-  --ease-signature: cubic-bezier(0.36, 0, 0.12, 1);
-  --dur-signature: var(--dur-slower);
-  --enter-distance: 22px;
-  --enter-blur: 4px;
 
   --cursor-ink: #a887d4;
-  --cursor-size: 38px;
-  --cursor-dot: 3px;
   --cursor-blend: screen;
   --cursor-light: 0.12;
+}
 
-  --hero-align: center;
-  --hero-text-align: center;
-  --hero-measure: 34rem;
-  --hero-min-h: min(100svh, 66rem);
+[data-design="gothic"][data-theme="light"] {
+  /* COUNTERPART-PENDING */
+  color-scheme: dark;
+
+  --color-bg: #0a0a10;
+  --color-bg-elevated: #0f0f18;
+  --color-surface: #141420;
+  --color-surface-2: #1b1b2b;
+  --color-surface-3: #242438;
+
+  --color-border: #262638;
+  --color-border-strong: #3f3d5c;
+  --color-border-accent: rgb(122 79 168 / 52%);
+
+  --color-text: #ded6e6;
+  --color-text-secondary: #b8aeca;
+  --color-text-muted: #938aa8;
+  --color-text-faint: #6a6382;
+
+  --color-accent: #7a4fa8;
+  --color-accent-hover: #9366c4;
+  --color-accent-press: #653d8e;
+  --color-accent-strong: #6a4292;
+  --color-accent-strong-hover: #58367a;
+  --color-accent-soft: rgb(122 79 168 / 18%);
+  --color-accent-text: #a887d4;
+
+  --color-teal: #a8324a;
+  --color-teal-soft: rgb(168 50 74 / 20%);
+  --color-teal-text: #d1697f;
+
+  --gradient-hero:
+    radial-gradient(30% 44% at 30% -6%, rgb(122 79 168 / 26%), transparent 66%),
+    radial-gradient(26% 40% at 52% -8%, rgb(168 50 74 / 20%), transparent 66%),
+    radial-gradient(28% 42% at 72% -6%, rgb(70 90 190 / 20%), transparent 66%);
+  --gradient-text: linear-gradient(180deg, #f2ecfa 0%, #a887d4 100%);
+  --gradient-accent: linear-gradient(180deg, #7a4fa8 0%, #a8324a 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(180 150 240 / 7%) 0%,
+    rgb(0 0 0 / 0%) 100%
+  );
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    rgb(122 79 168 / 70%),
+    transparent
+  );
+
+  --shadow-sm: 0 2px 8px rgb(0 0 0 / 66%);
+  --shadow-md: 0 10px 30px rgb(0 0 0 / 68%);
+  --shadow-lg: 0 22px 60px rgb(0 0 0 / 74%);
+  --shadow-xl: 0 40px 100px rgb(0 0 0 / 80%);
+  --shadow-glow: 0 0 0 1px var(--color-border-accent), 0 0 44px rgb(122 79 168 / 20%);
+  --highlight-top: inset 0 1px 0 rgb(190 160 250 / 10%);
+  --glass-bg: rgb(20 20 32 / 84%);
+  --glass-border: rgb(122 79 168 / 26%);
+
+  --card-bg: linear-gradient(180deg, rgb(36 36 56 / 66%) 0%, rgb(20 20 32 / 88%) 100%);
+  --card-border-color: rgb(122 79 168 / 26%);
+  --card-shadow: var(--highlight-top), 0 12px 36px rgb(0 0 0 / 56%);
+  --card-hover-shadow: 0 22px 56px rgb(0 0 0 / 70%), 0 0 44px rgb(122 79 168 / 18%);
+  --card-hover-border: rgb(168 135 212 / 60%);
+
+  --control-bg: transparent;
+  --control-fg: #a887d4;
+  --control-border: rgb(122 79 168 / 70%);
+
+  --rule-color: rgb(122 79 168 / 30%);
+
+  --ornament-color: rgb(168 135 212 / 60%);
+  --ornament-accent: #a8324a;
+  --ornament-opacity: 0.86;
+
+  --decor-stars: 0.22;
+  --decor-grain: 0.06;
+  --decor-vignette: 0.72;
+
+  --cursor-ink: #a887d4;
+  --cursor-blend: screen;
+  --cursor-light: 0.12;
 }

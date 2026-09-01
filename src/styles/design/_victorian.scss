@@ -1,4 +1,46 @@
 [data-design="victorian"] {
+  --font-display: "Baskerville", "Hoefler Text", "Times New Roman", garamond, serif;
+  --font-heading: var(--font-display);
+  --font-body: var(--font-display);
+  --font-eyebrow: var(--font-display);
+  --font-accent: var(--font-display);
+
+  --fw-display: var(--fw-regular);
+  --fw-heading: var(--fw-semibold);
+  --case-eyebrow: uppercase;
+  --ls-display: 0.004em;
+  --ls-eyebrow: 0.3em;
+  --optical-scale: 0.96;
+  --lh-normal: 1.68;
+
+  --density: 1.02;
+  --measure: 64ch;
+
+  --radius-card: 2px;
+  --radius-control: 2px;
+  --radius-tag: 2px;
+  --radius-media: 2px;
+  --card-border-width: 1px;
+  --card-hover-lift: -2px;
+  --rule-height: 2px;
+  --rule-style: double;
+  --ornament-width: 1.1;
+  --ornament-scale: 1.05;
+  --motif: "\2767";
+
+  --motion-scale: 1.1;
+  --ease-signature: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-signature: var(--dur-slower);
+  --enter-distance: 12px;
+  --enter-blur: 3px;
+  --cursor-size: 30px;
+  --cursor-dot: 4px;
+
+  --hero-align: start;
+  --hero-measure: 38rem;
+}
+
+[data-design="victorian"]:not([data-theme="light"]) {
   color-scheme: dark;
 
   --color-bg: #120e0c;
@@ -54,36 +96,12 @@
   --glass-bg: rgb(32 24 21 / 82%);
   --glass-border: rgb(140 106 63 / 30%);
 
-  --font-display: "Baskerville", "Hoefler Text", "Times New Roman", garamond, serif;
-  --font-heading: var(--font-display);
-  --font-body: var(--font-display);
-  --font-eyebrow: var(--font-display);
-  --font-accent: var(--font-display);
-
-  --fw-display: var(--fw-regular);
-  --fw-heading: var(--fw-semibold);
-  --case-eyebrow: uppercase;
-  --ls-display: 0.004em;
-  --ls-eyebrow: 0.3em;
-  --optical-scale: 0.96;
-  --lh-normal: 1.68;
-
-  --density: 1.02;
-  --measure: 64ch;
-
-  --radius-card: 2px;
-  --radius-control: 2px;
-  --radius-tag: 2px;
-  --radius-media: 2px;
-
   --card-bg: linear-gradient(180deg, rgb(56 42 35 / 70%) 0%, rgb(32 24 21 / 82%) 100%);
-  --card-border-width: 1px;
   --card-border-color: rgb(140 106 63 / 34%);
   --card-shadow: inset 0 0 0 3px rgb(140 106 63 / 12%), 0 8px 24px rgb(0 0 0 / 46%);
   --card-hover-shadow:
     inset 0 0 0 3px rgb(196 152 84 / 26%), 0 18px 44px rgb(0 0 0 / 60%);
   --card-hover-border: rgb(196 152 84 / 62%);
-  --card-hover-lift: -2px;
 
   --control-bg: var(--color-accent-strong);
   --control-fg: #f4e9d2;
@@ -91,31 +109,98 @@
   --control-shadow: inset 0 1px 0 rgb(255 235 190 / 14%);
 
   --rule-color: rgb(140 106 63 / 40%);
-  --rule-height: 2px;
-  --rule-style: double;
 
   --ornament-color: rgb(196 152 84 / 60%);
   --ornament-accent: #c39a5c;
   --ornament-opacity: 0.85;
-  --ornament-width: 1.1;
-  --ornament-scale: 1.05;
 
   --decor-grain: 0.07;
   --decor-vignette: 0.68;
   --decor-stars: 0.05;
-  --motif: "\2767";
-
-  --motion-scale: 1.1;
-  --ease-signature: cubic-bezier(0.4, 0, 0.2, 1);
-  --dur-signature: var(--dur-slower);
-  --enter-distance: 12px;
-  --enter-blur: 3px;
 
   --cursor-ink: #c39a5c;
-  --cursor-size: 30px;
-  --cursor-dot: 4px;
   --cursor-light: 0.07;
+}
 
-  --hero-align: start;
-  --hero-measure: 38rem;
+[data-design="victorian"][data-theme="light"] {
+  /* COUNTERPART-PENDING */
+  color-scheme: dark;
+
+  --color-bg: #120e0c;
+  --color-bg-elevated: #191311;
+  --color-surface: #201815;
+  --color-surface-2: #2b201b;
+  --color-surface-3: #382a23;
+
+  --color-border: #3a2b23;
+  --color-border-strong: #5c4432;
+  --color-border-accent: rgb(140 106 63 / 52%);
+
+  --color-text: #e8dcc4;
+  --color-text-secondary: #c9b795;
+  --color-text-muted: #a9977a;
+  --color-text-faint: #7d6e58;
+
+  --color-accent: #8c6a3f;
+  --color-accent-hover: #a6813f;
+  --color-accent-press: #74562f;
+  --color-accent-strong: #6d4f2c;
+  --color-accent-strong-hover: #5a4023;
+  --color-accent-soft: rgb(140 106 63 / 18%);
+  --color-accent-text: #c39a5c;
+
+  --color-teal: #6d2f34;
+  --color-teal-soft: rgb(140 60 66 / 20%);
+  --color-teal-text: #c0777c;
+
+  --gradient-hero:
+    radial-gradient(48% 40% at 22% 14%, rgb(196 152 84 / 20%), transparent 72%),
+    radial-gradient(56% 46% at 84% 78%, rgb(109 47 52 / 22%), transparent 74%);
+  --gradient-text: linear-gradient(170deg, #f4e9d2 0%, #c39a5c 100%);
+  --gradient-accent: linear-gradient(120deg, #8c6a3f 0%, #6d2f34 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(230 195 130 / 6%) 0%,
+    rgb(0 0 0 / 0%) 100%
+  );
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    rgb(140 106 63 / 70%),
+    transparent
+  );
+
+  --shadow-sm: 0 2px 6px rgb(0 0 0 / 60%);
+  --shadow-md: 0 8px 26px rgb(0 0 0 / 62%);
+  --shadow-lg: 0 18px 54px rgb(0 0 0 / 68%);
+  --shadow-xl: 0 34px 90px rgb(0 0 0 / 74%);
+  --shadow-glow: 0 0 0 1px var(--color-border-accent), 0 10px 40px rgb(196 152 84 / 14%);
+  --highlight-top: inset 0 1px 0 rgb(230 195 130 / 10%);
+  --glass-bg: rgb(32 24 21 / 82%);
+  --glass-border: rgb(140 106 63 / 30%);
+
+  --card-bg: linear-gradient(180deg, rgb(56 42 35 / 70%) 0%, rgb(32 24 21 / 82%) 100%);
+  --card-border-color: rgb(140 106 63 / 34%);
+  --card-shadow: inset 0 0 0 3px rgb(140 106 63 / 12%), 0 8px 24px rgb(0 0 0 / 46%);
+  --card-hover-shadow:
+    inset 0 0 0 3px rgb(196 152 84 / 26%), 0 18px 44px rgb(0 0 0 / 60%);
+  --card-hover-border: rgb(196 152 84 / 62%);
+
+  --control-bg: var(--color-accent-strong);
+  --control-fg: #f4e9d2;
+  --control-border: rgb(196 152 84 / 50%);
+  --control-shadow: inset 0 1px 0 rgb(255 235 190 / 14%);
+
+  --rule-color: rgb(140 106 63 / 40%);
+
+  --ornament-color: rgb(196 152 84 / 60%);
+  --ornament-accent: #c39a5c;
+  --ornament-opacity: 0.85;
+
+  --decor-grain: 0.07;
+  --decor-vignette: 0.68;
+  --decor-stars: 0.05;
+
+  --cursor-ink: #c39a5c;
+  --cursor-light: 0.07;
 }

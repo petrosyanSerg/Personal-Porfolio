@@ -1,4 +1,50 @@
 [data-design="wild-west"] {
+  --font-display: "Rockwell", "Bookman Old Style", "Courier Bold", georgia, serif;
+  --font-heading: var(--font-display);
+  --font-body: var(--font-sans);
+  --font-eyebrow: var(--font-display);
+  --font-accent: var(--font-display);
+
+  --fw-display: var(--fw-bold);
+  --fw-heading: var(--fw-bold);
+  --case-display: uppercase;
+  --case-heading: uppercase;
+  --case-eyebrow: uppercase;
+  --case-control: uppercase;
+  --ls-display: 0.01em;
+  --ls-eyebrow: 0.42em;
+  --ls-control: 0.14em;
+  --optical-scale: 1.14;
+  --lh-tight: 0.94;
+
+  --density: 0.96;
+  --measure: 60ch;
+
+  --radius-card: 0;
+  --radius-control: 0;
+  --radius-tag: 0;
+  --radius-media: 0;
+  --card-border-width: 3px;
+  --card-hover-lift: -2px;
+  --control-border-width: 3px;
+  --rule-height: 4px;
+  --rule-style: double;
+  --motif: "\2736";
+
+  --motion-scale: 0.85;
+  --ease-signature: cubic-bezier(0.5, 0, 0.2, 1);
+  --dur-signature: var(--dur-base);
+  --enter-distance: 12px;
+  --cursor-size: 26px;
+  --cursor-dot: 4px;
+  --cursor-radius: 0;
+
+  --hero-align: center;
+  --hero-text-align: center;
+  --hero-measure: 40rem;
+}
+
+[data-design="wild-west"][data-theme="light"] {
   color-scheme: light;
 
   --color-bg: #e8d9b8;
@@ -53,69 +99,104 @@
   --glass-bg: rgb(245 236 216 / 88%);
   --glass-border: rgb(138 116 72 / 50%);
 
-  --font-display: "Rockwell", "Bookman Old Style", "Courier Bold", georgia, serif;
-  --font-heading: var(--font-display);
-  --font-body: var(--font-sans);
-  --font-eyebrow: var(--font-display);
-  --font-accent: var(--font-display);
-
-  --fw-display: var(--fw-bold);
-  --fw-heading: var(--fw-bold);
-  --case-display: uppercase;
-  --case-heading: uppercase;
-  --case-eyebrow: uppercase;
-  --case-control: uppercase;
-  --ls-display: 0.01em;
-  --ls-eyebrow: 0.42em;
-  --ls-control: 0.14em;
-  --optical-scale: 1.14;
-  --lh-tight: 0.94;
-
-  --density: 0.96;
-  --measure: 60ch;
-
-  --radius-card: 0;
-  --radius-control: 0;
-  --radius-tag: 0;
-  --radius-media: 0;
-
   --card-bg: var(--color-surface);
-  --card-border-width: 3px;
   --card-border-color: #2b1d12;
   --card-shadow: inset 0 0 0 3px var(--color-surface), inset 0 0 0 4px #2b1d12;
   --card-hover-shadow:
     inset 0 0 0 3px var(--color-surface), inset 0 0 0 4px #b5471f,
     4px 4px 0 rgb(43 29 18 / 28%);
   --card-hover-border: #2b1d12;
-  --card-hover-lift: -2px;
 
   --control-bg: #2b1d12;
   --control-fg: #f5ecd8;
   --control-border: #2b1d12;
-  --control-border-width: 3px;
   --control-shadow: 3px 3px 0 rgb(43 29 18 / 30%);
 
   --rule-color: #2b1d12;
-  --rule-height: 4px;
-  --rule-style: double;
 
   --decor-paper: 0.18;
   --decor-grain: 0.13;
   --decor-vignette: 0.3;
-  --motif: "\2736";
-
-  --motion-scale: 0.85;
-  --ease-signature: cubic-bezier(0.5, 0, 0.2, 1);
-  --dur-signature: var(--dur-base);
-  --enter-distance: 12px;
 
   --cursor-ink: #b5471f;
-  --cursor-size: 26px;
-  --cursor-dot: 4px;
-  --cursor-radius: 0;
   --cursor-light: 0.02;
+}
 
-  --hero-align: center;
-  --hero-text-align: center;
-  --hero-measure: 40rem;
+[data-design="wild-west"]:not([data-theme="light"]) {
+  /* COUNTERPART-PENDING */
+  color-scheme: light;
+
+  --color-bg: #e8d9b8;
+  --color-bg-elevated: #efe3c8;
+  --color-surface: #f5ecd8;
+  --color-surface-2: #ddcba4;
+  --color-surface-3: #cdb98e;
+
+  --color-border: #bda878;
+  --color-border-strong: #8a7448;
+  --color-border-accent: rgb(181 71 31 / 56%);
+
+  --color-text: #2b1d12;
+  --color-text-secondary: #453222;
+  --color-text-muted: #5d4630;
+  --color-text-faint: #917a58;
+
+  --color-accent: #b5471f;
+  --color-accent-hover: #9c3b18;
+  --color-accent-press: #843113;
+  --color-accent-strong: #9c3b18;
+  --color-accent-strong-hover: #843113;
+  --color-accent-soft: rgb(181 71 31 / 14%);
+  --color-accent-text: #963813;
+
+  --color-teal: #4c6b52;
+  --color-teal-soft: rgb(76 107 82 / 16%);
+  --color-teal-text: #3a5340;
+
+  --color-warn: #c48a12;
+
+  --gradient-hero:
+    radial-gradient(70% 40% at 50% -10%, rgb(255 249 220 / 90%), transparent 68%),
+    linear-gradient(180deg, transparent 52%, rgb(181 71 31 / 18%) 100%);
+  --gradient-text: none;
+  --gradient-accent: linear-gradient(120deg, #b5471f 0%, #c48a12 100%);
+  --gradient-surface: none;
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    #2b1d12 20%,
+    #2b1d12 80%,
+    transparent
+  );
+
+  --shadow-sm: 2px 2px 0 rgb(43 29 18 / 26%);
+  --shadow-md: 4px 4px 0 rgb(43 29 18 / 28%);
+  --shadow-lg: 6px 6px 0 rgb(43 29 18 / 30%);
+  --shadow-xl: 10px 10px 0 rgb(43 29 18 / 32%);
+  --shadow-glow: 0 0 0 3px rgb(181 71 31 / 50%);
+  --highlight-top: none;
+  --glass-bg: rgb(245 236 216 / 88%);
+  --glass-border: rgb(138 116 72 / 50%);
+
+  --card-bg: var(--color-surface);
+  --card-border-color: #2b1d12;
+  --card-shadow: inset 0 0 0 3px var(--color-surface), inset 0 0 0 4px #2b1d12;
+  --card-hover-shadow:
+    inset 0 0 0 3px var(--color-surface), inset 0 0 0 4px #b5471f,
+    4px 4px 0 rgb(43 29 18 / 28%);
+  --card-hover-border: #2b1d12;
+
+  --control-bg: #2b1d12;
+  --control-fg: #f5ecd8;
+  --control-border: #2b1d12;
+  --control-shadow: 3px 3px 0 rgb(43 29 18 / 30%);
+
+  --rule-color: #2b1d12;
+
+  --decor-paper: 0.18;
+  --decor-grain: 0.13;
+  --decor-vignette: 0.3;
+
+  --cursor-ink: #b5471f;
+  --cursor-light: 0.02;
 }

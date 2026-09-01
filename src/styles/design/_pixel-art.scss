@@ -1,4 +1,62 @@
 [data-design="pixel-art"] {
+  --font-display: var(--font-mono);
+  --font-heading: var(--font-mono);
+  --font-body: var(--font-mono);
+  --font-sans: var(--font-mono);
+  --font-eyebrow: var(--font-mono);
+  --font-accent: var(--font-mono);
+
+  --fw-display: 700;
+  --fw-heading: 700;
+  --case-display: uppercase;
+  --case-heading: uppercase;
+  --case-eyebrow: uppercase;
+  --case-control: uppercase;
+  --ls-display: 0.01em;
+  --ls-eyebrow: 0.22em;
+  --ls-control: 0.12em;
+
+  --optical-scale: 0.8;
+  --lh-tight: 1.12;
+  --lh-normal: 1.6;
+
+  --space-3: 0.75rem;
+  --space-5: 1.5rem;
+  --density: 0.92;
+  --measure: 68ch;
+
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-full: 0;
+  --radius-card: 0;
+  --radius-control: 0;
+  --radius-tag: 0;
+  --radius-media: 0;
+  --card-border-width: 2px;
+  --card-hover-lift: 0;
+  --control-border-width: 2px;
+  --rule-height: 2px;
+  --rule-style: dashed;
+  --motif: "\25A0";
+
+  --motion-scale: 0.6;
+  --ease-signature: steps(6, end);
+  --dur-signature: var(--dur-fast);
+  --enter-distance: 8px;
+  --cursor-size: 16px;
+  --cursor-dot: 8px;
+  --cursor-radius: 0;
+
+  --hero-align: start;
+  --hero-measure: 44rem;
+  --hero-min-h: min(88svh, 56rem);
+}
+
+[data-design="pixel-art"]:not([data-theme="light"]) {
   color-scheme: dark;
 
   --color-bg: #0d1117;
@@ -51,80 +109,100 @@
   --glass-bg: #11171f;
   --glass-border: #2c3a4d;
 
-  --font-display: var(--font-mono);
-  --font-heading: var(--font-mono);
-  --font-body: var(--font-mono);
-  --font-sans: var(--font-mono);
-  --font-eyebrow: var(--font-mono);
-  --font-accent: var(--font-mono);
-
-  --fw-display: 700;
-  --fw-heading: 700;
-  --case-display: uppercase;
-  --case-heading: uppercase;
-  --case-eyebrow: uppercase;
-  --case-control: uppercase;
-  --ls-display: 0.01em;
-  --ls-eyebrow: 0.22em;
-  --ls-control: 0.12em;
-
-  --optical-scale: 0.8;
-  --lh-tight: 1.12;
-  --lh-normal: 1.6;
-
-  --space-3: 0.75rem;
-  --space-5: 1.5rem;
-  --density: 0.92;
-  --measure: 68ch;
-
-  --radius-xs: 0;
-  --radius-sm: 0;
-  --radius-md: 0;
-  --radius-lg: 0;
-  --radius-xl: 0;
-  --radius-2xl: 0;
-  --radius-full: 0;
-  --radius-card: 0;
-  --radius-control: 0;
-  --radius-tag: 0;
-  --radius-media: 0;
-
   --card-bg: var(--color-surface);
-  --card-border-width: 2px;
   --card-border-color: #2c3a4d;
   --card-shadow: 4px 4px 0 rgb(0 0 0 / 60%);
   --card-hover-shadow: 4px 4px 0 rgb(0 0 0 / 60%), 0 0 0 2px #39ff88;
   --card-hover-border: #39ff88;
-  --card-hover-lift: 0;
 
   --control-bg: #39ff88;
   --control-fg: #0d1117;
   --control-border: #0d1117;
-  --control-border-width: 2px;
   --control-shadow: 3px 3px 0 rgb(0 0 0 / 80%);
 
   --rule-color: #2c3a4d;
-  --rule-height: 2px;
-  --rule-style: dashed;
 
   --decor-scanline: 1;
   --decor-grid: 1;
   --decor-vignette: 0.5;
   --ornament-opacity: 0;
-  --motif: "\25A0";
-
-  --motion-scale: 0.6;
-  --ease-signature: steps(6, end);
-  --dur-signature: var(--dur-fast);
-  --enter-distance: 8px;
 
   --cursor-ink: #39ff88;
-  --cursor-size: 16px;
-  --cursor-dot: 8px;
-  --cursor-radius: 0;
   --cursor-light: 0.03;
+}
 
-  --hero-align: start;
-  --hero-measure: 44rem;
-  --hero-min-h: min(88svh, 56rem);
+[data-design="pixel-art"][data-theme="light"] {
+  /* COUNTERPART-PENDING */
+  color-scheme: dark;
+
+  --color-bg: #0d1117;
+  --color-bg-elevated: #11171f;
+  --color-surface: #141b25;
+  --color-surface-2: #1b2430;
+  --color-surface-3: #24303f;
+
+  --color-border: #2c3a4d;
+  --color-border-strong: #47617f;
+  --color-border-accent: rgb(57 255 136 / 55%);
+
+  --color-text: #c7f5d9;
+  --color-text-secondary: #93bfae;
+  --color-text-muted: #6f9689;
+  --color-text-faint: #4d6b62;
+
+  --color-accent: #39ff88;
+  --color-accent-hover: #6bffa8;
+  --color-accent-press: #23d96b;
+
+  --color-accent-strong: #39ff88;
+  --color-accent-strong-hover: #6bffa8;
+  --color-accent-soft: rgb(57 255 136 / 14%);
+  --color-accent-text: #39ff88;
+
+  --color-teal: #56d8ff;
+  --color-teal-soft: rgb(86 216 255 / 14%);
+  --color-teal-text: #7ee0ff;
+
+  --color-warn: #ffd23f;
+  --color-danger: #ff5f6d;
+
+  --gradient-hero: radial-gradient(
+    100% 70% at 50% 0%,
+    rgb(57 255 136 / 8%) 0%,
+    rgb(13 17 23 / 0%) 60%
+  );
+  --gradient-text: linear-gradient(180deg, #e6ffef 0%, #39ff88 100%);
+  --gradient-accent: linear-gradient(90deg, #39ff88 0%, #56d8ff 100%);
+  --gradient-surface: none;
+  --gradient-edge: linear-gradient(90deg, transparent, #39ff88, transparent);
+
+  --shadow-sm: 2px 2px 0 rgb(0 0 0 / 90%);
+  --shadow-md: 4px 4px 0 rgb(0 0 0 / 90%);
+  --shadow-lg: 4px 4px 0 rgb(0 0 0 / 90%), 0 0 0 2px #2c3a4d;
+  --shadow-xl: 6px 6px 0 rgb(0 0 0 / 90%);
+  --shadow-glow: 0 0 0 2px #39ff88;
+  --highlight-top: none;
+  --glass-bg: #11171f;
+  --glass-border: #2c3a4d;
+
+  --card-bg: var(--color-surface);
+  --card-border-color: #2c3a4d;
+  --card-shadow: 4px 4px 0 rgb(0 0 0 / 60%);
+  --card-hover-shadow: 4px 4px 0 rgb(0 0 0 / 60%), 0 0 0 2px #39ff88;
+  --card-hover-border: #39ff88;
+
+  --control-bg: #39ff88;
+  --control-fg: #0d1117;
+  --control-border: #0d1117;
+  --control-shadow: 3px 3px 0 rgb(0 0 0 / 80%);
+
+  --rule-color: #2c3a4d;
+
+  --decor-scanline: 1;
+  --decor-grid: 1;
+  --decor-vignette: 0.5;
+  --ornament-opacity: 0;
+
+  --cursor-ink: #39ff88;
+  --cursor-light: 0.03;
 }

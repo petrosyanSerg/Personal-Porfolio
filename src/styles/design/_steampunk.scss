@@ -1,4 +1,48 @@
 [data-design="steampunk"] {
+  --font-display: "Rockwell", "Bookman Old Style", "Courier Bold", georgia, serif;
+  --font-heading: var(--font-display);
+  --font-body: var(--font-sans);
+  --font-eyebrow: var(--font-mono);
+  --font-accent: var(--font-mono);
+
+  --fw-display: var(--fw-bold);
+  --fw-heading: var(--fw-semibold);
+  --case-display: uppercase;
+  --case-eyebrow: uppercase;
+  --case-control: uppercase;
+  --ls-display: 0.02em;
+  --ls-eyebrow: 0.3em;
+  --ls-control: 0.14em;
+  --optical-scale: 0.9;
+  --lh-tight: 1.08;
+
+  --density: 1;
+  --measure: 66ch;
+
+  --radius-card: 6px;
+  --radius-control: 4px;
+  --radius-tag: 3px;
+  --radius-media: 6px;
+  --card-border-width: 2px;
+  --card-hover-lift: 0;
+  --control-border-width: 2px;
+  --rule-height: 3px;
+  --rule-style: double;
+  --ornament-width: 1.3;
+  --motif: "\2699";
+
+  --motion-scale: 0.9;
+  --ease-signature: cubic-bezier(0.6, 0, 0.2, 1);
+  --dur-signature: var(--dur-slow);
+  --enter-distance: 10px;
+  --cursor-size: 30px;
+  --cursor-dot: 5px;
+
+  --hero-align: start;
+  --hero-measure: 40rem;
+}
+
+[data-design="steampunk"]:not([data-theme="light"]) {
   color-scheme: dark;
 
   --color-bg: #17110a;
@@ -58,33 +102,7 @@
   --glass-bg: rgb(37 28 19 / 86%);
   --glass-border: rgb(176 125 58 / 34%);
 
-  --font-display: "Rockwell", "Bookman Old Style", "Courier Bold", georgia, serif;
-  --font-heading: var(--font-display);
-  --font-body: var(--font-sans);
-  --font-eyebrow: var(--font-mono);
-  --font-accent: var(--font-mono);
-
-  --fw-display: var(--fw-bold);
-  --fw-heading: var(--fw-semibold);
-  --case-display: uppercase;
-  --case-eyebrow: uppercase;
-  --case-control: uppercase;
-  --ls-display: 0.02em;
-  --ls-eyebrow: 0.3em;
-  --ls-control: 0.14em;
-  --optical-scale: 0.9;
-  --lh-tight: 1.08;
-
-  --density: 1;
-  --measure: 66ch;
-
-  --radius-card: 6px;
-  --radius-control: 4px;
-  --radius-tag: 3px;
-  --radius-media: 6px;
-
   --card-bg: linear-gradient(180deg, rgb(59 46 31 / 76%) 0%, rgb(30 23 16 / 90%) 100%);
-  --card-border-width: 2px;
   --card-border-color: rgb(176 125 58 / 40%);
 
   --card-shadow:
@@ -97,37 +115,114 @@
     inset 6px -6px 0 -4px #cb9548, inset -6px -6px 0 -4px #cb9548,
     0 18px 44px rgb(0 0 0 / 62%);
   --card-hover-border: rgb(203 149 72 / 76%);
-  --card-hover-lift: 0;
 
   --control-bg: linear-gradient(180deg, #cb9548 0%, #8a5f28 100%);
   --control-fg: #17110a;
   --control-border: rgb(240 205 140 / 40%);
-  --control-border-width: 2px;
   --control-shadow: inset 0 1px 0 rgb(255 235 190 / 30%), 0 4px 12px rgb(0 0 0 / 50%);
 
   --rule-color: rgb(176 125 58 / 46%);
-  --rule-height: 3px;
-  --rule-style: double;
 
   --ornament-color: rgb(203 149 72 / 72%);
   --ornament-accent: #6cae99;
   --ornament-opacity: 0.9;
-  --ornament-width: 1.3;
 
   --decor-grain: 0.09;
   --decor-vignette: 0.66;
-  --motif: "\2699";
-
-  --motion-scale: 0.9;
-  --ease-signature: cubic-bezier(0.6, 0, 0.2, 1);
-  --dur-signature: var(--dur-slow);
-  --enter-distance: 10px;
 
   --cursor-ink: #cb9548;
-  --cursor-size: 30px;
-  --cursor-dot: 5px;
   --cursor-light: 0.06;
+}
 
-  --hero-align: start;
-  --hero-measure: 40rem;
+[data-design="steampunk"][data-theme="light"] {
+  /* COUNTERPART-PENDING */
+  color-scheme: dark;
+
+  --color-bg: #17110a;
+  --color-bg-elevated: #1e1710;
+  --color-surface: #251c13;
+  --color-surface-2: #2f2418;
+  --color-surface-3: #3b2e1f;
+
+  --color-border: #3d2f1e;
+  --color-border-strong: #6b5432;
+  --color-border-accent: rgb(176 125 58 / 56%);
+
+  --color-text: #e8d5ae;
+  --color-text-secondary: #cbb289;
+  --color-text-muted: #a89170;
+  --color-text-faint: #7a6a52;
+
+  --color-accent: #b07d3a;
+  --color-accent-hover: #cb9548;
+  --color-accent-press: #94662d;
+  --color-accent-strong: #8a5f28;
+  --color-accent-strong-hover: #745020;
+  --color-accent-soft: rgb(176 125 58 / 16%);
+  --color-accent-text: #cb9548;
+
+  --color-teal: #3f7d6a;
+  --color-teal-soft: rgb(63 125 106 / 18%);
+  --color-teal-text: #6cae99;
+
+  --color-warn: #c9421f;
+  --color-danger: #c9421f;
+
+  --gradient-hero:
+    radial-gradient(56% 44% at 8% 94%, rgb(201 66 31 / 18%), transparent 72%),
+    radial-gradient(34% 30% at 86% 28%, rgb(63 125 106 / 16%), transparent 70%),
+    linear-gradient(180deg, rgb(176 125 58 / 8%) 0%, transparent 40%);
+  --gradient-text: linear-gradient(170deg, #f5e6c4 0%, #b07d3a 100%);
+  --gradient-accent: linear-gradient(120deg, #b07d3a 0%, #c9421f 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(230 190 120 / 8%) 0%,
+    rgb(0 0 0 / 0%) 100%
+  );
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    rgb(176 125 58 / 72%),
+    transparent
+  );
+
+  --shadow-sm: 0 2px 6px rgb(0 0 0 / 60%);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 62%);
+  --shadow-lg: 0 18px 50px rgb(0 0 0 / 68%);
+  --shadow-xl: 0 32px 84px rgb(0 0 0 / 74%);
+  --shadow-glow: 0 0 0 2px rgb(176 125 58 / 60%), 0 0 30px rgb(176 125 58 / 18%);
+  --highlight-top: inset 0 1px 0 rgb(240 205 140 / 16%);
+  --glass-bg: rgb(37 28 19 / 86%);
+  --glass-border: rgb(176 125 58 / 34%);
+
+  --card-bg: linear-gradient(180deg, rgb(59 46 31 / 76%) 0%, rgb(30 23 16 / 90%) 100%);
+  --card-border-color: rgb(176 125 58 / 40%);
+
+  --card-shadow:
+    inset 0 1px 0 rgb(240 205 140 / 14%), inset 6px 6px 0 -4px rgb(203 149 72 / 60%),
+    inset -6px 6px 0 -4px rgb(203 149 72 / 60%),
+    inset 6px -6px 0 -4px rgb(203 149 72 / 60%),
+    inset -6px -6px 0 -4px rgb(203 149 72 / 60%), 0 10px 28px rgb(0 0 0 / 50%);
+  --card-hover-shadow:
+    inset 6px 6px 0 -4px #cb9548, inset -6px 6px 0 -4px #cb9548,
+    inset 6px -6px 0 -4px #cb9548, inset -6px -6px 0 -4px #cb9548,
+    0 18px 44px rgb(0 0 0 / 62%);
+  --card-hover-border: rgb(203 149 72 / 76%);
+
+  --control-bg: linear-gradient(180deg, #cb9548 0%, #8a5f28 100%);
+  --control-fg: #17110a;
+  --control-border: rgb(240 205 140 / 40%);
+  --control-shadow: inset 0 1px 0 rgb(255 235 190 / 30%), 0 4px 12px rgb(0 0 0 / 50%);
+
+  --rule-color: rgb(176 125 58 / 46%);
+
+  --ornament-color: rgb(203 149 72 / 72%);
+  --ornament-accent: #6cae99;
+  --ornament-opacity: 0.9;
+
+  --decor-grain: 0.09;
+  --decor-vignette: 0.66;
+
+  --cursor-ink: #cb9548;
+  --cursor-light: 0.06;
 }
