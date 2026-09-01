@@ -1,4 +1,44 @@
 [data-design="wabi-sabi"] {
+  --font-display: "Iowan Old Style", "Palatino Linotype", palatino, georgia, serif;
+  --font-heading: var(--font-display);
+  --font-eyebrow: var(--font-sans);
+  --font-accent: var(--font-display);
+
+  --fw-display: var(--fw-regular);
+  --fw-heading: var(--fw-regular);
+  --ls-display: -0.007em;
+  --ls-eyebrow: 0.23em;
+  --optical-scale: 0.91;
+  --lh-tight: 1.13;
+  --lh-normal: 1.73;
+
+  --density: 1.27;
+  --measure: 57ch;
+
+  --radius-card: 3px 11px 5px 14px;
+  --radius-control: 14px 5px 11px 3px;
+  --radius-tag: 2px 7px 3px 9px;
+  --radius-media: 9px 3px 13px 4px;
+  --card-border-width: 1px;
+  --card-hover-lift: -1px;
+  --control-border-width: 1px;
+  --rule-height: 1px;
+  --motif: "\25CB";
+
+  --motion-scale: 1.35;
+  --ease-signature: cubic-bezier(0.29, 0, 0.19, 1);
+  --dur-signature: var(--dur-slower);
+  --enter-distance: 9px;
+  --enter-blur: 2px;
+  --cursor-size: 27px;
+  --cursor-dot: 3px;
+  --cursor-radius: 44% 56% 52% 48%;
+
+  --hero-align: start;
+  --hero-measure: 33rem;
+}
+
+[data-design="wabi-sabi"][data-theme="light"] {
   color-scheme: light;
 
   --color-bg: #eae5da;
@@ -53,64 +93,107 @@
   --glass-bg: rgb(244 241 233 / 78%);
   --glass-border: rgb(159 148 130 / 40%);
 
-  --font-display: "Iowan Old Style", "Palatino Linotype", palatino, georgia, serif;
-  --font-heading: var(--font-display);
-  --font-eyebrow: var(--font-sans);
-  --font-accent: var(--font-display);
-
-  --fw-display: var(--fw-regular);
-  --fw-heading: var(--fw-regular);
-  --ls-display: -0.007em;
-  --ls-eyebrow: 0.23em;
-  --optical-scale: 0.91;
-  --lh-tight: 1.13;
-  --lh-normal: 1.73;
-
-  --density: 1.27;
-  --measure: 57ch;
-
-  --radius-card: 3px 11px 5px 14px;
-  --radius-control: 14px 5px 11px 3px;
-  --radius-tag: 2px 7px 3px 9px;
-  --radius-media: 9px 3px 13px 4px;
-
   --card-bg: var(--color-surface);
-  --card-border-width: 1px;
   --card-border-color: #d8d0c0;
 
   --card-shadow: inset 2px 0 0 rgb(140 122 99 / 22%), 0 3px 11px rgb(70 62 48 / 7%);
   --card-hover-shadow:
     inset 3px 0 0 rgb(140 122 99 / 46%), 0 11px 27px rgb(70 62 48 / 11%);
   --card-hover-border: rgb(140 122 99 / 60%);
-  --card-hover-lift: -1px;
 
   --control-bg: transparent;
   --control-fg: #5f523f;
   --control-border: #8c7a63;
-  --control-border-width: 1px;
 
   --rule-color: rgb(140 122 99 / 34%);
-  --rule-height: 1px;
 
   --decor-paper: 0.13;
   --decor-grain: 0.075;
   --decor-marble: 0.3;
-  --motif: "\25CB";
-
-  --motion-scale: 1.35;
-  --ease-signature: cubic-bezier(0.29, 0, 0.19, 1);
-  --dur-signature: var(--dur-slower);
-  --enter-distance: 9px;
-  --enter-blur: 2px;
 
   --cursor-ink: #6b5b47;
-  --cursor-size: 27px;
-  --cursor-dot: 3px;
-  --cursor-radius: 44% 56% 52% 48%;
   --cursor-light: 0.02;
 
-  --hero-align: start;
-  --hero-measure: 33rem;
+  --scene-opacity: 0.93;
+  --scene-blend: multiply;
+}
+
+[data-design="wabi-sabi"]:not([data-theme="light"]) {
+  /* COUNTERPART-PENDING */
+  color-scheme: light;
+
+  --color-bg: #eae5da;
+  --color-bg-elevated: #efebe1;
+  --color-surface: #f4f1e9;
+  --color-surface-2: #e0dacd;
+  --color-surface-3: #d2cabb;
+
+  --color-border: #cfc7b7;
+  --color-border-strong: #9f9482;
+  --color-border-accent: rgb(140 122 99 / 48%);
+
+  --color-text: #33302a;
+  --color-text-secondary: #4f4a41;
+  --color-text-muted: #665f54;
+  --color-text-faint: #99917f;
+
+  --color-accent: #8c7a63;
+  --color-accent-hover: #786751;
+  --color-accent-press: #655643;
+  --color-accent-strong: #6b5b47;
+  --color-accent-strong-hover: #584a3a;
+  --color-accent-soft: rgb(140 122 99 / 14%);
+  --color-accent-text: #5f523f;
+
+  --color-teal: #6b7268;
+  --color-teal-soft: rgb(107 114 104 / 16%);
+  --color-teal-text: #4a5148;
+
+  --color-warn: #a8763c;
+
+  --gradient-hero:
+    radial-gradient(58% 44% at 18% 8%, rgb(255 253 246 / 70%), transparent 74%),
+    radial-gradient(46% 38% at 84% 88%, rgb(140 122 99 / 16%), transparent 76%);
+  --gradient-text: linear-gradient(168deg, #33302a 0%, #6b5b47 100%);
+  --gradient-accent: linear-gradient(120deg, #8c7a63 0%, #6b7268 100%);
+  --gradient-surface: none;
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    rgb(140 122 99 / 60%) 38%,
+    rgb(140 122 99 / 20%) 62%,
+    transparent
+  );
+
+  --shadow-sm: 0 1px 2px rgb(70 62 48 / 8%);
+  --shadow-md: 0 5px 15px rgb(70 62 48 / 9%);
+  --shadow-lg: 0 13px 37px rgb(70 62 48 / 11%);
+  --shadow-xl: 0 23px 61px rgb(70 62 48 / 13%);
+  --shadow-glow: 0 0 0 1px var(--color-border-accent);
+  --highlight-top: none;
+  --glass-bg: rgb(244 241 233 / 78%);
+  --glass-border: rgb(159 148 130 / 40%);
+
+  --card-bg: var(--color-surface);
+  --card-border-color: #d8d0c0;
+
+  --card-shadow: inset 2px 0 0 rgb(140 122 99 / 22%), 0 3px 11px rgb(70 62 48 / 7%);
+  --card-hover-shadow:
+    inset 3px 0 0 rgb(140 122 99 / 46%), 0 11px 27px rgb(70 62 48 / 11%);
+  --card-hover-border: rgb(140 122 99 / 60%);
+
+  --control-bg: transparent;
+  --control-fg: #5f523f;
+  --control-border: #8c7a63;
+
+  --rule-color: rgb(140 122 99 / 34%);
+
+  --decor-paper: 0.13;
+  --decor-grain: 0.075;
+  --decor-marble: 0.3;
+
+  --cursor-ink: #6b5b47;
+  --cursor-light: 0.02;
 
   --scene-opacity: 0.93;
   --scene-blend: multiply;

@@ -1,4 +1,45 @@
 [data-design="japandi"] {
+  --font-display: "Iowan Old Style", "Palatino Linotype", palatino, georgia, serif;
+  --font-heading: var(--font-display);
+  --font-eyebrow: var(--font-sans);
+  --font-accent: var(--font-display);
+
+  --fw-display: var(--fw-regular);
+  --fw-heading: var(--fw-regular);
+  --ls-display: -0.01em;
+  --ls-heading: -0.005em;
+  --ls-eyebrow: 0.24em;
+  --optical-scale: 0.9;
+  --lh-tight: 1.16;
+  --lh-normal: 1.72;
+
+  --density: 1.34;
+  --measure: 58ch;
+
+  --radius-card: 3px;
+  --radius-control: 3px;
+  --radius-tag: 3px;
+  --radius-media: 3px;
+  --card-border-width: 1px;
+  --card-hover-lift: -2px;
+  --control-border-width: 1px;
+  --rule-height: 1px;
+  --motif: "\2014";
+
+  --motion-scale: 1.25;
+  --ease-signature: cubic-bezier(0.33, 0, 0.15, 1);
+  --dur-signature: var(--dur-slower);
+  --enter-distance: 10px;
+  --enter-blur: 0px;
+  --cursor-size: 24px;
+  --cursor-dot: 3px;
+
+  --hero-align: start;
+  --hero-measure: 34rem;
+  --hero-min-h: min(86svh, 54rem);
+}
+
+[data-design="japandi"][data-theme="light"] {
   color-scheme: light;
 
   --color-bg: #f3efe7;
@@ -47,64 +88,99 @@
   --glass-bg: rgb(251 249 244 / 78%);
   --glass-border: rgb(188 179 160 / 40%);
 
-  --font-display: "Iowan Old Style", "Palatino Linotype", palatino, georgia, serif;
-  --font-heading: var(--font-display);
-  --font-eyebrow: var(--font-sans);
-  --font-accent: var(--font-display);
-
-  --fw-display: var(--fw-regular);
-  --fw-heading: var(--fw-regular);
-  --ls-display: -0.01em;
-  --ls-heading: -0.005em;
-  --ls-eyebrow: 0.24em;
-  --optical-scale: 0.9;
-  --lh-tight: 1.16;
-  --lh-normal: 1.72;
-
-  --density: 1.34;
-  --measure: 58ch;
-
-  --radius-card: 3px;
-  --radius-control: 3px;
-  --radius-tag: 3px;
-  --radius-media: 3px;
-
   --card-bg: var(--color-surface);
-  --card-border-width: 1px;
   --card-border-color: #e0d9cc;
   --card-shadow: none;
   --card-hover-shadow: 0 10px 30px rgb(76 66 52 / 9%);
   --card-hover-border: #bcb3a0;
-  --card-hover-lift: -2px;
 
   --control-bg: transparent;
   --control-fg: #2c2a26;
   --control-border: #6d5745;
-  --control-border-width: 1px;
   --control-shadow: none;
 
   --rule-color: #ded7c9;
-  --rule-height: 1px;
 
   --decor-paper: 0.22;
   --decor-grain: 0.035;
   --decor-sunbeam: 0.3;
-  --motif: "\2014";
-
-  --motion-scale: 1.25;
-  --ease-signature: cubic-bezier(0.33, 0, 0.15, 1);
-  --dur-signature: var(--dur-slower);
-  --enter-distance: 10px;
-  --enter-blur: 0px;
 
   --cursor-ink: #6d5745;
-  --cursor-size: 24px;
-  --cursor-dot: 3px;
   --cursor-light: 0.02;
 
-  --hero-align: start;
-  --hero-measure: 34rem;
-  --hero-min-h: min(86svh, 54rem);
+  --scene-opacity: 0.9;
+  --scene-blend: multiply;
+}
+
+[data-design="japandi"]:not([data-theme="light"]) {
+  /* COUNTERPART-PENDING */
+  color-scheme: light;
+
+  --color-bg: #f3efe7;
+  --color-bg-elevated: #f8f5ef;
+  --color-surface: #fbf9f4;
+  --color-surface-2: #eee9df;
+  --color-surface-3: #e4ded1;
+
+  --color-border: #dcd5c7;
+  --color-border-strong: #bcb3a0;
+  --color-border-accent: rgb(168 131 106 / 40%);
+
+  --color-text: #2c2a26;
+  --color-text-secondary: #55514a;
+  --color-text-muted: #6e685e;
+  --color-text-faint: #a09889;
+
+  --color-accent: #a8836a;
+  --color-accent-hover: #93705a;
+  --color-accent-press: #7d5e4b;
+  --color-accent-strong: #6d5745;
+  --color-accent-strong-hover: #5a4738;
+  --color-accent-soft: rgb(168 131 106 / 12%);
+  --color-accent-text: #7d5e4b;
+
+  --color-teal: #6f7f73;
+  --color-teal-soft: rgb(111 127 115 / 12%);
+  --color-teal-text: #4d5a50;
+
+  --gradient-hero: linear-gradient(
+    182deg,
+    rgb(255 252 246 / 90%) 0%,
+    rgb(243 239 231 / 0%) 52%
+  );
+  --gradient-text: linear-gradient(180deg, #2c2a26 0%, #55514a 100%);
+  --gradient-accent: linear-gradient(120deg, #a8836a 0%, #6f7f73 100%);
+  --gradient-surface: none;
+  --gradient-edge: linear-gradient(90deg, transparent, #bcb3a0, transparent);
+
+  --shadow-sm: 0 1px 2px rgb(76 66 52 / 8%);
+  --shadow-md: 0 6px 20px rgb(76 66 52 / 8%);
+  --shadow-lg: 0 14px 44px rgb(76 66 52 / 10%);
+  --shadow-xl: 0 26px 70px rgb(76 66 52 / 12%);
+  --shadow-glow: 0 0 0 1px var(--color-border-accent);
+  --highlight-top: none;
+  --glass-bg: rgb(251 249 244 / 78%);
+  --glass-border: rgb(188 179 160 / 40%);
+
+  --card-bg: var(--color-surface);
+  --card-border-color: #e0d9cc;
+  --card-shadow: none;
+  --card-hover-shadow: 0 10px 30px rgb(76 66 52 / 9%);
+  --card-hover-border: #bcb3a0;
+
+  --control-bg: transparent;
+  --control-fg: #2c2a26;
+  --control-border: #6d5745;
+  --control-shadow: none;
+
+  --rule-color: #ded7c9;
+
+  --decor-paper: 0.22;
+  --decor-grain: 0.035;
+  --decor-sunbeam: 0.3;
+
+  --cursor-ink: #6d5745;
+  --cursor-light: 0.02;
 
   --scene-opacity: 0.9;
   --scene-blend: multiply;

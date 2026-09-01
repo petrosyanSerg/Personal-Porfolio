@@ -1,4 +1,46 @@
 [data-design="graffiti"] {
+  --font-display: "Haettenschweiler", "Arial Narrow", impact, var(--font-sans);
+  --font-heading: var(--font-display);
+  --font-body: var(--font-sans);
+  --font-eyebrow: var(--font-mono);
+  --font-accent: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+
+  --fw-display: var(--fw-bold);
+  --case-display: uppercase;
+  --case-heading: uppercase;
+  --case-eyebrow: uppercase;
+  --case-control: uppercase;
+  --ls-display: -0.03em;
+  --ls-eyebrow: 0.2em;
+  --ls-control: 0.1em;
+  --optical-scale: 1.28;
+  --lh-tight: 0.84;
+
+  --density: 0.88;
+  --measure: 62ch;
+
+  --radius-card: 0;
+  --radius-control: 0;
+  --radius-tag: 0;
+  --radius-media: 0;
+  --card-border-width: 2px;
+  --card-hover-lift: -2px;
+  --control-border-width: 2px;
+  --rule-height: 3px;
+  --motif: "\00BB";
+
+  --motion-scale: 0.7;
+  --ease-signature: cubic-bezier(0.3, 1.4, 0.5, 1);
+  --dur-signature: var(--dur-fast);
+  --enter-distance: 16px;
+  --cursor-size: 32px;
+  --cursor-dot: 10px;
+
+  --hero-align: start;
+  --hero-measure: 46rem;
+}
+
+[data-design="graffiti"]:not([data-theme="light"]) {
   color-scheme: dark;
 
   --color-bg: #1a1a1a;
@@ -47,64 +89,96 @@
   --glass-bg: rgb(36 36 36 / 84%);
   --glass-border: rgb(57 255 106 / 26%);
 
-  --font-display: "Haettenschweiler", "Arial Narrow", impact, var(--font-sans);
-  --font-heading: var(--font-display);
-  --font-body: var(--font-sans);
-  --font-eyebrow: var(--font-mono);
-  --font-accent: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
-
-  --fw-display: var(--fw-bold);
-  --case-display: uppercase;
-  --case-heading: uppercase;
-  --case-eyebrow: uppercase;
-  --case-control: uppercase;
-  --ls-display: -0.03em;
-  --ls-eyebrow: 0.2em;
-  --ls-control: 0.1em;
-  --optical-scale: 1.28;
-  --lh-tight: 0.84;
-
-  --density: 0.88;
-  --measure: 62ch;
-
-  --radius-card: 0;
-  --radius-control: 0;
-  --radius-tag: 0;
-  --radius-media: 0;
-
   --card-bg: var(--color-surface);
-  --card-border-width: 2px;
   --card-border-color: #3a3a3a;
   --card-shadow: 5px 5px 0 rgb(0 0 0 / 66%);
   --card-hover-shadow: 8px 8px 0 rgb(0 0 0 / 74%), 0 0 34px rgb(57 255 106 / 18%);
   --card-hover-border: #39ff6a;
-  --card-hover-lift: -2px;
 
   --control-bg: #39ff6a;
   --control-fg: #1a1a1a;
   --control-border: #1a1a1a;
-  --control-border-width: 2px;
   --control-shadow: 4px 4px 0 rgb(0 0 0 / 70%);
 
   --rule-color: #3a3a3a;
-  --rule-height: 3px;
 
   --decor-concrete: 0.36;
   --decor-grain: 0.11;
   --decor-vignette: 0.44;
-  --motif: "\00BB";
-
-  --motion-scale: 0.7;
-  --ease-signature: cubic-bezier(0.3, 1.4, 0.5, 1);
-  --dur-signature: var(--dur-fast);
-  --enter-distance: 16px;
 
   --cursor-ink: #39ff6a;
-  --cursor-size: 32px;
-  --cursor-dot: 10px;
   --cursor-blend: screen;
   --cursor-light: 0.05;
+}
 
-  --hero-align: start;
-  --hero-measure: 46rem;
+[data-design="graffiti"][data-theme="light"] {
+  /* COUNTERPART-PENDING */
+  color-scheme: dark;
+
+  --color-bg: #1a1a1a;
+  --color-bg-elevated: #202020;
+  --color-surface: #242424;
+  --color-surface-2: #2c2c2c;
+  --color-surface-3: #363636;
+
+  --color-border: #3a3a3a;
+  --color-border-strong: #585858;
+  --color-border-accent: rgb(57 255 106 / 55%);
+
+  --color-text: #f4f4f0;
+  --color-text-secondary: #c9c9c2;
+  --color-text-muted: #9d9d95;
+  --color-text-faint: #6e6e68;
+
+  --color-accent: #39ff6a;
+  --color-accent-hover: #6cff90;
+  --color-accent-press: #22d94f;
+  --color-accent-strong: #39ff6a;
+  --color-accent-strong-hover: #6cff90;
+  --color-accent-soft: rgb(57 255 106 / 14%);
+  --color-accent-text: #39ff6a;
+
+  --color-teal: #ff5a1f;
+  --color-teal-soft: rgb(255 90 31 / 16%);
+  --color-teal-text: #ff8556;
+
+  --color-warn: #ffd400;
+
+  --gradient-hero:
+    radial-gradient(44% 40% at 12% 88%, rgb(57 255 106 / 18%), transparent 70%),
+    radial-gradient(40% 36% at 88% 10%, rgb(255 90 31 / 16%), transparent 70%);
+  --gradient-text: linear-gradient(160deg, #f4f4f0 0%, #39ff6a 100%);
+  --gradient-accent: linear-gradient(120deg, #39ff6a 0%, #ff5a1f 100%);
+  --gradient-surface: none;
+  --gradient-edge: linear-gradient(90deg, transparent, #39ff6a, #ff5a1f, transparent);
+
+  --shadow-sm: 3px 3px 0 rgb(0 0 0 / 70%);
+  --shadow-md: 5px 5px 0 rgb(0 0 0 / 70%), 0 0 22px rgb(57 255 106 / 12%);
+  --shadow-lg: 8px 8px 0 rgb(0 0 0 / 74%), 0 0 40px rgb(57 255 106 / 16%);
+  --shadow-xl: 12px 12px 0 rgb(0 0 0 / 78%);
+  --shadow-glow: 0 0 0 2px #39ff6a, 0 0 30px rgb(57 255 106 / 40%);
+  --highlight-top: none;
+  --glass-bg: rgb(36 36 36 / 84%);
+  --glass-border: rgb(57 255 106 / 26%);
+
+  --card-bg: var(--color-surface);
+  --card-border-color: #3a3a3a;
+  --card-shadow: 5px 5px 0 rgb(0 0 0 / 66%);
+  --card-hover-shadow: 8px 8px 0 rgb(0 0 0 / 74%), 0 0 34px rgb(57 255 106 / 18%);
+  --card-hover-border: #39ff6a;
+
+  --control-bg: #39ff6a;
+  --control-fg: #1a1a1a;
+  --control-border: #1a1a1a;
+  --control-shadow: 4px 4px 0 rgb(0 0 0 / 70%);
+
+  --rule-color: #3a3a3a;
+
+  --decor-concrete: 0.36;
+  --decor-grain: 0.11;
+  --decor-vignette: 0.44;
+
+  --cursor-ink: #39ff6a;
+  --cursor-blend: screen;
+  --cursor-light: 0.05;
 }

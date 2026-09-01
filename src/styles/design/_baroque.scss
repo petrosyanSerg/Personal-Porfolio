@@ -1,4 +1,51 @@
 [data-design="baroque"] {
+  --font-display:
+    "Bodoni MT", "Didot", "Bodoni 72", "Big Caslon", "Playfair Display",
+    "Times New Roman", georgia, serif;
+  --font-heading: var(--font-display);
+  --font-accent: var(--font-display);
+
+  --fw-display: 700;
+  --fw-heading: 600;
+  --ls-display: -0.015em;
+  --ls-eyebrow: 0.3em;
+  --case-display: none;
+  --case-eyebrow: uppercase;
+  --case-control: uppercase;
+  --ls-control: 0.16em;
+  --optical-scale: 1.14;
+  --lh-tight: 0.95;
+
+  --density: 1.2;
+  --container-lg: 76rem;
+  --measure: 60ch;
+
+  --radius-xs: 0;
+  --radius-sm: 1px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 3px;
+  --radius-card: 2px;
+  --radius-control: 2px;
+  --radius-tag: 0;
+  --card-hover-lift: -6px;
+  --ornament-width: 1.2;
+  --ornament-scale: 1.15;
+  --motif: "❧";
+
+  --motion-scale: 1.25;
+  --ease-signature: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-signature: var(--dur-slower);
+  --enter-distance: 30px;
+  --enter-blur: 6px;
+  --cursor-size: 34px;
+  --cursor-dot: 4px;
+
+  --hero-align: start;
+  --hero-measure: 44rem;
+}
+
+[data-design="baroque"]:not([data-theme="light"]) {
   color-scheme: dark;
 
   --color-bg: #0b0705;
@@ -49,36 +96,6 @@
   --glass-bg: rgb(18 12 8 / 80%);
   --glass-border: rgb(201 162 39 / 18%);
 
-  --font-display:
-    "Bodoni MT", "Didot", "Bodoni 72", "Big Caslon", "Playfair Display",
-    "Times New Roman", georgia, serif;
-  --font-heading: var(--font-display);
-  --font-accent: var(--font-display);
-
-  --fw-display: 700;
-  --fw-heading: 600;
-  --ls-display: -0.015em;
-  --ls-eyebrow: 0.3em;
-  --case-display: none;
-  --case-eyebrow: uppercase;
-  --case-control: uppercase;
-  --ls-control: 0.16em;
-  --optical-scale: 1.14;
-  --lh-tight: 0.95;
-
-  --density: 1.2;
-  --container-lg: 76rem;
-  --measure: 60ch;
-
-  --radius-xs: 0;
-  --radius-sm: 1px;
-  --radius-md: 2px;
-  --radius-lg: 2px;
-  --radius-xl: 3px;
-  --radius-card: 2px;
-  --radius-control: 2px;
-  --radius-tag: 0;
-
   --card-bg: linear-gradient(180deg, #1a120c 0%, #120c08 100%);
   --card-border-color: #4a361f;
   --card-shadow: var(--highlight-top), 0 10px 40px rgb(0 0 0 / 55%);
@@ -86,7 +103,6 @@
     0 0 0 1px rgb(201 162 39 / 55%), 0 26px 80px rgb(0 0 0 / 78%),
     0 0 60px rgb(201 162 39 / 12%);
   --card-hover-border: #c9a227;
-  --card-hover-lift: -6px;
 
   --control-bg: var(--gradient-accent);
   --control-fg: #1a1206;
@@ -99,21 +115,83 @@
   --ornament-color: #7a5c1f;
   --ornament-accent: #e0c866;
   --ornament-opacity: 0.85;
-  --ornament-width: 1.2;
-  --ornament-scale: 1.15;
-  --motif: "❧";
-
-  --motion-scale: 1.25;
-  --ease-signature: cubic-bezier(0.16, 1, 0.3, 1);
-  --dur-signature: var(--dur-slower);
-  --enter-distance: 30px;
-  --enter-blur: 6px;
 
   --cursor-ink: #c9a227;
-  --cursor-size: 34px;
-  --cursor-dot: 4px;
   --cursor-light: 0.14;
+}
 
-  --hero-align: start;
-  --hero-measure: 44rem;
+[data-design="baroque"][data-theme="light"] {
+  /* COUNTERPART-PENDING */
+  color-scheme: dark;
+
+  --color-bg: #0b0705;
+  --color-bg-elevated: #120c08;
+  --color-surface: #17100b;
+  --color-surface-2: #1f1610;
+  --color-surface-3: #2a1e15;
+
+  --color-border: #34251a;
+  --color-border-strong: #57402a;
+  --color-border-accent: rgb(201 162 39 / 45%);
+
+  --color-text: #f3e3c3;
+  --color-text-secondary: #cfb992;
+  --color-text-muted: #a08d6c;
+  --color-text-faint: #6b5c45;
+
+  --color-accent: #c9a227;
+  --color-accent-hover: #e0b83a;
+  --color-accent-press: #a8871c;
+
+  --color-accent-strong: #c9a227;
+  --color-accent-strong-hover: #ddb534;
+  --color-accent-soft: rgb(201 162 39 / 12%);
+  --color-accent-text: #d9b545;
+
+  --color-teal: #9e3b32;
+  --color-teal-soft: rgb(158 59 50 / 16%);
+  --color-teal-text: #d9756a;
+
+  --gradient-hero:
+    radial-gradient(90% 70% at 18% -5%, rgb(201 162 39 / 16%) 0%, rgb(11 7 5 / 0%) 62%),
+    radial-gradient(70% 60% at 88% 110%, rgb(158 59 50 / 10%) 0%, rgb(11 7 5 / 0%) 70%);
+  --gradient-text: linear-gradient(175deg, #fff6dd 0%, #c9a227 62%, #8a6d1c 100%);
+  --gradient-accent: linear-gradient(120deg, #8a6d1c 0%, #f0d98a 48%, #a8871c 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(201 162 39 / 7%) 0%,
+    rgb(255 255 255 / 0%) 100%
+  );
+  --gradient-edge: linear-gradient(90deg, transparent, #c9a227, transparent);
+
+  --shadow-sm: 0 2px 6px rgb(0 0 0 / 55%);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 60%);
+  --shadow-lg: 0 20px 60px rgb(0 0 0 / 70%);
+  --shadow-xl: 0 36px 110px rgb(0 0 0 / 80%);
+  --highlight-top: inset 0 1px 0 rgb(240 217 138 / 14%);
+  --glass-bg: rgb(18 12 8 / 80%);
+  --glass-border: rgb(201 162 39 / 18%);
+
+  --card-bg: linear-gradient(180deg, #1a120c 0%, #120c08 100%);
+  --card-border-color: #4a361f;
+  --card-shadow: var(--highlight-top), 0 10px 40px rgb(0 0 0 / 55%);
+  --card-hover-shadow:
+    0 0 0 1px rgb(201 162 39 / 55%), 0 26px 80px rgb(0 0 0 / 78%),
+    0 0 60px rgb(201 162 39 / 12%);
+  --card-hover-border: #c9a227;
+
+  --control-bg: var(--gradient-accent);
+  --control-fg: #1a1206;
+  --control-border: rgb(240 217 138 / 55%);
+
+  --rule-color: #57402a;
+
+  --decor-grain: 0.05;
+  --decor-vignette: 0.75;
+  --ornament-color: #7a5c1f;
+  --ornament-accent: #e0c866;
+  --ornament-opacity: 0.85;
+
+  --cursor-ink: #c9a227;
+  --cursor-light: 0.14;
 }

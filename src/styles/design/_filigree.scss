@@ -1,4 +1,46 @@
 [data-design="filigree"] {
+  --font-display:
+    "Baskerville", "Libre Baskerville", "Hoefler Text", "Times New Roman", georgia, serif;
+  --font-heading: var(--font-display);
+  --font-accent: var(--font-display);
+
+  --fw-display: 400;
+  --fw-heading: 500;
+  --style-display: normal;
+  --ls-display: 0.01em;
+  --ls-eyebrow: 0.34em;
+  --case-eyebrow: uppercase;
+  --case-control: uppercase;
+  --ls-control: 0.18em;
+  --optical-scale: 1.04;
+  --lh-tight: 1.06;
+
+  --density: 1.18;
+  --container-lg: 70rem;
+  --measure: 60ch;
+
+  --radius-card: 2px;
+  --radius-control: 2px;
+  --radius-tag: 2px;
+  --radius-media: 2px;
+  --card-hover-lift: -2px;
+  --ornament-width: 0.75;
+  --motif: "\2766";
+
+  --motion-scale: 0.9;
+  --ease-signature: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-signature: var(--dur-slow);
+  --enter-distance: 10px;
+  --cursor-size: 24px;
+  --cursor-dot: 3px;
+  --cursor-radius: 0;
+
+  --hero-align: center;
+  --hero-text-align: center;
+  --hero-measure: 44rem;
+}
+
+[data-design="filigree"]:not([data-theme="light"]) {
   color-scheme: dark;
 
   --color-bg: #12131a;
@@ -54,37 +96,11 @@
   --glass-bg: rgb(23 25 34 / 78%);
   --glass-border: rgb(185 153 95 / 22%);
 
-  --font-display:
-    "Baskerville", "Libre Baskerville", "Hoefler Text", "Times New Roman", georgia, serif;
-  --font-heading: var(--font-display);
-  --font-accent: var(--font-display);
-
-  --fw-display: 400;
-  --fw-heading: 500;
-  --style-display: normal;
-  --ls-display: 0.01em;
-  --ls-eyebrow: 0.34em;
-  --case-eyebrow: uppercase;
-  --case-control: uppercase;
-  --ls-control: 0.18em;
-  --optical-scale: 1.04;
-  --lh-tight: 1.06;
-
-  --density: 1.18;
-  --container-lg: 70rem;
-  --measure: 60ch;
-
-  --radius-card: 2px;
-  --radius-control: 2px;
-  --radius-tag: 2px;
-  --radius-media: 2px;
-
   --card-bg: var(--color-surface);
   --card-border-color: #3d3f52;
   --card-shadow: var(--highlight-top);
   --card-hover-shadow: 0 0 0 1px rgb(185 153 95 / 42%), 0 16px 46px rgb(0 0 0 / 55%);
   --card-hover-border: rgb(185 153 95 / 62%);
-  --card-hover-lift: -2px;
 
   --control-bg: transparent;
   --control-fg: #cdb079;
@@ -97,21 +113,86 @@
   --ornament-color: rgb(185 153 95 / 55%);
   --ornament-accent: #e6cd97;
   --ornament-opacity: 1;
-  --ornament-width: 0.75;
-  --motif: "\2766";
-
-  --motion-scale: 0.9;
-  --ease-signature: cubic-bezier(0.4, 0, 0.2, 1);
-  --dur-signature: var(--dur-slow);
-  --enter-distance: 10px;
 
   --cursor-ink: #cdb079;
-  --cursor-size: 24px;
-  --cursor-dot: 3px;
-  --cursor-radius: 0;
   --cursor-light: 0.06;
+}
 
-  --hero-align: center;
-  --hero-text-align: center;
-  --hero-measure: 44rem;
+[data-design="filigree"][data-theme="light"] {
+  /* COUNTERPART-PENDING */
+  color-scheme: dark;
+
+  --color-bg: #12131a;
+  --color-bg-elevated: #171922;
+  --color-surface: #1a1c26;
+  --color-surface-2: #20222e;
+  --color-surface-3: #282b39;
+
+  --color-border: #33364a;
+  --color-border-strong: #4a4d66;
+  --color-border-accent: rgb(185 153 95 / 46%);
+
+  --color-text: #efe9dd;
+  --color-text-secondary: #c4bcab;
+  --color-text-muted: #98917f;
+  --color-text-faint: #6a6558;
+
+  --color-accent: #b9995f;
+  --color-accent-hover: #d0ae70;
+  --color-accent-press: #9c7f4b;
+  --color-accent-strong: #b9995f;
+  --color-accent-strong-hover: #cba86b;
+  --color-accent-soft: rgb(185 153 95 / 12%);
+  --color-accent-text: #cdb079;
+
+  --color-teal: #7fa6a0;
+  --color-teal-soft: rgb(127 166 160 / 12%);
+  --color-teal-text: #9dbdb8;
+
+  --gradient-hero: radial-gradient(
+    100% 70% at 50% 0%,
+    rgb(185 153 95 / 10%) 0%,
+    rgb(18 19 26 / 0%) 62%
+  );
+  --gradient-text: linear-gradient(180deg, #f6f1e6 0%, #cdb079 100%);
+  --gradient-accent: linear-gradient(
+    100deg,
+    #8a6f42 0%,
+    #e6cd97 38%,
+    #a38550 68%,
+    #d8bd85 100%
+  );
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(185 153 95 / 5%) 0%,
+    rgb(255 255 255 / 0%) 100%
+  );
+  --gradient-edge: linear-gradient(90deg, transparent, #b9995f, transparent);
+
+  --shadow-md: 0 4px 18px rgb(0 0 0 / 45%);
+  --shadow-lg: 0 14px 46px rgb(0 0 0 / 55%);
+  --highlight-top: inset 0 1px 0 rgb(230 205 151 / 10%);
+  --glass-bg: rgb(23 25 34 / 78%);
+  --glass-border: rgb(185 153 95 / 22%);
+
+  --card-bg: var(--color-surface);
+  --card-border-color: #3d3f52;
+  --card-shadow: var(--highlight-top);
+  --card-hover-shadow: 0 0 0 1px rgb(185 153 95 / 42%), 0 16px 46px rgb(0 0 0 / 55%);
+  --card-hover-border: rgb(185 153 95 / 62%);
+
+  --control-bg: transparent;
+  --control-fg: #cdb079;
+  --control-border: #b9995f;
+
+  --rule-color: rgb(185 153 95 / 34%);
+
+  --decor-grain: 0.02;
+  --decor-vignette: 0.5;
+  --ornament-color: rgb(185 153 95 / 55%);
+  --ornament-accent: #e6cd97;
+  --ornament-opacity: 1;
+
+  --cursor-ink: #cdb079;
+  --cursor-light: 0.06;
 }

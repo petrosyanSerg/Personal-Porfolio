@@ -1,4 +1,45 @@
 [data-design="mixed-media"] {
+  --font-display: "Rockwell", "Bookman Old Style", "Courier Bold", georgia, serif;
+  --font-heading: var(--font-display);
+  --font-body: var(--font-sans);
+  --font-eyebrow: var(--font-mono);
+  --font-accent: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+
+  --fw-display: var(--fw-bold);
+  --fw-heading: var(--fw-bold);
+  --case-display: uppercase;
+  --case-eyebrow: uppercase;
+  --ls-display: -0.015em;
+  --ls-eyebrow: 0.22em;
+  --optical-scale: 1.08;
+  --lh-tight: 0.96;
+
+  --density: 0.98;
+  --measure: 62ch;
+
+  --radius-card: 1px 5px 2px 6px;
+  --radius-control: 2px;
+  --radius-tag: 1px 4px 1px 4px;
+  --radius-media: 3px 1px 5px 2px;
+  --card-border-width: 1px;
+  --card-hover-lift: -2px;
+  --control-border-width: 2px;
+  --rule-height: 6px;
+  --motif: "\2702";
+
+  --motion-scale: 0.9;
+  --ease-signature: cubic-bezier(0.3, 1.2, 0.4, 1);
+  --dur-signature: var(--dur-base);
+  --enter-distance: 14px;
+  --cursor-size: 26px;
+  --cursor-dot: 5px;
+  --cursor-radius: 2px;
+
+  --hero-align: start;
+  --hero-measure: 40rem;
+}
+
+[data-design="mixed-media"][data-theme="light"] {
   color-scheme: light;
 
   --color-bg: #e9e4d8;
@@ -55,62 +96,102 @@
   --glass-bg: rgb(247 244 236 / 84%);
   --glass-border: rgb(143 136 115 / 46%);
 
-  --font-display: "Rockwell", "Bookman Old Style", "Courier Bold", georgia, serif;
-  --font-heading: var(--font-display);
-  --font-body: var(--font-sans);
-  --font-eyebrow: var(--font-mono);
-  --font-accent: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
-
-  --fw-display: var(--fw-bold);
-  --fw-heading: var(--fw-bold);
-  --case-display: uppercase;
-  --case-eyebrow: uppercase;
-  --ls-display: -0.015em;
-  --ls-eyebrow: 0.22em;
-  --optical-scale: 1.08;
-  --lh-tight: 0.96;
-
-  --density: 0.98;
-  --measure: 62ch;
-
-  --radius-card: 1px 5px 2px 6px;
-  --radius-control: 2px;
-  --radius-tag: 1px 4px 1px 4px;
-  --radius-media: 3px 1px 5px 2px;
-
   --card-bg: var(--color-surface);
-  --card-border-width: 1px;
   --card-border-color: #c6bfaa;
   --card-shadow: 4px 5px 0 rgb(28 26 23 / 18%);
   --card-hover-shadow: 7px 9px 0 rgb(28 26 23 / 24%);
   --card-hover-border: #b8452f;
-  --card-hover-lift: -2px;
 
   --control-bg: var(--color-accent-strong);
   --control-fg: #f7f4ec;
   --control-border: #1c1a17;
-  --control-border-width: 2px;
   --control-shadow: 3px 3px 0 rgb(28 26 23 / 24%);
 
   --rule-color: rgb(200 144 28 / 42%);
-  --rule-height: 6px;
 
   --decor-paper: 0.2;
   --decor-grain: 0.12;
   --decor-halftone: 0.05;
-  --motif: "\2702";
-
-  --motion-scale: 0.9;
-  --ease-signature: cubic-bezier(0.3, 1.2, 0.4, 1);
-  --dur-signature: var(--dur-base);
-  --enter-distance: 14px;
 
   --cursor-ink: #b8452f;
-  --cursor-size: 26px;
-  --cursor-dot: 5px;
-  --cursor-radius: 2px;
   --cursor-light: 0.02;
+}
 
-  --hero-align: start;
-  --hero-measure: 40rem;
+[data-design="mixed-media"]:not([data-theme="light"]) {
+  /* COUNTERPART-PENDING */
+  color-scheme: light;
+
+  --color-bg: #e9e4d8;
+  --color-bg-elevated: #f0ece2;
+  --color-surface: #f7f4ec;
+  --color-surface-2: #ded8c8;
+  --color-surface-3: #cdc6b3;
+
+  --color-border: #c6bfaa;
+  --color-border-strong: #8f8873;
+  --color-border-accent: rgb(184 69 47 / 52%);
+
+  --color-text: #1c1a17;
+  --color-text-secondary: #3c382f;
+  --color-text-muted: #57523f;
+  --color-text-faint: #8d8874;
+
+  --color-accent: #b8452f;
+  --color-accent-hover: #9d3624;
+  --color-accent-press: #852c1d;
+  --color-accent-strong: #9d3624;
+  --color-accent-strong-hover: #852c1d;
+  --color-accent-soft: rgb(184 69 47 / 14%);
+  --color-accent-text: #932f1f;
+
+  --color-teal: #2c5f6b;
+  --color-teal-soft: rgb(44 95 107 / 14%);
+  --color-teal-text: #234c56;
+
+  --color-warn: #c8901c;
+
+  --gradient-hero:
+    linear-gradient(112deg, rgb(184 69 47 / 12%) 0 22%, transparent 22%),
+    linear-gradient(248deg, rgb(44 95 107 / 12%) 0 26%, transparent 26%),
+    linear-gradient(18deg, rgb(200 144 28 / 12%) 0 18%, transparent 18%),
+    radial-gradient(50% 40% at 76% 82%, rgb(28 26 23 / 8%), transparent 72%);
+  --gradient-text: none;
+  --gradient-accent: linear-gradient(120deg, #b8452f 0%, #2c5f6b 100%);
+  --gradient-surface: none;
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    #b8452f 40%,
+    #2c5f6b 60%,
+    transparent
+  );
+
+  --shadow-sm: 2px 2px 0 rgb(28 26 23 / 18%);
+  --shadow-md: 4px 5px 0 rgb(28 26 23 / 20%);
+  --shadow-lg: 6px 8px 0 rgb(28 26 23 / 22%);
+  --shadow-xl: 10px 12px 0 rgb(28 26 23 / 24%);
+  --shadow-glow: 0 0 0 2px var(--color-border-accent);
+  --highlight-top: none;
+  --glass-bg: rgb(247 244 236 / 84%);
+  --glass-border: rgb(143 136 115 / 46%);
+
+  --card-bg: var(--color-surface);
+  --card-border-color: #c6bfaa;
+  --card-shadow: 4px 5px 0 rgb(28 26 23 / 18%);
+  --card-hover-shadow: 7px 9px 0 rgb(28 26 23 / 24%);
+  --card-hover-border: #b8452f;
+
+  --control-bg: var(--color-accent-strong);
+  --control-fg: #f7f4ec;
+  --control-border: #1c1a17;
+  --control-shadow: 3px 3px 0 rgb(28 26 23 / 24%);
+
+  --rule-color: rgb(200 144 28 / 42%);
+
+  --decor-paper: 0.2;
+  --decor-grain: 0.12;
+  --decor-halftone: 0.05;
+
+  --cursor-ink: #b8452f;
+  --cursor-light: 0.02;
 }

@@ -1,4 +1,44 @@
 [data-design="art-nouveau"] {
+  --font-display: "Optima", "Palatino Linotype", palatino, "Book Antiqua", serif;
+  --font-heading: var(--font-display);
+  --font-eyebrow: var(--font-display);
+  --font-accent: "Snell Roundhand", "Segoe Script", "Brush Script MT", cursive;
+
+  --fw-display: var(--fw-regular);
+  --fw-heading: var(--fw-medium);
+  --case-eyebrow: uppercase;
+  --ls-display: -0.006em;
+  --ls-eyebrow: 0.28em;
+  --optical-scale: 1.02;
+  --lh-tight: 1.06;
+  --lh-normal: 1.66;
+
+  --density: 1.12;
+  --measure: 60ch;
+
+  --radius-card: 42px 8px 42px 8px;
+  --radius-control: 999px;
+  --radius-tag: 999px;
+  --radius-media: 8px 42px 8px 42px;
+  --card-hover-lift: -3px;
+  --control-border-width: 1px;
+  --ornament-width: 1.4;
+  --ornament-scale: 1.15;
+  --motif: "\2766";
+
+  --motion-scale: 1.2;
+  --ease-signature: cubic-bezier(0.55, 0.06, 0.18, 1);
+  --dur-signature: var(--dur-slower);
+  --enter-distance: 16px;
+  --enter-blur: 2px;
+  --cursor-size: 32px;
+  --cursor-dot: 4px;
+
+  --hero-align: start;
+  --hero-measure: 38rem;
+}
+
+[data-design="art-nouveau"][data-theme="light"] {
   color-scheme: light;
 
   --color-bg: #f2ede0;
@@ -58,66 +98,116 @@
   --glass-bg: rgb(251 248 240 / 78%);
   --glass-border: rgb(168 156 125 / 44%);
 
-  --font-display: "Optima", "Palatino Linotype", palatino, "Book Antiqua", serif;
-  --font-heading: var(--font-display);
-  --font-eyebrow: var(--font-display);
-  --font-accent: "Snell Roundhand", "Segoe Script", "Brush Script MT", cursive;
-
-  --fw-display: var(--fw-regular);
-  --fw-heading: var(--fw-medium);
-  --case-eyebrow: uppercase;
-  --ls-display: -0.006em;
-  --ls-eyebrow: 0.28em;
-  --optical-scale: 1.02;
-  --lh-tight: 1.06;
-  --lh-normal: 1.66;
-
-  --density: 1.12;
-  --measure: 60ch;
-
-  --radius-card: 42px 8px 42px 8px;
-  --radius-control: 999px;
-  --radius-tag: 999px;
-  --radius-media: 8px 42px 8px 42px;
-
   --card-bg: var(--color-surface);
   --card-border-color: rgb(162 121 74 / 30%);
   --card-shadow: var(--highlight-top), 0 6px 20px rgb(60 62 44 / 9%);
   --card-hover-shadow: 0 16px 42px rgb(60 62 44 / 15%);
   --card-hover-border: rgb(162 121 74 / 64%);
-  --card-hover-lift: -3px;
 
   --control-bg: transparent;
   --control-fg: #6d5030;
   --control-border: #a2794a;
-  --control-border-width: 1px;
 
   --rule-color: rgb(162 121 74 / 40%);
 
   --ornament-color: rgb(109 80 48 / 74%);
   --ornament-accent: #4f7a6b;
   --ornament-opacity: 0.92;
-  --ornament-width: 1.4;
-  --ornament-scale: 1.15;
 
   --decor-botanical: 0.11;
   --decor-grain: 0.04;
   --decor-paper: 0.1;
-  --motif: "\2766";
-
-  --motion-scale: 1.2;
-  --ease-signature: cubic-bezier(0.55, 0.06, 0.18, 1);
-  --dur-signature: var(--dur-slower);
-  --enter-distance: 16px;
-  --enter-blur: 2px;
 
   --cursor-ink: #6d5030;
-  --cursor-size: 32px;
-  --cursor-dot: 4px;
   --cursor-light: 0.03;
 
-  --hero-align: start;
-  --hero-measure: 38rem;
+  --scene-opacity: 0.92;
+  --scene-blend: multiply;
+}
+
+[data-design="art-nouveau"]:not([data-theme="light"]) {
+  /* COUNTERPART-PENDING */
+  color-scheme: light;
+
+  --color-bg: #f2ede0;
+  --color-bg-elevated: #f7f3e9;
+  --color-surface: #fbf8f0;
+  --color-surface-2: #eae4d3;
+  --color-surface-3: #ddd6c1;
+
+  --color-border: #d3cbb4;
+  --color-border-strong: #a89c7d;
+  --color-border-accent: rgb(162 121 74 / 48%);
+
+  --color-text: #1f2a22;
+  --color-text-secondary: #435043;
+  --color-text-muted: #5d6a58;
+  --color-text-faint: #93997f;
+
+  --color-accent: #a2794a;
+  --color-accent-hover: #8d663c;
+  --color-accent-press: #765531;
+  --color-accent-strong: #6d5030;
+  --color-accent-strong-hover: #5a4127;
+  --color-accent-soft: rgb(162 121 74 / 14%);
+  --color-accent-text: #6d5030;
+
+  --color-teal: #4f7a6b;
+  --color-teal-soft: rgb(79 122 107 / 16%);
+  --color-teal-text: #3a5c50;
+
+  --color-warn: #b08423;
+
+  --gradient-hero:
+    radial-gradient(46% 40% at 24% 2%, rgb(176 132 35 / 20%), transparent 70%),
+    radial-gradient(42% 38% at 76% 8%, rgb(79 122 107 / 18%), transparent 70%),
+    radial-gradient(60% 44% at 50% 100%, rgb(150 120 160 / 12%), transparent 74%);
+  --gradient-text: linear-gradient(160deg, #1f2a22 0%, #6d5030 100%);
+  --gradient-accent: linear-gradient(120deg, #a2794a 0%, #4f7a6b 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 62%) 0%,
+    rgb(255 255 255 / 0%) 100%
+  );
+  --gradient-edge: linear-gradient(
+    90deg,
+    transparent,
+    #a2794a 24%,
+    #4f7a6b 76%,
+    transparent
+  );
+
+  --shadow-sm: 0 1px 3px rgb(60 62 44 / 10%);
+  --shadow-md: 0 6px 20px rgb(60 62 44 / 12%);
+  --shadow-lg: 0 16px 44px rgb(60 62 44 / 14%);
+  --shadow-xl: 0 28px 72px rgb(60 62 44 / 16%);
+  --shadow-glow: 0 0 0 1px var(--color-border-accent);
+  --highlight-top: inset 0 1px 0 rgb(255 255 255 / 70%);
+  --glass-bg: rgb(251 248 240 / 78%);
+  --glass-border: rgb(168 156 125 / 44%);
+
+  --card-bg: var(--color-surface);
+  --card-border-color: rgb(162 121 74 / 30%);
+  --card-shadow: var(--highlight-top), 0 6px 20px rgb(60 62 44 / 9%);
+  --card-hover-shadow: 0 16px 42px rgb(60 62 44 / 15%);
+  --card-hover-border: rgb(162 121 74 / 64%);
+
+  --control-bg: transparent;
+  --control-fg: #6d5030;
+  --control-border: #a2794a;
+
+  --rule-color: rgb(162 121 74 / 40%);
+
+  --ornament-color: rgb(109 80 48 / 74%);
+  --ornament-accent: #4f7a6b;
+  --ornament-opacity: 0.92;
+
+  --decor-botanical: 0.11;
+  --decor-grain: 0.04;
+  --decor-paper: 0.1;
+
+  --cursor-ink: #6d5030;
+  --cursor-light: 0.03;
 
   --scene-opacity: 0.92;
   --scene-blend: multiply;
