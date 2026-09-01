@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { DesignLab } from '@/design-system/components/DesignLab';
@@ -13,6 +13,11 @@ import { LocaleSwitcher } from './LocaleSwitcher';
 import { ThemeToggle } from './ThemeToggle';
 import styles from './Header.module.scss';
 
+// The shrink flag turns on later than it turns off, so a scroll that hovers on
+// the boundary cannot chatter the 64px -> 56px transition.
+const SHRINK_ON = 24;
+const SHRINK_OFF = 12;
+
 const SECTION_IDS = navigation
   .filter((item) => item.href.startsWith('/#'))
   .map((item) => item.href.slice(2));
@@ -20,15 +25,40 @@ const SECTION_IDS = navigation
 export function Header() {
   const t = useTranslations('nav');
   const a11y = useTranslations('a11y');
-  const [scrolled, setScrolled] = useState(false);
+  const header = useRef<HTMLElement>(null);
   const [open, setOpen] = useState(false);
   const active = useActiveSection(SECTION_IDS);
 
+  // Written straight to the DOM rather than held in state: this flag is purely
+  // presentational, and routing it through React re-rendered the whole header —
+  // including the DesignLab dialog and its fifty previews — between the scroll
+  // event and the paint that starts the transition.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
+    const node = header.current;
+    if (!node) return;
+
+    let frame = 0;
+    let scrolled = false;
+
+    const measure = () => {
+      frame = 0;
+      const next = window.scrollY > (scrolled ? SHRINK_OFF : SHRINK_ON);
+      if (next === scrolled) return;
+      scrolled = next;
+      node.toggleAttribute('data-scrolled', next);
+    };
+
+    const onScroll = () => {
+      if (frame === 0) frame = requestAnimationFrame(measure);
+    };
+
+    measure();
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
 
   useEffect(() => {
@@ -47,7 +77,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className={styles.header} data-scrolled={scrolled || undefined}>
+    <header ref={header} className={styles.header}>
       <div className={styles.inner}>
         <Link href="/" className={styles.brand} onClick={() => setOpen(false)}>
           <span className={styles.brandName}>{fullName}</span>
