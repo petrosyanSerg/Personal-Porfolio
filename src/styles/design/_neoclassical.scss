@@ -51,6 +51,7 @@
 
 [data-design="neoclassical"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f6f3ec;
   --color-bg-elevated: #fdfbf6;
@@ -126,6 +127,7 @@
 [data-design="neoclassical"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f6f3ec;
   --color-bg-elevated: #fdfbf6;

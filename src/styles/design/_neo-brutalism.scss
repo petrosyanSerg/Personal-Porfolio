@@ -43,6 +43,7 @@
 
 [data-design="neo-brutalism"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fdf05c;
   --color-bg-elevated: #fef58a;
@@ -116,6 +117,7 @@
 [data-design="neo-brutalism"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fdf05c;
   --color-bg-elevated: #fef58a;

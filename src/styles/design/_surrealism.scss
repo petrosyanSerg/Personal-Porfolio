@@ -34,6 +34,7 @@
 
 [data-design="surrealism"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #e8dfd0;
   --color-bg-elevated: #efe8db;
@@ -103,6 +104,7 @@
 [data-design="surrealism"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #e8dfd0;
   --color-bg-elevated: #efe8db;

@@ -58,6 +58,7 @@
 
 [data-design="pixel-art"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0d1117;
   --color-bg-elevated: #11171f;
@@ -134,6 +135,7 @@
 [data-design="pixel-art"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0d1117;
   --color-bg-elevated: #11171f;

@@ -41,6 +41,7 @@
 
 [data-design="conceptual-sketch"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f4f1e8;
   --color-bg-elevated: #fbf9f3;
@@ -114,6 +115,7 @@
 [data-design="conceptual-sketch"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f4f1e8;
   --color-bg-elevated: #fbf9f3;

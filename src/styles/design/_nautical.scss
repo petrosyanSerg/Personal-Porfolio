@@ -37,6 +37,7 @@
 
 [data-design="nautical"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0b1f2e;
   --color-bg-elevated: #0f2739;
@@ -117,6 +118,7 @@
 [data-design="nautical"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0b1f2e;
   --color-bg-elevated: #0f2739;

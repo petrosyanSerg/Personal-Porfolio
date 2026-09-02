@@ -40,6 +40,7 @@
 
 [data-design="art-nouveau"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f2ede0;
   --color-bg-elevated: #f7f3e9;
@@ -128,6 +129,7 @@
 [data-design="art-nouveau"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f2ede0;
   --color-bg-elevated: #f7f3e9;

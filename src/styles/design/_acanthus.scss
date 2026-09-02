@@ -40,6 +40,7 @@
 
 [data-design="acanthus"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #efeade;
   --color-bg-elevated: #f8f5ec;
@@ -53,7 +54,7 @@
 
   --color-text: #22261f;
   --color-text-secondary: #474d3c;
-  --color-text-muted: #676e57;
+  --color-text-muted: #5c624c;
   --color-text-faint: #9aa085;
 
   --color-accent: #6f7d4f;
@@ -122,6 +123,7 @@
 [data-design="acanthus"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #efeade;
   --color-bg-elevated: #f8f5ec;
@@ -135,7 +137,7 @@
 
   --color-text: #22261f;
   --color-text-secondary: #474d3c;
-  --color-text-muted: #676e57;
+  --color-text-muted: #5c624c;
   --color-text-faint: #9aa085;
 
   --color-accent: #6f7d4f;

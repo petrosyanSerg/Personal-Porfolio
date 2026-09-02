@@ -39,6 +39,7 @@
 
 [data-design="scrapbook"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f2ece1;
   --color-bg-elevated: #f7f2e9;
@@ -117,6 +118,7 @@
 [data-design="scrapbook"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f2ece1;
   --color-bg-elevated: #f7f2e9;

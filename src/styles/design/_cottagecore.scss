@@ -35,6 +35,7 @@
 
 [data-design="cottagecore"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f6f2e4;
   --color-bg-elevated: #fbf8ee;
@@ -112,6 +113,7 @@
 [data-design="cottagecore"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f6f2e4;
   --color-bg-elevated: #fbf8ee;

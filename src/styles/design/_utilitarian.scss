@@ -43,6 +43,7 @@
 
 [data-design="utilitarian"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #16181a;
   --color-bg-elevated: #1b1e20;
@@ -117,6 +118,7 @@
 [data-design="utilitarian"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #16181a;
   --color-bg-elevated: #1b1e20;

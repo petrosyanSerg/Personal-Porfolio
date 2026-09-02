@@ -46,6 +46,7 @@
 
 [data-design="modular-typography"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #111;
   --color-bg-elevated: #171717;
@@ -113,6 +114,7 @@
 [data-design="modular-typography"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #111;
   --color-bg-elevated: #171717;

@@ -41,6 +41,7 @@
 
 [data-design="coquette"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fdf3f5;
   --color-bg-elevated: #fef8f9;
@@ -120,6 +121,7 @@
 [data-design="coquette"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fdf3f5;
   --color-bg-elevated: #fef8f9;

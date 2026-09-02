@@ -37,6 +37,7 @@
 
 [data-design="frutiger-aero"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #e6f6ff;
   --color-bg-elevated: #f2fbff;
@@ -63,7 +64,7 @@
 
   --color-teal: #4bbf6a;
   --color-teal-soft: rgb(75 191 106 / 18%);
-  --color-teal-text: #2f8347;
+  --color-teal-text: #2c7b43;
 
   --color-success: #4bbf6a;
 
@@ -101,7 +102,7 @@
     inset 0 1px 0 #fff, 0 18px 44px rgb(16 120 158 / 26%), 0 0 26px rgb(79 216 255 / 40%);
   --card-hover-border: rgb(79 216 255 / 70%);
 
-  --control-bg: var(--gradient-accent);
+  --control-bg: linear-gradient(160deg, #167a9f 0%, #0f6b8c 58%, #2f7d49 100%);
   --control-fg: #fff;
   --control-border: rgb(255 255 255 / 80%);
   --control-shadow:
@@ -120,6 +121,7 @@
 [data-design="frutiger-aero"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #e6f6ff;
   --color-bg-elevated: #f2fbff;
@@ -146,7 +148,7 @@
 
   --color-teal: #4bbf6a;
   --color-teal-soft: rgb(75 191 106 / 18%);
-  --color-teal-text: #2f8347;
+  --color-teal-text: #2c7b43;
 
   --color-success: #4bbf6a;
 
@@ -184,7 +186,7 @@
     inset 0 1px 0 #fff, 0 18px 44px rgb(16 120 158 / 26%), 0 0 26px rgb(79 216 255 / 40%);
   --card-hover-border: rgb(79 216 255 / 70%);
 
-  --control-bg: var(--gradient-accent);
+  --control-bg: linear-gradient(160deg, #167a9f 0%, #0f6b8c 58%, #2f7d49 100%);
   --control-fg: #fff;
   --control-border: rgb(255 255 255 / 80%);
   --control-shadow:

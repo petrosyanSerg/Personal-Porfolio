@@ -3,7 +3,10 @@
 .light {
   position: fixed;
   inset: 0;
-  z-index: 1;
+
+  /* Atmosphere, not content: this used to sit at z-index 1, above every
+     section, so the pointer wash dimmed the text it passed over. */
+  z-index: var(--z-atmosphere);
   pointer-events: none;
 
   background: radial-gradient(

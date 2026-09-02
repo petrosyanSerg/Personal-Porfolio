@@ -3,7 +3,7 @@
 .stage {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: var(--z-atmosphere);
   overflow: hidden;
   pointer-events: none;
 
@@ -20,24 +20,46 @@
   will-change: transform;
 }
 
+/*
+ * The atmosphere is drawn from the active palette rather than from a fixed
+ * blue-on-black. Cinematic mode can be combined with any of the fifty design
+ * systems, twenty-nine of which are light-native, and a hardcoded navy fog with
+ * a black vignette over a cream page looked like a bug and dragged the effective
+ * background out from under the text at the edges.
+ */
 .strata {
   opacity: var(--atmos-strata);
   background: repeating-linear-gradient(
     180deg,
-    rgb(108 156 255 / 0%) 0,
-    rgb(108 156 255 / 5.5%) 8vh,
-    rgb(108 156 255 / 0%) 17vh,
-    rgb(108 156 255 / 0%) 26vh
+    rgb(from var(--color-accent) r g b / 0%) 0,
+    rgb(from var(--color-accent) r g b / 5.5%) 8vh,
+    rgb(from var(--color-accent) r g b / 0%) 17vh,
+    rgb(from var(--color-accent) r g b / 0%) 26vh
   );
   transition: opacity var(--dur-slower) var(--ease-out);
 }
 
 .fog {
   opacity: var(--atmos-fog);
+  --fog-a: color-mix(in oklab, var(--color-accent), var(--atmos-ink, #000) 30%);
+  --fog-b: color-mix(in oklab, var(--color-teal), var(--atmos-ink, #000) 30%);
+
   background:
-    radial-gradient(42vw 34vw at 22% 12%, rgb(108 156 255 / 15%), transparent 70%),
-    radial-gradient(48vw 36vw at 84% 72%, rgb(63 224 204 / 9%), transparent 72%),
-    radial-gradient(34vw 28vw at 60% 4%, rgb(140 120 255 / 8%), transparent 70%);
+    radial-gradient(
+      42vw 34vw at 22% 12%,
+      rgb(from var(--fog-a) r g b / 15%),
+      transparent 70%
+    ),
+    radial-gradient(
+      48vw 36vw at 84% 72%,
+      rgb(from var(--fog-b) r g b / 9%),
+      transparent 72%
+    ),
+    radial-gradient(
+      34vw 28vw at 60% 4%,
+      rgb(from var(--fog-a) r g b / 8%),
+      transparent 70%
+    );
   filter: blur(48px);
   transition: opacity var(--dur-slower) var(--ease-out);
 }
@@ -45,11 +67,31 @@
 .motes {
   opacity: calc(var(--atmos-motes) * 0.55);
   background-image:
-    radial-gradient(1.5px 1.5px at 20% 30%, rgb(180 205 255 / 55%), transparent),
-    radial-gradient(1px 1px at 68% 12%, rgb(180 205 255 / 45%), transparent),
-    radial-gradient(1.5px 1.5px at 45% 78%, rgb(150 240 230 / 40%), transparent),
-    radial-gradient(1px 1px at 88% 55%, rgb(180 205 255 / 40%), transparent),
-    radial-gradient(1px 1px at 8% 65%, rgb(180 205 255 / 35%), transparent);
+    radial-gradient(
+      1.5px 1.5px at 20% 30%,
+      rgb(from var(--color-text) r g b / 55%),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 68% 12%,
+      rgb(from var(--color-text) r g b / 45%),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 45% 78%,
+      rgb(from var(--color-teal) r g b / 45%),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 88% 55%,
+      rgb(from var(--color-text) r g b / 40%),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 8% 65%,
+      rgb(from var(--color-text) r g b / 35%),
+      transparent
+    );
   background-size: 42vmin 42vmin;
   transition: opacity var(--dur-slower) var(--ease-out);
 }
@@ -66,7 +108,7 @@
   background: radial-gradient(
     120% 90% at 50% 45%,
     transparent 42%,
-    rgb(0 0 0 / 55%) 100%
+    color-mix(in oklab, var(--color-bg), var(--atmos-ink, #000) 62%) 100%
   );
   transition: opacity var(--dur-slower) var(--ease-out);
 }
