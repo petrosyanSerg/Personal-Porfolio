@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { Reveal } from '@/components/animations/Reveal';
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
+import { AiNativeVisual } from '@/components/visuals/AiNativeVisual';
 
 import styles from './AiNative.module.scss';
 
@@ -20,6 +21,8 @@ export async function AiNative() {
           title={t('title')}
           lead={t('lead')}
         />
+
+        <AiNativeVisual />
 
         <ol className={styles.pipeline}>
           {STAGES.map((stage, index) => (

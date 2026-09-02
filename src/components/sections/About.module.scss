@@ -47,18 +47,3 @@
   border-radius: var(--radius-media);
   border: 1px solid var(--color-border);
 }
-
-.placeholder {
-  @include mono(var(--fs-small));
-
-  display: grid;
-  place-items: center;
-  aspect-ratio: 4 / 5;
-  border: 1px dashed var(--color-border-strong);
-  border-radius: var(--radius-media);
-  background: linear-gradient(var(--gradient-surface)), var(--color-surface);
-  color: var(--color-text-muted);
-  letter-spacing: var(--ls-eyebrow);
-  text-align: center;
-  padding: var(--space-6);
-}

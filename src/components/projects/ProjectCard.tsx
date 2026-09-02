@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import { Spotlight } from '@/components/ui/Spotlight';
+import { ProjectVisual } from '@/components/visuals/ProjectVisual';
 import { Tag } from '@/components/ui/Tag';
 import { Link } from '@/i18n/navigation';
 import { getSkill } from '@/data/skills';
@@ -27,6 +28,8 @@ export async function ProjectCard({ project, featured = false }: ProjectCardProp
         data-featured={featured || undefined}
         data-cursor-label={linksToCaseStudy ? t('viewCaseStudy') : undefined}
       >
+        <ProjectVisual category={project.category} className={styles.visual} />
+
         <header className={styles.head}>
           <div className={styles.meta}>
             {project.company ? (
