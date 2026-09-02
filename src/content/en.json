@@ -140,6 +140,42 @@
       "manifesto": {
         "claim": "Frontends that hold their shape"
       }
+    },
+    "world": {
+      "title": "Engineering world",
+      "hint": "Hover a node · click to open it",
+      "hintStatic": "Choose a node to open it",
+      "loading": "Building the world…",
+      "rail": "World map",
+      "skip": "Skip to the portfolio",
+      "open": "Open the section",
+      "units": {
+        "years": "{count, plural, one {# year} other {# years}}",
+        "roles": "{count, plural, one {# role} other {# roles}}",
+        "layers": "{count, plural, one {# layer} other {# layers}}",
+        "technologies": "{count, plural, one {# technology} other {# technologies}}",
+        "projects": "{count, plural, one {# project} other {# projects}}"
+      },
+      "nodes": {
+        "about": {
+          "tagline": "The engineer at the centre of the system."
+        },
+        "experience": {
+          "tagline": "Where the work happened, and for how long."
+        },
+        "architecture": {
+          "tagline": "The dependency stack the frontends are built on."
+        },
+        "stack": {
+          "tagline": "The technologies, grouped by the job they do."
+        },
+        "projects": {
+          "tagline": "Production work, and public code."
+        },
+        "contact": {
+          "tagline": "Open to work — Yerevan, remote or hybrid."
+        }
+      }
     }
   },
   "metrics": {

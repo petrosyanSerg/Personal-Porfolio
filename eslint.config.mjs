@@ -46,5 +46,16 @@ export default tseslint.config(
     },
   },
 
+  {
+    // The world's frame loop writes into three.js objects it owns — matrices,
+    // colours, instance buffers — for the same reason the hero scenes do: a
+    // scene animates by mutating GPU-bound state, not by re-rendering React.
+    // Everything React reads still comes from the exploration store.
+    files: ['src/components/world/three/**/*.{ts,tsx}'],
+    rules: {
+      'react-hooks/immutability': 'off',
+    },
+  },
+
   prettier,
 );

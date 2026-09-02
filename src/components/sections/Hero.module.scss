@@ -100,7 +100,8 @@
 }
 
 .specDot {
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
+  opacity: 0.75;
 }
 
 .actions {
@@ -400,7 +401,7 @@
     .headline::after {
       content: "_";
       margin-inline-start: 0.15em;
-      color: var(--color-accent);
+      color: var(--color-accent-text);
     }
 
     .spec {
@@ -455,7 +456,8 @@
     }
 
     .specDot {
-      color: var(--color-accent);
+      color: var(--color-accent-text);
+      opacity: 1;
       font-size: 1.15em;
     }
   }
@@ -703,4 +705,24 @@
       --hero-flourish-inline: auto;
     }
   }
+}
+
+/* The exploration bar sits at the foot of the hero; the copy makes room for it
+   instead of colliding with it on short viewports. */
+.hero {
+  padding-block-end: calc(var(--space-9) + 8rem);
+
+  @include up("md") {
+    padding-block-end: calc(var(--space-9) + 5rem);
+  }
+}
+
+.content {
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+
+/* While a world node is open, the hero copy steps back and lets the node panel
+   be the subject. Nothing moves and nothing is removed — it only recedes. */
+:global(html[data-world="focused"]) .content {
+  opacity: 0.3;
 }

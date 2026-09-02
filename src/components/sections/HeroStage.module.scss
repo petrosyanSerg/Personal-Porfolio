@@ -2,7 +2,7 @@
 
 .readout {
   position: absolute;
-  inset-block-end: var(--space-6);
+  inset-block-start: calc(var(--space-11) + var(--space-4));
   inset-inline-end: var(--gutter);
   z-index: 2;
   display: flex;

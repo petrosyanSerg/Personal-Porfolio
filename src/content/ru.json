@@ -140,6 +140,42 @@
       "manifesto": {
         "claim": "Фронтенд, который держит форму"
       }
+    },
+    "world": {
+      "title": "Инженерный мир",
+      "hint": "Наведите на узел · нажмите, чтобы открыть",
+      "hintStatic": "Выберите узел, чтобы открыть его",
+      "loading": "Строим мир…",
+      "rail": "Карта мира",
+      "skip": "Перейти к портфолио",
+      "open": "Открыть раздел",
+      "units": {
+        "years": "{count, plural, one {# год} few {# года} many {# лет} other {# года}}",
+        "roles": "{count, plural, one {# роль} few {# роли} many {# ролей} other {# роли}}",
+        "layers": "{count, plural, one {# слой} few {# слоя} many {# слоёв} other {# слоя}}",
+        "technologies": "{count, plural, one {# технология} few {# технологии} many {# технологий} other {# технологии}}",
+        "projects": "{count, plural, one {# проект} few {# проекта} many {# проектов} other {# проекта}}"
+      },
+      "nodes": {
+        "about": {
+          "tagline": "Инженер в центре системы."
+        },
+        "experience": {
+          "tagline": "Где шла работа и сколько она длилась."
+        },
+        "architecture": {
+          "tagline": "Стек зависимостей, на котором собран фронтенд."
+        },
+        "stack": {
+          "tagline": "Технологии, сгруппированные по задачам."
+        },
+        "projects": {
+          "tagline": "Продакшн и публичный код."
+        },
+        "contact": {
+          "tagline": "Открыт к предложениям: Ереван, remote или hybrid."
+        }
+      }
     }
   },
   "metrics": {

@@ -4,13 +4,14 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { Container } from '@/components/ui/Container';
+import { architectureLayers, type ArchitectureLayer } from '@/data/architecture';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 
 import styles from './Architecture.module.scss';
 
-const LAYERS = ['app', 'pages', 'widgets', 'features', 'entities', 'shared'] as const;
+const LAYERS = architectureLayers;
 
-type LayerId = (typeof LAYERS)[number];
+type LayerId = ArchitectureLayer;
 
 export function Architecture() {
   const t = useTranslations('architecture');

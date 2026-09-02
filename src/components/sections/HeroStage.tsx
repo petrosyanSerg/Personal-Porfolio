@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react';
 
 import { useDesignCapability } from '@/design-system';
-import { HeroSceneMount } from '@/components/hero3d/HeroSceneMount';
+import { ExplorationWorld } from '@/components/world/ExplorationWorld';
+import { useExploration } from '@/components/world/core/useExploration';
 import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion';
 
 import styles from './HeroStage.module.scss';
@@ -24,6 +25,7 @@ const DWELL = 2600;
 
 export function HeroStage({ modules, countLabel, completeLabel }: StageProps) {
   const hasReadout = useDesignCapability('system-readout');
+  const { phase } = useExploration();
   const reducedMotion = usePrefersReducedMotion();
   const [index, setIndex] = useState(0);
   const [cycled, setCycled] = useState(false);
@@ -48,9 +50,9 @@ export function HeroStage({ modules, countLabel, completeLabel }: StageProps) {
 
   return (
     <>
-      <HeroSceneMount />
+      <ExplorationWorld />
 
-      {!hasReadout || !shown ? null : (
+      {!hasReadout || !shown || phase === 'focused' ? null : (
         <div className={styles.readout} data-hero-readout aria-hidden="true">
           <p className={styles.counter} data-complete={cycled || undefined}>
             <span className={styles.count}>

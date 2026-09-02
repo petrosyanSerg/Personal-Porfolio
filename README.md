@@ -26,7 +26,7 @@ Not a portfolio template. Every claim on the site traces to a documented audit o
 - **Nine home sections** telling one story: who → what → what I've built → how I think → what I use → why it matters → how we work together.
 - **Scroll-tracked Feature-Sliced Design explainer** — a sticky diagram that follows reading position through the six architectural layers.
 - **AI-native engineering pipeline** — context → spec → scaffold → validate → merge, as the answer to the obvious question about delivery speed.
-- **Interactive hero diagram** — a layered core with six technology modules in orbit, connected by lines that carry data inward. The modules _are_ `data/skills.ts`: hover one to light it, open one to read its strongest technologies. Six draw calls, zero React renders while the pointer moves, and every colour read from the theme's own CSS variables.
+- **An explorable hero world** — six nodes around a core, wired into one graph: About, Experience, Architecture, Stack, Projects, Contact. Point at one and it lights; open it and the camera travels there while an HTML panel gives you the real thing — the roles and their dates, the six FSD layers, the technologies by group, the shipped projects. The numbers on the nodes are read out of `src/data`, the words out of `src/content`, and every destination is a section of the page you can also just scroll to. Fifty design systems change what the world is made of; none of them changes what it says.
 - **Case studies** with hand-built SVG architecture diagrams.
 - **Three first-class locales** — English, Russian, Armenian — with reciprocal hreflang, localised metadata and JSON-LD.
 - **Three themes** — dark (canonical), light, and **cinematic**: a deep-black ground with banded volumetric light, slow fog, drifting motes, film grain and a vignette. Switching wipes in from the control you pressed, via View Transitions where the browser has them.
@@ -312,6 +312,61 @@ degrees and cannot touch the solids. Pixel Art ratchets the camera in eight
 discrete steps because interpolation is the one thing a bitmap must not do.
 Rebus hides six symbols and only draws the line joining them once you have
 found all six.
+
+### The exploration world
+
+The hero is not a picture of a system, it is one. Six nodes hang off a core —
+About, Experience, Architecture, Stack, Projects, Contact — joined by the edges
+that actually describe the work: stack feeds architecture, architecture feeds
+projects and experience. Pulses travel those edges. Hovering a node lifts it;
+opening one flies the camera to it and grows the node into its own structure —
+a slab per role, scaled by how long the role ran; the six dependency layers,
+widest at the base; every technology in `data/skills.ts` orbiting the group it
+belongs to; a plate per project, with the commercial work forward.
+
+Four decisions carry it:
+
+**One world, fifty dialects.** There is no `CybercoreWorld.tsx`. A design system
+contributes a `WorldDialect` — node shape, surface, link, motes, ground, light,
+motion, weight — resolved from its family with small per-theme overrides, in
+`components/world/core/worldTheme.ts`. Colour comes from the same CSS variables
+the page uses, so light, dark and cinematic are already handled. A unit test
+walks all fifty and asserts each resolves to a legal dialect, and that the
+families stay visually distinguishable.
+
+**The old scenes became the environment.** The fifty hero scenes were not
+replaced. `HeroCanvas` now notices when it is rendered inside the world and
+gives up the canvas, the camera and the fog instead of creating a second WebGL
+context; the scene is pushed back and held at the angular size it was composed
+for. One context, fifty backdrops, and the scene files are untouched.
+
+**The information is HTML.** WebGL carries the exploration; it never carries the
+content. Node labels are real elements positioned each frame from a projected
+point written straight to CSS variables — no React render per frame. The map,
+the panel, the breadcrumb and the way out are ordinary buttons and links, which
+is why the whole thing works with a keyboard, with a screen reader, and with no
+GPU at all. Escape closes a node; focus follows into the panel and comes back to
+the button that opened it.
+
+**One state machine.** `idle → exploring → focused → returning`, with the active
+node, the hovered node and what has been visited, in one reducer
+(`exploration-store.ts`). The 3D reads it imperatively inside the frame loop, so
+hovering a node re-renders no React at all. Opening a node writes
+`#explore-<node>`, and arriving on that URL opens it.
+
+The camera has exactly two kinds of pose — home, and one focused node — damped
+frame-rate independently, with pointer parallax and idle drift hard-clamped on
+top. It also owns the render call, which is how a background scene that moves
+the camera for its own composition cannot fight it. The world's size and place
+are derived per frame from the band of the hero that is actually visible, since
+hero heights vary by a factor of two across the fifty systems and the copy is
+centred in some of them and left-aligned in others.
+
+Under `prefers-reduced-motion` the canvas renders on demand rather than
+continuously, floating and drift stop, and the camera snaps rather than travels
+— the map, the panels and the links are all unchanged. Without WebGL there is
+no canvas and the exploration layer carries on by itself; `tests/e2e/exploration-world.spec.ts`
+asserts exactly that, including axe with a node open.
 
 ### What it costs
 
