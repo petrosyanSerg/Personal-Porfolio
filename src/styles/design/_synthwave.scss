@@ -38,6 +38,7 @@
 
 [data-design="synthwave"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #100425;
   --color-bg-elevated: #170733;
@@ -121,6 +122,7 @@
 [data-design="synthwave"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #100425;
   --color-bg-elevated: #170733;

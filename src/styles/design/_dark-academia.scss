@@ -41,6 +41,7 @@
 
 [data-design="dark-academia"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #131009;
   --color-bg-elevated: #1a160d;
@@ -123,6 +124,7 @@
 [data-design="dark-academia"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #131009;
   --color-bg-elevated: #1a160d;

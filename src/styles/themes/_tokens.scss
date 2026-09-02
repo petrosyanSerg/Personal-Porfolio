@@ -128,6 +128,22 @@
   --blur-md: 16px;
   --blur-lg: 32px;
 
+  /*
+   * One layer scale for the whole site. Everything decorative is negative, so
+   * in-flow text always paints above it without needing a z-index of its own —
+   * a section only has to stay out of the negative range to stay readable.
+   *
+   *   backdrop   page-wide gradient wash
+   *   atmosphere cinematic strata / fog / motes / vignette, pointer light
+   *   decor      per-section ornament, spotlight glow, card sheen
+   *   ---------- in-flow content and text paint here ----------
+   *   raised     content that must sit over a sibling (hero copy over scene)
+   *   sticky/header/… interactive chrome
+   */
+  --z-backdrop: -3;
+  --z-atmosphere: -2;
+  --z-decor: -1;
+
   --z-base: 0;
   --z-raised: 10;
   --z-sticky: 100;
@@ -155,10 +171,20 @@
   --atmos-vignette: 0;
   --cursor-light: 0.055;
 
+  /*
+   * 1 = the active palette is dark, 0 = light. CSS cannot branch on
+   * `color-scheme`, and cinematic mode has to know: a vignette and a mote field
+   * tuned for a black page turn a cream one into mud. Every design system
+   * declares this next to its own `color-scheme`, in both palette blocks.
+   */
+  --polarity: 1;
+
   color-scheme: dark;
 }
 
 [data-theme="light"] {
+  --polarity: 0;
+
   --color-bg: #fbfbfd;
   --color-bg-elevated: #fff;
   --color-surface: #fff;
@@ -258,12 +284,29 @@
   --shadow-xl: 0 24px 72px rgb(0 0 0 / 68%);
   --glass-bg: rgb(8 10 18 / 68%);
 
-  --atmos-strata: 1;
+  /*
+   * Cinematic combines with any of the fifty design systems, and twenty-nine of
+   * them are light-native. Strata and motes are light-on-dark effects that do
+   * not read on a pale page, and the vignette has to be a fifth as strong there
+   * or it drags every text token below AA at the edges of the viewport.
+   */
+
+  /*
+   * Cinematic combines with any of the fifty design systems, and twenty-nine of
+   * them are light-native. The trick is --atmos-ink: black on a dark palette,
+   * white on a light one. The fog and the vignette then *darken* a dark page and
+   * *bloom* a light one — the high-key equivalent of the same photographic idea
+   * — so neither polarity ever loses contrast under the effect. Strata and motes
+   * are light-on-dark by construction and simply switch off.
+   */
+  --atmos-ink: color-mix(in oklab, #000 calc(var(--polarity) * 100%), #fff);
+
+  --atmos-strata: var(--polarity);
   --atmos-fog: 1;
-  --atmos-motes: 1;
-  --atmos-grain: 0.035;
+  --atmos-motes: var(--polarity);
+  --atmos-grain: calc(0.014 + 0.021 * var(--polarity));
   --atmos-vignette: 0.55;
-  --cursor-light: 0.1;
+  --cursor-light: calc(0.05 + 0.05 * var(--polarity));
 
   color-scheme: dark;
 }

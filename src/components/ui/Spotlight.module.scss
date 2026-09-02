@@ -9,7 +9,7 @@
     content: "";
     position: absolute;
     inset: -1px;
-    z-index: -1;
+    z-index: var(--z-decor);
     border-radius: inherit;
     background: radial-gradient(
       18rem 18rem at var(--spot-x, 50%) var(--spot-y, 0%),

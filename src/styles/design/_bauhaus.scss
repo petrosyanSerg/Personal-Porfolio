@@ -43,6 +43,7 @@
 
 [data-design="bauhaus"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f2efe9;
   --color-bg-elevated: #f8f6f2;
@@ -124,6 +125,7 @@
 [data-design="bauhaus"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f2efe9;
   --color-bg-elevated: #f8f6f2;

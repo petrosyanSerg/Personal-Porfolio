@@ -42,6 +42,7 @@
 
 [data-design="graffiti"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #1a1a1a;
   --color-bg-elevated: #202020;
@@ -114,6 +115,7 @@
 [data-design="graffiti"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #1a1a1a;
   --color-bg-elevated: #202020;

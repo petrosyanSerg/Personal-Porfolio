@@ -27,6 +27,7 @@
 
 [data-design="aurora"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #050914;
   --color-bg-elevated: #070d1c;
@@ -112,6 +113,7 @@
 [data-design="aurora"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #050914;
   --color-bg-elevated: #070d1c;

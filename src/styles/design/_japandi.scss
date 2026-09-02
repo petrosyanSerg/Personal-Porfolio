@@ -41,6 +41,7 @@
 
 [data-design="japandi"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f3efe7;
   --color-bg-elevated: #f8f5ef;
@@ -115,6 +116,7 @@
 [data-design="japandi"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f3efe7;
   --color-bg-elevated: #f8f5ef;

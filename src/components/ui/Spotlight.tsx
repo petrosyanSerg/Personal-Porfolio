@@ -34,7 +34,9 @@ export function Spotlight({ children, className }: SpotlightProps) {
   return (
     <div
       ref={ref}
-      className={cn(styles.spotlight, className)}
+      /* `spotlight-host` is a deliberate global hook: nested artwork reads the
+         hover state and the --spot-* variables this element publishes. */
+      className={cn(styles.spotlight, 'spotlight-host', className)}
       onPointerMove={onPointerMove}
     >
       {children}

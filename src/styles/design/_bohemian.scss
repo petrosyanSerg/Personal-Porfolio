@@ -36,6 +36,7 @@
 
 [data-design="bohemian"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #2a1f1a;
   --color-bg-elevated: #33261f;
@@ -97,7 +98,7 @@
   --card-hover-shadow: 0 18px 48px rgb(20 12 8 / 48%), 0 0 34px rgb(201 139 82 / 14%);
   --card-hover-border: rgb(201 139 82 / 60%);
 
-  --control-bg: var(--color-accent-strong);
+  --control-bg: #9a5d35;
   --control-fg: #fff4e6;
   --control-shadow: 0 6px 20px rgb(169 102 58 / 30%);
 
@@ -115,6 +116,7 @@
 [data-design="bohemian"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #2a1f1a;
   --color-bg-elevated: #33261f;
@@ -176,7 +178,7 @@
   --card-hover-shadow: 0 18px 48px rgb(20 12 8 / 48%), 0 0 34px rgb(201 139 82 / 14%);
   --card-hover-border: rgb(201 139 82 / 60%);
 
-  --control-bg: var(--color-accent-strong);
+  --control-bg: #9a5d35;
   --control-fg: #fff4e6;
   --control-shadow: 0 6px 20px rgb(169 102 58 / 30%);
 

@@ -41,6 +41,7 @@
 
 [data-design="memphis"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fdf6e3;
   --color-bg-elevated: #fffdf6;
@@ -117,6 +118,7 @@
 [data-design="memphis"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fdf6e3;
   --color-bg-elevated: #fffdf6;

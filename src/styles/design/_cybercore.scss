@@ -47,6 +47,7 @@
 
 [data-design="cybercore"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #04060a;
   --color-bg-elevated: #070b12;
@@ -128,6 +129,7 @@
 [data-design="cybercore"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #04060a;
   --color-bg-elevated: #070b12;

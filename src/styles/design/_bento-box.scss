@@ -35,6 +35,7 @@
 
 [data-design="bento-box"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0e0f12;
   --color-bg-elevated: #141619;
@@ -97,7 +98,7 @@
   --card-hover-shadow: var(--highlight-top), 0 10px 30px rgb(0 0 0 / 46%);
   --card-hover-border: rgb(124 156 255 / 46%);
 
-  --control-bg: var(--color-accent-strong);
+  --control-bg: #4c6bd7;
   --control-fg: #fff;
   --control-shadow: none;
 
@@ -113,6 +114,7 @@
 [data-design="bento-box"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0e0f12;
   --color-bg-elevated: #141619;
@@ -175,7 +177,7 @@
   --card-hover-shadow: var(--highlight-top), 0 10px 30px rgb(0 0 0 / 46%);
   --card-hover-border: rgb(124 156 255 / 46%);
 
-  --control-bg: var(--color-accent-strong);
+  --control-bg: #4c6bd7;
   --control-fg: #fff;
   --control-shadow: none;
 

@@ -44,6 +44,7 @@
 
 [data-design="steampunk"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #17110a;
   --color-bg-elevated: #1e1710;
@@ -116,7 +117,7 @@
     0 18px 44px rgb(0 0 0 / 62%);
   --card-hover-border: rgb(203 149 72 / 76%);
 
-  --control-bg: linear-gradient(180deg, #cb9548 0%, #8a5f28 100%);
+  --control-bg: linear-gradient(180deg, #cb9548 0%, #9e7a4d 100%);
   --control-fg: #17110a;
   --control-border: rgb(240 205 140 / 40%);
   --control-shadow: inset 0 1px 0 rgb(255 235 190 / 30%), 0 4px 12px rgb(0 0 0 / 50%);
@@ -137,6 +138,7 @@
 [data-design="steampunk"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #17110a;
   --color-bg-elevated: #1e1710;
@@ -209,7 +211,7 @@
     0 18px 44px rgb(0 0 0 / 62%);
   --card-hover-border: rgb(203 149 72 / 76%);
 
-  --control-bg: linear-gradient(180deg, #cb9548 0%, #8a5f28 100%);
+  --control-bg: linear-gradient(180deg, #cb9548 0%, #9e7a4d 100%);
   --control-fg: #17110a;
   --control-border: rgb(240 205 140 / 40%);
   --control-shadow: inset 0 1px 0 rgb(255 235 190 / 30%), 0 4px 12px rgb(0 0 0 / 50%);

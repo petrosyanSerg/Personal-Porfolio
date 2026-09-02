@@ -37,6 +37,7 @@
 
 [data-design="tenebrism"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #050505;
   --color-bg-elevated: #0a0908;
@@ -117,6 +118,7 @@
 [data-design="tenebrism"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #050505;
   --color-bg-elevated: #0a0908;

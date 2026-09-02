@@ -35,6 +35,7 @@
 
 [data-design="mystical-western"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0d0a14;
   --color-bg-elevated: #12101d;
@@ -114,6 +115,7 @@
 [data-design="mystical-western"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0d0a14;
   --color-bg-elevated: #12101d;

@@ -39,6 +39,7 @@
 
 [data-design="pointillism"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f4f1ea;
   --color-bg-elevated: #f9f7f1;
@@ -118,6 +119,7 @@
 [data-design="pointillism"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f4f1ea;
   --color-bg-elevated: #f9f7f1;

@@ -131,11 +131,28 @@
   border-block-start: var(--rule-height) var(--rule-style) var(--rule-color);
 }
 
+/*
+ * Paints text with `--gradient-text`.
+ *
+ * The background-color is a safety net, not decoration. `background-clip: text`
+ * clips every background layer to the glyphs, so when a design system opts out
+ * of gradients with `--gradient-text: none` the flat colour underneath is what
+ * gets painted. Without it those worlds render `color: transparent` over nothing
+ * and the text vanishes — which is what happened to the proof-bar numbers in the
+ * eleven flat-palette systems.
+ */
 @mixin text-gradient {
-  background: var(--gradient-text);
+  background-color: var(--gradient-text-flat, var(--color-text));
+  background-image: var(--gradient-text, none);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  /* Forced-colors modes drop backgrounds entirely; keep a real colour there. */
+  @media (forced-colors: active) {
+    background-image: none;
+    color: canvastext;
+  }
 }
 
 @mixin deferred-render($estimate: 800px) {

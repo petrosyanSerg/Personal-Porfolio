@@ -36,6 +36,7 @@
 
 [data-design="mid-century"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f3ead9;
   --color-bg-elevated: #f8f1e3;
@@ -58,7 +59,7 @@
   --color-accent-strong: #ac5f22;
   --color-accent-strong-hover: #93501c;
   --color-accent-soft: rgb(210 118 47 / 14%);
-  --color-accent-text: #a1571d;
+  --color-accent-text: #97521b;
 
   --color-teal: #2f7d80;
   --color-teal-soft: rgb(47 125 128 / 14%);
@@ -89,7 +90,7 @@
   --card-hover-shadow: 0 12px 30px rgb(70 60 40 / 14%);
   --card-hover-border: rgb(210 118 47 / 60%);
 
-  --control-bg: var(--color-accent-strong);
+  --control-bg: #a55b21;
   --control-fg: #fdf8ee;
   --control-shadow: 0 4px 12px rgb(172 95 34 / 22%);
 
@@ -105,6 +106,7 @@
 [data-design="mid-century"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f3ead9;
   --color-bg-elevated: #f8f1e3;
@@ -127,7 +129,7 @@
   --color-accent-strong: #ac5f22;
   --color-accent-strong-hover: #93501c;
   --color-accent-soft: rgb(210 118 47 / 14%);
-  --color-accent-text: #a1571d;
+  --color-accent-text: #97521b;
 
   --color-teal: #2f7d80;
   --color-teal-soft: rgb(47 125 128 / 14%);
@@ -158,7 +160,7 @@
   --card-hover-shadow: 0 12px 30px rgb(70 60 40 / 14%);
   --card-hover-border: rgb(210 118 47 / 60%);
 
-  --control-bg: var(--color-accent-strong);
+  --control-bg: #a55b21;
   --control-fg: #fdf8ee;
   --control-shadow: 0 4px 12px rgb(172 95 34 / 22%);
 

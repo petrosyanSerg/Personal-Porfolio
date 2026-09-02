@@ -40,6 +40,7 @@
 
 [data-design="wabi-sabi"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #eae5da;
   --color-bg-elevated: #efebe1;
@@ -121,6 +122,7 @@
 [data-design="wabi-sabi"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #eae5da;
   --color-bg-elevated: #efebe1;

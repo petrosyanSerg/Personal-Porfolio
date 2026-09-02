@@ -41,6 +41,7 @@
 
 [data-design="shabby-chic"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #faf3f2;
   --color-bg-elevated: #fdf9f8;
@@ -115,6 +116,7 @@
 [data-design="shabby-chic"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #faf3f2;
   --color-bg-elevated: #fdf9f8;

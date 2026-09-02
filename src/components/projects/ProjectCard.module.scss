@@ -49,6 +49,25 @@
   }
 }
 
+/*
+ * The plate is the card's visual anchor. It is pulled out to the card padding so
+ * it reads as a header image rather than a boxed illustration.
+ */
+.visual {
+  margin: calc(var(--space-6) * -1) calc(var(--space-6) * -1) var(--space-5);
+  border-inline: 0;
+  border-block-start: 0;
+  border-start-start-radius: inherit;
+  border-start-end-radius: inherit;
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+
+.card[data-featured] .visual {
+  margin: calc(var(--space-7) * -1) calc(var(--space-7) * -1) var(--space-6);
+  aspect-ratio: 21 / 9;
+}
+
 .head {
   margin-bottom: var(--space-4);
 }

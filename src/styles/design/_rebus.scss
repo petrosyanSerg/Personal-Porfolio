@@ -43,6 +43,7 @@
 
 [data-design="rebus"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f0ede4;
   --color-bg-elevated: #f6f4ec;
@@ -115,6 +116,7 @@
 [data-design="rebus"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #f0ede4;
   --color-bg-elevated: #f6f4ec;

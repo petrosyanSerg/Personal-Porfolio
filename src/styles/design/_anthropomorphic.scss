@@ -43,6 +43,7 @@
 
 [data-design="anthropomorphic"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fff6ec;
   --color-bg-elevated: #fffdfa;
@@ -125,6 +126,7 @@
 [data-design="anthropomorphic"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fff6ec;
   --color-bg-elevated: #fffdfa;

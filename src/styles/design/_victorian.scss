@@ -42,6 +42,7 @@
 
 [data-design="victorian"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #120e0c;
   --color-bg-elevated: #191311;
@@ -125,6 +126,7 @@
 [data-design="victorian"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #120e0c;
   --color-bg-elevated: #191311;

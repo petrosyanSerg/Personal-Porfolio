@@ -46,6 +46,7 @@
 
 [data-design="art-deco"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0e1418;
   --color-bg-elevated: #131c21;
@@ -129,6 +130,7 @@
 [data-design="art-deco"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0e1418;
   --color-bg-elevated: #131c21;

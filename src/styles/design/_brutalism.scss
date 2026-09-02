@@ -45,6 +45,7 @@
 
 [data-design="brutalism"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #c9c6bf;
   --color-bg-elevated: #d3d0c9;
@@ -71,7 +72,7 @@
 
   --color-teal: #b8531b;
   --color-teal-soft: rgb(184 83 27 / 14%);
-  --color-teal-text: #8f3f14;
+  --color-teal-text: #843a12;
 
   --color-warn: #b8531b;
 
@@ -121,6 +122,7 @@
 [data-design="brutalism"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #c9c6bf;
   --color-bg-elevated: #d3d0c9;
@@ -147,7 +149,7 @@
 
   --color-teal: #b8531b;
   --color-teal-soft: rgb(184 83 27 / 14%);
-  --color-teal-text: #8f3f14;
+  --color-teal-text: #843a12;
 
   --color-warn: #b8531b;
 

@@ -40,6 +40,7 @@
 
 [data-design="kitsch"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #ffe9f4;
   --color-bg-elevated: #fff2f8;
@@ -122,6 +123,7 @@
 [data-design="kitsch"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #ffe9f4;
   --color-bg-elevated: #fff2f8;

@@ -36,6 +36,7 @@
 
 [data-design="glassmorphism"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0f1424;
   --color-bg-elevated: #141a2e;
@@ -123,6 +124,7 @@
 [data-design="glassmorphism"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0f1424;
   --color-bg-elevated: #141a2e;

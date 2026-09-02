@@ -84,8 +84,7 @@
 }
 
 .prompt {
-  color: var(--color-accent);
-  opacity: 0.8;
+  color: var(--color-accent-text);
 }
 
 .hero {
@@ -115,7 +114,7 @@
 
     .specItem::before {
       content: "> ";
-      color: var(--color-accent);
+      color: var(--color-accent-text);
     }
 
     .specDot {
@@ -138,7 +137,7 @@
 }
 
 .voiceArrow {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   font-size: 1.1em;
   line-height: 1;
 }

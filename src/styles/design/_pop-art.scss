@@ -43,6 +43,7 @@
 
 [data-design="pop-art"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fff8e1;
   --color-bg-elevated: #fffdf4;
@@ -119,6 +120,7 @@
 [data-design="pop-art"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fff8e1;
   --color-bg-elevated: #fffdf4;

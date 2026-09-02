@@ -47,6 +47,7 @@
 
 [data-design="baroque"]:not([data-theme="light"]) {
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0b0705;
   --color-bg-elevated: #120c08;
@@ -104,7 +105,7 @@
     0 0 60px rgb(201 162 39 / 12%);
   --card-hover-border: #c9a227;
 
-  --control-bg: var(--gradient-accent);
+  --control-bg: linear-gradient(120deg, #987f37 0%, #f0d98a 48%, #a8871c 100%);
   --control-fg: #1a1206;
   --control-border: rgb(240 217 138 / 55%);
 
@@ -123,6 +124,7 @@
 [data-design="baroque"][data-theme="light"] {
   /* COUNTERPART-PENDING */
   color-scheme: dark;
+  --polarity: 1;
 
   --color-bg: #0b0705;
   --color-bg-elevated: #120c08;
@@ -180,7 +182,7 @@
     0 0 60px rgb(201 162 39 / 12%);
   --card-hover-border: #c9a227;
 
-  --control-bg: var(--gradient-accent);
+  --control-bg: linear-gradient(120deg, #987f37 0%, #f0d98a 48%, #a8871c 100%);
   --control-fg: #1a1206;
   --control-border: rgb(240 217 138 / 55%);
 

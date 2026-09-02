@@ -46,6 +46,7 @@
 
 [data-design="wild-west"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #e8d9b8;
   --color-bg-elevated: #efe3c8;
@@ -125,6 +126,7 @@
 [data-design="wild-west"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #e8d9b8;
   --color-bg-elevated: #efe3c8;

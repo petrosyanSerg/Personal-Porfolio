@@ -3,8 +3,8 @@ import { getTranslations } from 'next-intl/server';
 import { Reveal } from '@/components/animations/Reveal';
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
-import { personal } from '@/data/personal';
-import { DesignPortrait } from '@/design-system';
+import { AboutVisual } from '@/components/visuals/AboutVisual';
+import { fullName, personal } from '@/data/personal';
 
 import styles from './About.module.scss';
 
@@ -31,17 +31,13 @@ export async function About() {
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={personal.photo}
-                alt=""
+                alt={fullName}
                 className={styles.portrait}
                 width={520}
                 height={650}
               />
             ) : (
-              <DesignPortrait
-                className={styles.portrait}
-                fallbackClassName={styles.placeholder}
-                fallbackLabel={t('photoPlaceholder')}
-              />
+              <AboutVisual />
             )}
           </Reveal>
         </div>

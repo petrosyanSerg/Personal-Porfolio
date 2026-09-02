@@ -37,6 +37,7 @@
 
 [data-design="kawaii"][data-theme="light"] {
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fff0f6;
   --color-bg-elevated: #fff7fa;
@@ -95,7 +96,7 @@
   --card-hover-shadow: 0 14px 34px rgb(201 74 128 / 18%);
   --card-hover-border: #ff8fc4;
 
-  --control-bg: var(--color-accent-strong);
+  --control-bg: #bd4678;
   --control-fg: #fff;
   --control-border: transparent;
   --control-shadow: 0 4px 14px rgb(201 74 128 / 26%);
@@ -112,6 +113,7 @@
 [data-design="kawaii"]:not([data-theme="light"]) {
   /* COUNTERPART-PENDING */
   color-scheme: light;
+  --polarity: 0;
 
   --color-bg: #fff0f6;
   --color-bg-elevated: #fff7fa;
@@ -170,7 +172,7 @@
   --card-hover-shadow: 0 14px 34px rgb(201 74 128 / 18%);
   --card-hover-border: #ff8fc4;
 
-  --control-bg: var(--color-accent-strong);
+  --control-bg: #bd4678;
   --control-fg: #fff;
   --control-border: transparent;
   --control-shadow: 0 4px 14px rgb(201 74 128 / 26%);
