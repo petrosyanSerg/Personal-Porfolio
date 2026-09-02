@@ -140,6 +140,42 @@
       "manifesto": {
         "claim": "Frontend, որը պահում է իր ձևը"
       }
+    },
+    "world": {
+      "title": "Ինժեներական աշխարհ",
+      "hint": "Տեղափոխեք կուրսորը հանգույցի վրա · սեղմեք՝ բացելու համար",
+      "hintStatic": "Ընտրեք հանգույցը՝ բացելու համար",
+      "loading": "Աշխարհը կառուցվում է…",
+      "rail": "Աշխարհի քարտեզ",
+      "skip": "Անցնել պորտֆոլիոյին",
+      "open": "Բացել բաժինը",
+      "units": {
+        "years": "{count, plural, one {# տարի} other {# տարի}}",
+        "roles": "{count, plural, one {# դեր} other {# դեր}}",
+        "layers": "{count, plural, one {# շերտ} other {# շերտ}}",
+        "technologies": "{count, plural, one {# տեխնոլոգիա} other {# տեխնոլոգիա}}",
+        "projects": "{count, plural, one {# նախագիծ} other {# նախագիծ}}"
+      },
+      "nodes": {
+        "about": {
+          "tagline": "Ինժեները՝ համակարգի կենտրոնում։"
+        },
+        "experience": {
+          "tagline": "Որտեղ է կատարվել աշխատանքը և որքան ժամանակ։"
+        },
+        "architecture": {
+          "tagline": "Կախվածությունների շերտերը, որոնց վրա կառուցված է frontend-ը։"
+        },
+        "stack": {
+          "tagline": "Տեխնոլոգիաները՝ խմբավորված ըստ իրենց դերի։"
+        },
+        "projects": {
+          "tagline": "Production աշխատանք և հանրային կոդ։"
+        },
+        "contact": {
+          "tagline": "Բաց եմ առաջարկների համար՝ Երևան, remote կամ hybrid։"
+        }
+      }
     }
   },
   "metrics": {

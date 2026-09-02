@@ -1,21 +1,41 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useEffect, useRef, useState } from 'react';
 
-import { useDesignSystem } from '@/design-system';
-import { useDeviceCapability } from '@/hooks/useDeviceCapability';
-import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion';
+import { useDesignSystemId } from '@/design-system';
+import { WorldBoundary } from '@/components/world/three/WorldBoundary';
 
-import { useScenePalette } from './core/palette';
-import { resolveQuality } from './core/quality';
-import { sceneComponents } from './sceneRegistry';
+import type { SceneQuality } from './core/quality';
 import styles from './HeroScene.module.scss';
 
-export function HeroSceneMount() {
-  const design = useDesignSystem();
-  const capability = useDeviceCapability();
-  const reducedMotion = usePrefersReducedMotion();
-  const palette = useScenePalette();
+const WorldCanvas = dynamic(() => import('@/components/world/three/WorldCanvas'), {
+  ssr: false,
+});
+
+type MountProps = {
+  /** False when the device, the theme's mobile policy or WebGL says no. */
+  readonly live: boolean;
+  readonly quality: SceneQuality;
+  readonly reducedMotion: boolean;
+  readonly onReady: () => void;
+  readonly onFail: () => void;
+};
+
+/**
+ * The WebGL half of the hero. It stays a separate mount from the exploration
+ * overlay on purpose: three.js is code-split behind this boundary, only loads
+ * when the hero is near the viewport, and can fail without taking anything
+ * readable down with it.
+ */
+export function HeroSceneMount({
+  live,
+  quality,
+  reducedMotion,
+  onReady,
+  onFail,
+}: MountProps) {
+  const design = useDesignSystemId();
   const container = useRef<HTMLDivElement>(null);
   const [near, setNear] = useState(false);
 
@@ -32,26 +52,23 @@ export function HeroSceneMount() {
     return () => observer.disconnect();
   }, []);
 
-  const smallDevice = capability === 'low';
-  const allowed =
-    capability !== 'none' && !(smallDevice && design.scene.mobile === 'disabled');
-
-  const Scene = sceneComponents[design.id];
-  const quality = allowed
-    ? resolveQuality(capability, design.scene, reducedMotion)
-    : 'low';
-
   return (
     <div
       ref={container}
       className={styles.stage}
       data-scene-slot
-      data-scene={design.id}
+      data-scene={design}
       data-bleed
       aria-hidden="true"
     >
-      {allowed && near ? (
-        <Scene quality={quality} reducedMotion={reducedMotion} palette={palette} />
+      {live && near ? (
+        <WorldBoundary onFail={onFail}>
+          <WorldCanvas
+            quality={quality}
+            reducedMotion={reducedMotion}
+            onReady={onReady}
+          />
+        </WorldBoundary>
       ) : null}
     </div>
   );

@@ -1,0 +1,419 @@
+@use "abstracts" as *;
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Floating labels ------------------------------------------------------- */
+
+.labels {
+  position: absolute;
+  inset: 0;
+  display: none;
+
+  @include up("md") {
+    display: block;
+  }
+}
+
+.label {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2) var(--space-3);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur-sm));
+  -webkit-backdrop-filter: blur(var(--blur-sm));
+  color: var(--color-text);
+  text-align: start;
+  white-space: nowrap;
+  pointer-events: auto;
+  opacity: 0;
+
+  translate: calc(var(--px, 0px) - var(--anchor, 50%))
+    calc(var(--py, 0px) - 100% - 1.4rem);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+
+  &[data-projected="1"] {
+    opacity: 1;
+  }
+
+  /* Near the right edge the label hangs off the node instead of straddling it,
+     so it can never be clipped by the frame. */
+  &[data-flip="1"] {
+    --anchor: 88%;
+  }
+
+  &[data-state="hover"],
+  &[data-state="active"] {
+    border-color: var(--color-border-accent);
+    background: var(--color-bg-elevated);
+  }
+
+  &[data-state="active"] {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+.labelName {
+  @include mono;
+
+  color: var(--color-text);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+}
+
+.labelCount {
+  @include mono;
+
+  color: var(--color-accent-text);
+  font-size: var(--fs-mono-sm);
+  opacity: 0.85;
+}
+
+/* Bottom bar ------------------------------------------------------------ */
+
+/* The hero is often taller than the first viewport. The bar anchors to
+   whichever comes first — the fold or the foot of the hero — so the map is
+   always on screen without the copy having to shrink for it. */
+.bar {
+  position: absolute;
+  inset-inline: var(--gutter);
+
+  /* On a phone the hero copy already fills the first screen, so the map waits
+     at the foot of the hero — one short scroll, never on top of the words. */
+  inset-block-end: var(--space-5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+
+  /* Beside the copy, not across it: on a desktop the whole exploration UI is
+     one right-aligned column, leaving the hero's own actions untouched. */
+  @include up("md") {
+    /* Anchored by its own foot, a little above the fold, so the block sizes
+       itself: the hero is anywhere from 55rem to 90rem tall across the fifty
+       design systems and this needs no per-theme number. */
+    inset-block-end: max(var(--space-5), calc(100% - 100svh + 5rem));
+    align-items: flex-end;
+  }
+}
+
+.trail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  pointer-events: auto;
+
+  @include up("md") {
+    align-items: flex-end;
+    text-align: end;
+  }
+}
+
+.breadcrumb {
+  @include mono;
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+}
+
+.crumb {
+  color: inherit;
+
+  &:not(:disabled) {
+    color: var(--color-accent-text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.crumbMark {
+  color: var(--color-text-faint);
+}
+
+.crumbHere {
+  color: var(--color-text);
+}
+
+.hint {
+  @include mono;
+
+  color: var(--color-text-muted);
+  transition: opacity var(--dur-base) var(--ease-out);
+
+  &[data-quiet] {
+    opacity: 0.45;
+  }
+}
+
+.overlay[data-phase="focused"] .hint {
+  opacity: 0;
+}
+
+/* The map ---------------------------------------------------------------- */
+
+.rail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  max-width: 100%;
+  pointer-events: auto;
+
+  /* Kept narrow on purpose: the map wraps into a compact block in the corner
+     rather than a wide strip that reaches across the hero's own actions. */
+  @include up("md") {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-2);
+  }
+}
+
+.railList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  max-width: 100%;
+  padding: var(--space-1);
+
+  @include up("md") {
+    max-width: min(30rem, 40vw);
+    justify-content: flex-end;
+  }
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur-sm));
+  -webkit-backdrop-filter: blur(var(--blur-sm));
+}
+
+.railItem {
+  @include mono;
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 34px;
+  padding: 0 var(--space-3);
+
+  border-radius: var(--radius-tag);
+  color: var(--color-text-secondary);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-text);
+    background: var(--color-accent-soft);
+  }
+
+  &[aria-expanded="true"] {
+    color: var(--color-accent-text);
+    background: var(--color-accent-soft);
+  }
+}
+
+.railDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-strong);
+
+  .railItem[data-visited] & {
+    background: var(--color-teal);
+    border-color: var(--color-teal);
+  }
+
+  .railItem[aria-expanded="true"] & {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+}
+
+.skip {
+  @include mono;
+
+  color: var(--color-text-muted);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  &:hover {
+    color: var(--color-text);
+  }
+}
+
+/* The panel -------------------------------------------------------------- */
+
+/* On a phone the panel opens directly above the map, at the foot of the hero
+   where the visitor's attention already is. */
+.panel {
+  position: absolute;
+  inset-inline: var(--gutter);
+  inset-block-end: calc(var(--space-5) + 8.5rem);
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-height: 60svh;
+  padding: var(--space-5);
+  overflow-y: auto;
+
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  box-shadow: var(--shadow-lg);
+  pointer-events: auto;
+
+  @include up("md") {
+    inset-inline: auto var(--gutter);
+    inset-block: min(calc(50svh - 2rem), calc(50% - 2rem)) auto;
+    width: min(23rem, 32vw);
+    max-height: min(60svh, 34rem);
+    translate: 0 -50%;
+  }
+}
+
+.panelHead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.panelEyebrow {
+  @include mono;
+
+  color: var(--color-accent-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.panelTitle {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-heading);
+  color: var(--color-text);
+}
+
+.panelTagline {
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  text-wrap: pretty;
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid var(--color-border);
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &[data-numbered] {
+    counter-reset: layer;
+
+    li {
+      counter-increment: layer;
+    }
+  }
+}
+
+.factKey {
+  @include mono;
+
+  color: var(--color-text);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+}
+
+.factValue {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+}
+
+.panelFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid var(--color-border);
+}
+
+.panelLink {
+  @include mono;
+
+  color: var(--color-accent-text);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+.panelClose {
+  @include mono;
+
+  color: var(--color-text-muted);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--color-text);
+  }
+}
+
+@include motion-safe {
+  .panel {
+    animation: world-panel-in var(--dur-base) var(--ease-signature);
+  }
+}
+
+@keyframes world-panel-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@include reduced-motion {
+  .label,
+  .hint,
+  .railItem {
+    transition: none;
+  }
+}

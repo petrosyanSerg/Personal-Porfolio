@@ -4,6 +4,7 @@ import { useEffect, type ReactNode } from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
 import { NoToneMapping } from 'three';
 
+import { useInWorldSlot } from './core/slot';
 import type { ScenePalette } from './core/palette';
 import type { SceneQuality } from './core/quality';
 
@@ -50,6 +51,12 @@ export function HeroCanvas({
   palette,
   children,
 }: CanvasProps) {
+  const inWorld = useInWorldSlot();
+
+  // Inside the world the scene is the far environment: one canvas, one camera,
+  // one fog band, and no second WebGL context to pay for.
+  if (inWorld) return <>{children}</>;
+
   return (
     <Canvas
       shadows={shadows && quality === 'high'}
